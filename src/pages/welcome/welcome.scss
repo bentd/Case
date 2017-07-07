@@ -1,0 +1,84 @@
+
+@keyframes slide
+{
+    100%
+    {
+        margin-left: 0%;
+    }
+}
+
+[container]
+{
+    height: 100%;
+    width: 100%;
+}
+
+[background]
+{
+    height: 80%;
+    opacity: 0.1;
+    width: 100%;
+    z-index: -1;
+}
+
+[letter]
+{
+    height: 25%;
+    margin-left: -29900%;
+    width: 30000%;
+}
+
+[c]
+{
+    animation: slide 1000s linear infinite;
+    background: url(../assets/img/c.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+[a]
+{
+    animation: slide 1000s 100ms linear infinite;
+    background: url(../assets/img/a.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+[s]
+{
+    animation: slide 1000s 200ms linear infinite;
+    background: url(../assets/img/s.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+[e]
+{
+    animation: slide 1000s 300ms linear infinite;
+    background: url(../assets/img/e.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+
+[buttons]
+{
+    text-align: center;
+    height: 20%
+}
+
+[buttons] button
+{
+    background-color: maroon;
+    border: solid;
+    color: blanchedalmond;
+    display: block;
+    font-size: 35px;
+    height: 50%;
+    width: 100%;
+    z-index: 100;
+}
+
+[buttons] button:hover
+{
+    background-color: hsl(0, 100%, 15%);
+}
