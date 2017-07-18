@@ -20,11 +20,11 @@ export class WelcomePage
 
     segueToLogIn()
     {
-        this.controller.setRoot(LoginPage);
+        this.controller.push(LoginPage);
     }
 
     segueToSignUp()
     {
-        this.controller.setRoot(SignupPage);
+        this.controller.push(SignupPage);
     }
 }

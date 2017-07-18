@@ -41,6 +41,15 @@ $dark: black;
     background-color: $primary;
     border-radius: 2px;
     box-shadow: 1px 1px 1px $dark;
-    color: $secondary;
+    color: $light;
+    padding: 10px 20px;
+}
+
+.button-reverse
+{
+    background-color: $secondary;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px $dark;
+    color: $primary;
     padding: 10px 20px;
 }

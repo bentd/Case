@@ -1,6 +1,6 @@
 // Angular
 import { Component } from "@angular/core";
-//import { ViewChild } from "@angular/core";
+import { ViewChild } from "@angular/core";
 
 // Ionic
 import { NavController } from "ionic-angular";
@@ -18,22 +18,9 @@ import { ForgotPage } from "../forgot/forgot";
 })
 export class LoginPage
 {
-    //@ViewChild("ion-content") content: any;
+    @ViewChild("ion-navbar button") button: any;
 
     constructor(public controller: NavController) { }
-
-    segueToWelcome()
-    {
-
-        var animations =
-        {
-            animate: true,
-            animation: "ios-transition",
-            direction: "back",
-        }
-
-        this.controller.setRoot(WelcomePage, null, animations);
-    }
 
     segueToForgot()
     {
