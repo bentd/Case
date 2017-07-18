@@ -1,84 +1,121 @@
-
-@keyframes slide
+page-welcome
 {
-    100%
+    @keyframes slide
     {
-        margin-left: 0%;
+        100%
+        {
+            margin-left: 0%;
+        }
     }
-}
 
-[container]
-{
-    height: 100%;
-    width: 100%;
-}
+    .container
+    {
+        height: 100%;
+        width: 100%;
+    }
 
-[background]
-{
-    height: 80%;
-    opacity: 0.1;
-    width: 100%;
-    z-index: -1;
-}
+    /* BACKGROUND */
 
-[letter]
-{
-    height: 25%;
-    margin-left: -29900%;
-    width: 30000%;
-}
+    #background
+    {
+        height: 80%;
+        opacity: 0.10;
+        overflow-x: hidden;
+        width: 100%;
+        z-index: -1;
+    }
 
-[c]
-{
-    animation: slide 1000s linear infinite;
-    background: url(../assets/img/c.jpg);
-    background-repeat: repeat-x;
-    background-size: contain;
-}
+    .letter
+    {
+        height: 25%;
+        margin-left: -29900%;
+        width: 30000%;
+    }
 
-[a]
-{
-    animation: slide 1000s 100ms linear infinite;
-    background: url(../assets/img/a.jpg);
-    background-repeat: repeat-x;
-    background-size: contain;
-}
+    #c
+    {
+        animation: slide 1000s linear infinite;
+        background: url(../assets/img/c.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
+    }
 
-[s]
-{
-    animation: slide 1000s 200ms linear infinite;
-    background: url(../assets/img/s.jpg);
-    background-repeat: repeat-x;
-    background-size: contain;
-}
+    #a
+    {
+        animation: slide 1000s 200ms linear infinite;
+        background: url(../assets/img/a.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
+    }
 
-[e]
-{
-    animation: slide 1000s 300ms linear infinite;
-    background: url(../assets/img/e.jpg);
-    background-repeat: repeat-x;
-    background-size: contain;
-}
+    #s
+    {
+        animation: slide 1000s 300ms linear infinite;
+        background: url(../assets/img/s.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
+    }
 
-[buttons]
-{
-    text-align: center;
-    height: 20%
-}
+    #e
+    {
+        animation: slide 1000s 400ms linear infinite;
+        background: url(../assets/img/e.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
+    }
 
-[buttons] button
-{
-    background-color: maroon;
-    border: solid;
-    color: blanchedalmond;
-    display: block;
-    font-size: 35px;
-    height: 50%;
-    width: 100%;
-    z-index: 100;
-}
 
-[buttons] button:hover
-{
-    background-color: hsl(0, 100%, 15%);
+    /* WELCOME MESSAGE */
+
+    #welcome
+    {
+        color: $primary;
+        display: block;
+        box-sizing: border-box;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        top: 30%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    #welcome h1
+    {
+        font-size: 3.2em;
+    }
+
+    #welcome h5
+    {
+        font-size: 1.7em;
+    }
+
+    /* BUTTONS */
+
+    #buttons
+    {
+        text-align: center;
+        height: 20%
+    }
+
+    #buttons button
+    {
+        background-color: $primary;
+        color: $secondary;
+        border: solid;
+        display: block;
+        font-size: 24px;
+        height: 50%;
+        width: 100%;
+        z-index: 100;
+    }
+
+    #buttons button:hover
+    {
+        background-color: hsl(0, 100%, 15%);
+    }
 }

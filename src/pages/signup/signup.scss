@@ -1,0 +1,88 @@
+page-signup
+{
+    ion-content
+    {
+      background-image: url(../assets/img/background.jpg);
+    }
+
+    .signup
+    {
+      margin-top: 50px;
+    }
+
+    .signup-header
+    {
+      text-align: center;
+      color: $light;
+    }
+
+    .signup form
+    {
+        text-align: center;
+    }
+
+    .signup input
+    {
+
+      padding: 20px 10px;
+      background: transparent;
+      border: none;
+      font-size: 1em;
+      color: white;
+      border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+      width: 90%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-transition: background-color 0.5s ease-in-out;
+      -o-transition: background-color 0.5s ease-in-out;
+      -webkit-transition: background-color 0.5s ease-in-out;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    .signup input::-moz-placeholder,
+    .signup input::-ms-input-placeholder,
+    .signup input::-webkit-input-placeholder
+    {
+      color: darkgray;
+    }
+
+    .signup input::focus
+    {
+      background-color: darkgray;
+    }
+
+    .signup-footer
+    {
+      margin: 10px 0;
+      overlow: hidden;
+      float: left;
+      width: 100%;
+    }
+
+    .btn
+    {
+      padding: 15px 30px;
+      border: none;
+      background: white;
+      color: #5D92BA;
+    }
+
+    .btn--right
+    {
+      float: right;
+    }
+
+    .icon
+    {
+      display: inline-block;
+    }
+
+    .lnk
+    {
+      font-size: .8em;
+      line-height: 3em;
+      color: white;
+      text-decoration: none;
+    }
+}

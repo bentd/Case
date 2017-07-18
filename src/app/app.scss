@@ -15,23 +15,32 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-@import url(https://fonts.googleapis.com/css?family=Tenor+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bellefair);
 @import url(https://necolas.github.io/normalize.css/7.0.0/normalize.css);
+
+$primary: maroon;
+$secondary: blanchedalmond;
+$danger: red;
+$light: white;
+$dark: black;
 
 *
 {
+    font-family: "Bellefair";
     margin: 0;
     padding: 0;
 }
 
-/*
-*::-webkit-scrollbar
-{
-    display: none;
-}
-*/
-
-[woodenBackground]
+.woodenBackground
 {
     background: url(../assets/img/background.jpg);
+}
+
+.button
+{
+    background-color: $primary;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px $dark;
+    color: $secondary;
+    padding: 10px 20px;
 }

@@ -1,20 +1,35 @@
-<ion-content woodenBackground>
+<ion-header>
 
-    <div container ion-fixed>
+</ion-header>
 
-        <div background>
-        <div letter c></div>
-        <div letter a></div>
-        <div letter s></div>
-        <div letter e></div>
-        </div>
 
-        <div buttons>
-        <button>Log In</button>
-        <button>Sign Up</button>
-        </div>
+<ion-content>
+
+    <div class="container" ion-fixed>
+
+            <div id="background">
+
+                <div class="letter" id="c"></div>
+                <div class="letter" id="a"></div>
+                <div class="letter" id="s"></div>
+                <div class="letter" id="e"></div>
+
+            </div>
+
+            <div id="welcome">
+
+                <h1>Welcome to Case</h1>
+                <h5>Sell your books today</h5>
+
+            </div>
+
+            <div id="buttons">
+
+                <button (click)=segueToLogIn()>Log In</button>
+                <button (click)=segueToSignUp()>Sign Up</button>
+
+            </div>
 
     </div>
-
 
 </ion-content>

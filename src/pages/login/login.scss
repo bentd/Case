@@ -1,82 +1,76 @@
 page-login
 {
-    [login]
+    ion-view.pane::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container
     {
         margin: auto;
-        width: 450px;
+        width: 90%;
     }
 
-    [container]
+    .login
     {
-        width: 500px;
-        height: 400px;
-        margin: 0 auto;
+        margin-top: 50px;
     }
 
-    [login-header]
+    .login-header
     {
-        font: 1.8em/48px "Tenor Sans", sans-serif;
-        color: white;
+        color: $primary;
+        font-size: 2em;
     }
 
-    [login] input
+    .login input
     {
+        color: $light;
         background: transparent;
         border: none;
-        border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+        border-bottom: 1px dotted $light;
         box-sizing: border-box;
-        color: white;
+        font-size: 1.3em;
         padding: 20px 10px;
         transition: background-color 0.5s ease-in-out;
         width: 100%;
-        -o-transition: background-color 0.5s ease-in-out;
-        -moz-box-sizing: border-box;
-        -moz-transition: background-color 0.5s ease-in-out;
-        -webkit-box-sizing: border-box;
-        -webkit-transition: background-color 0.5s ease-in-out;
     }
 
-    [login] input::-moz-placeholder,
-    [login] input::-ms-input-placeholder,
-    [login] input::-webkit-input-placeholder
+    .login input::-moz-placeholder,
+    .login input::-ms-input-placeholder,
+    .login input::-webkit-input-placeholder
     {
-        color: darkgray;
+        color: $dark;
     }
 
-    .input-txt:focus {
-        background-color: darkgray;
+    .login-footer
+    {
+        margin-top: 20px;
     }
 
-    .login-footer {
-        margin: 10px 0;
-        overlow: hidden;
+    #login-footer-forgot
+    {
+        display: inline-block;
         float: left;
-        width: 100%;
     }
 
-    .btn {
-        padding: 15px 30px;
-        border: none;
-        background: white;
-        color: #5D92BA;
+    #forgot-link
+    {
+        display: block;
+        padding-top: 0.5em;
     }
 
-    .btn--right {
+    #login-footer-login
+    {
+        display: inline-block;
         float: right;
     }
 
-    .icon {
-        display: inline-block;
-    }
+    #login-button
+    {
 
-    .icon--min {
-        font-size: .9em;
-    }
-
-    .lnk {
-        font-size: .8em;
-        line-height: 3em;
-        color: white;
-        text-decoration: none;
     }
 }

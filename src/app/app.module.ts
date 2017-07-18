@@ -7,23 +7,25 @@ import { NgModule } from "@angular/core";
 import { IonicApp } from "ionic-angular";
 import { IonicErrorHandler } from "ionic-angular";
 import { IonicModule } from "ionic-angular";
-// import { SplashScreen } from "@ionic-native/splash-screen";
+import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
 // Case
 import { App } from "./app.component";
-import { SplashPage } from "../pages/splash/splash";
 import { WelcomePage } from "../pages/welcome/welcome";
+import { SignupPage } from "../pages/signup/signup";
 import { LoginPage } from "../pages/login/login";
+import { ForgotPage } from "../pages/forgot/forgot";
 
 @NgModule
 ({
     declarations:
     [
         App,
-        SplashPage,
         WelcomePage,
-        LoginPage
+        SignupPage,
+        LoginPage,
+        ForgotPage,
     ],
 
     imports:
@@ -37,15 +39,16 @@ import { LoginPage } from "../pages/login/login";
     entryComponents:
     [
         App,
-        SplashPage,
         WelcomePage,
-        LoginPage
+        SignupPage,
+        LoginPage,
+        ForgotPage,
     ],
 
     providers:
     [
         StatusBar,
-        //SplashScreen,
+        SplashScreen,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })
