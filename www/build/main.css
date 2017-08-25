@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Bellefair);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(https://necolas.github.io/normalize.css/7.0.0/normalize.css);
 .ion-ios-add:before {
   content: "\f102";
@@ -27458,12 +27459,17 @@ ion-navbar.toolbar {
 }
 
 * {
-  font-family: "Bellefair";
+  font-family: "Josefin Sans";
   margin: 0;
   padding: 0;
 }
 
-.woodenBackground {
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.wooden-background {
   background: url(../assets/img/background.jpg);
 }
 
@@ -27483,15 +27489,101 @@ ion-navbar.toolbar {
   padding: 10px 20px;
 }
 
-page-login ion-view.pane::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 44px;
-  background-color: red;
+page-forgot .container {
+  padding: 20px;
+}
+
+page-forgot .forgot {
+  padding-top: 40px;
+}
+
+page-forgot .forgot-heading {
+  font: 36px;
+  color: maroon;
+}
+
+page-forgot .input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+page-forgot .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-forgot .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-forgot .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-forgot .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-forgot .login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+page-forgot .btn {
+  padding: 15px 30px;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
+}
+
+page-forgot .btn--right {
+  float: right;
+}
+
+page-forgot .icon {
+  display: inline-block;
+}
+
+page-forgot .icon--min {
+  font-size: .9em;
+}
+
+page-forgot .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+page-login {
+  /*
+    ion-view.pane::before
+    {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 44px;
+        background-color: red;
+    }
+*/
+  /*
+    .container
+    {
+        margin: auto;
+        width: 90%;
+    }
+*/
 }
 
 page-login button {
@@ -27499,13 +27591,8 @@ page-login button {
   color: maroon;
 }
 
-page-login .container {
-  margin: auto;
-  width: 90%;
-}
-
 page-login .login {
-  margin-top: 50px;
+  padding: 50px 20px;
 }
 
 page-login .login-header {
@@ -27550,17 +27637,13 @@ page-login #login-footer-login {
   float: right;
 }
 
-page-signup ion-content {
-  background-image: url(../assets/img/background.jpg);
-}
-
 page-signup .signup {
   margin-top: 50px;
 }
 
 page-signup .signup-header {
   color: maroon;
-  font-size: 2.5em;
+  font-size: 36px;
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -27653,14 +27736,9 @@ page-welcome {
   }
 }
 
-page-welcome .container {
-  height: 100%;
-  width: 100%;
-}
-
 page-welcome #background {
   height: 80%;
-  opacity: 0.30;
+  opacity: 0.09;
   overflow-x: hidden;
   width: 100%;
   z-index: -1;
@@ -27670,6 +27748,7 @@ page-welcome .letter {
   height: 25%;
   margin-left: -29900%;
   width: 30000%;
+  z-index: -2;
 }
 
 page-welcome #c {
@@ -27722,11 +27801,13 @@ page-welcome #welcome {
 }
 
 page-welcome #welcome h1 {
-  font-size: 3.2em;
+  font-size: 48px;
+  font-weight: 900;
 }
 
 page-welcome #welcome h5 {
-  font-size: 1.7em;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 page-welcome #buttons {

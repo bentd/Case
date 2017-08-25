@@ -16,6 +16,7 @@ import { WelcomePage } from "../pages/welcome/welcome";
 import { SignupPage } from "../pages/signup/signup";
 import { LoginPage } from "../pages/login/login";
 import { ForgotPage } from "../pages/forgot/forgot";
+//import { PostPage } from "../pages/post/post";
 
 @NgModule
 ({
@@ -43,6 +44,7 @@ import { ForgotPage } from "../pages/forgot/forgot";
         SignupPage,
         LoginPage,
         ForgotPage,
+        //PostPage,
     ],
 
     providers:

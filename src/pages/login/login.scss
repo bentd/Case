@@ -1,5 +1,6 @@
 page-login
 {
+/*
     ion-view.pane::before
     {
         content: "";
@@ -11,22 +12,23 @@ page-login
         height: 44px;
         background-color: red;
     }
-
+*/
     button
     {
         background-color: $secondary;
         color: $primary;
     }
 
+/*
     .container
     {
         margin: auto;
         width: 90%;
     }
-
+*/
     .login
     {
-        margin-top: 50px;
+        padding: 50px 20px;
     }
 
     .login-header

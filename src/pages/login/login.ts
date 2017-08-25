@@ -24,6 +24,6 @@ export class LoginPage
 
     segueToForgot()
     {
-        this.controller
+        this.controller.push(ForgotPage);
     }
 }

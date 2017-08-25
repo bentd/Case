@@ -1,14 +1,12 @@
 <ion-header>
 
-    <ion-navbar>
-
-    </ion-navbar>
+    <ion-navbar></ion-navbar>
 
 </ion-header>
 
-<ion-content class="woodenBackground">
+<ion-content class>
 
-    <div class="container" (swipeRight)="segueToWelcome()">
+    <div class="container wooden-background" (swipeRight)="segueToWelcome()">
 
         <div class="login">
 
@@ -21,17 +19,13 @@
 
                     <div class="login-footer">
 
-                        <div id="login-footer-forgot">
-                            <a (click)="segueToForgot()" id="forgot-link">
-                                I've Forgotten Something
-                            </a>
-                        </div>
+                    <div id="login-footer-forgot">
+                    <a (click)="segueToForgot()" id="forgot-link">I've Forgotten Something</a>
+                    </div>
 
-                        <div id="login-footer-login">
-                            <button type="submit" class="button">
-                                Log In
-                            </button>
-                        </div>
+                    <div id="login-footer-login">
+                    <button type="submit" class="button">Log In</button>
+                    </div>
 
                     </div>
 

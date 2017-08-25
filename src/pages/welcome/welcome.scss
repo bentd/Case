@@ -8,18 +8,12 @@ page-welcome
         }
     }
 
-    .container
-    {
-        height: 100%;
-        width: 100%;
-    }
-
     /* BACKGROUND */
 
     #background
     {
         height: 80%;
-        opacity: 0.30;
+        opacity: 0.09;
         overflow-x: hidden;
         width: 100%;
         z-index: -1;
@@ -30,6 +24,7 @@ page-welcome
         height: 25%;
         margin-left: -29900%;
         width: 30000%;
+        z-index: -2;
     }
 
     #c
@@ -86,12 +81,14 @@ page-welcome
 
     #welcome h1
     {
-        font-size: 3.2em;
+        font-size: 48px;
+        font-weight: 900;
     }
 
     #welcome h5
     {
-        font-size: 1.7em;
+        font-size: 32px;
+        font-weight: 400;
     }
 
     /* BUTTONS */
@@ -99,7 +96,7 @@ page-welcome
     #buttons
     {
         text-align: center;
-        height: 20%
+        height: 20%;
     }
 
     #buttons button
