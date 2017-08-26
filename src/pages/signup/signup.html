@@ -16,17 +16,17 @@
                 Create Your Account
             </h1>
 
-            <form method="post">
+            <form (ngSubmit)="createUser()" method="post">
 
-                <input type="text" name="firstName" placeholder="First Name" required="required"/>
-                <input type="text" name="lastName" placeholder="Last Name" required="required"/>
-                <input type="text" name="email" placeholder="Email Address" required="required"/>
-                <input type="text" name="user" placeholder="Username" required="required"/>
-                <input type="password" name="password" placeholder="Password" required="required"/>
-                <input type="password" name="confirmPassword" placeholder="Confirm Password" required="required"/>
+                <input [(ngModel)]="user.first" type="text"  required="required" name="first" placeholder="First Name"/>
+                <input [(ngModel)]="user.last" type="text" required="required" name="last" placeholder="Last Name" />
+                <input [(ngModel)]="user.email" type="text" name="email" placeholder="Email Address" required="required"/>
+                <input [(ngModel)]="user.username" type="text" name="username" placeholder="Username" required="required"/>
+                <input [(ngModel)]="user.password" type="password" name="password" placeholder="Password" required="required"/>
+                <input [(ngModel)]="user.verify" type="password" name="verify" placeholder="Confirm Password" required="required"/>
 
                 <div>
-                    <input type="submit">
+                    <button ion-button type="submit" block>Submit</button>
                 </div>
 
             </form>

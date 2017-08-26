@@ -2,6 +2,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { ErrorHandler } from "@angular/core";
 import { NgModule } from "@angular/core";
+// import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 // Ionic
 import { IonicApp } from "ionic-angular";
@@ -32,6 +34,7 @@ import { ForgotPage } from "../pages/forgot/forgot";
     imports:
     [
         BrowserModule,
+        HttpModule,
         IonicModule.forRoot(App)
     ],
 
