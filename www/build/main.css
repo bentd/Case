@@ -24912,6 +24912,15 @@ page-login #login-footer-login {
   float: right;
 }
 
+page-school .button-school {
+  margin: 10px;
+  background-color: maroon;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px black;
+  color: white;
+  padding: 10px 20px;
+}
+
 page-signup .signup {
   margin-top: 50px;
 }

@@ -1,4 +1,12 @@
 page-school
 {
+  .button-school {
+    margin: 10px;
+    background-color: $primary;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px $dark;
+    color: $light;
+    padding: 10px 20px;
+  }
 
 }
