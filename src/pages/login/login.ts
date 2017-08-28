@@ -6,15 +6,13 @@ import { ViewChild } from "@angular/core";
 import { NavController } from "ionic-angular";
 
 // Case
-import { WelcomePage } from "../welcome/welcome";
 import { ForgotPage } from "../forgot/forgot";
+import { SchoolPage } from "../school/school";
 
 @Component
 ({
     selector: "page-login",
     templateUrl: "login.html"
-
-
 })
 export class LoginPage
 {
@@ -25,5 +23,10 @@ export class LoginPage
     segueToForgot()
     {
         this.controller.push(ForgotPage);
+    }
+
+    segueToSchool()
+    {
+        this.controller.push(SchoolPage);
     }
 }

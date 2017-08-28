@@ -1,0 +1,28 @@
+<ion-header>
+
+    <ion-navbar></ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+    <div class="container wooden-background">
+
+        <ion-searchbar (ionInput)="filterSchools($event)"></ion-searchbar>
+
+        <ion-list>
+            <ion-item *ngFor="let school of filteredSchools" (click)="addSchool(school)">
+                {{ school.title }}
+            </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-item *ngFor="let school of selected">
+                <p>{{ school.title }}</p>
+                <ion-icon name="close-circle" (click)="removeSchool(school)"></ion-icon>
+            </ion-item>
+        </ion-list>
+
+    </div>
+
+</ion-content>

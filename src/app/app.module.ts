@@ -4,6 +4,12 @@ import { ErrorHandler } from "@angular/core";
 import { NgModule } from "@angular/core";
 // import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MdAutocompleteModule } from '@angular/material';
+import {MdInputModule} from '@angular/material';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 // Ionic
 import { IonicApp } from "ionic-angular";
@@ -18,7 +24,7 @@ import { WelcomePage } from "../pages/welcome/welcome";
 import { SignupPage } from "../pages/signup/signup";
 import { LoginPage } from "../pages/login/login";
 import { ForgotPage } from "../pages/forgot/forgot";
-//import { PostPage } from "../pages/post/post";
+import { SchoolPage } from "../pages/school/school";
 
 @NgModule
 ({
@@ -29,12 +35,20 @@ import { ForgotPage } from "../pages/forgot/forgot";
         SignupPage,
         LoginPage,
         ForgotPage,
+        SchoolPage,
     ],
 
     imports:
     [
         BrowserModule,
         HttpModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MdAutocompleteModule,
+        MdInputModule,
+        BrowserAnimationsModule,
+        MdButtonModule,
+        MdCheckboxModule,
         IonicModule.forRoot(App)
     ],
 
@@ -47,7 +61,7 @@ import { ForgotPage } from "../pages/forgot/forgot";
         SignupPage,
         LoginPage,
         ForgotPage,
-        //PostPage,
+        SchoolPage,
     ],
 
     providers:
