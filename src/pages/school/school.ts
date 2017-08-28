@@ -54,10 +54,11 @@ export class SchoolPage
 
     addSchool(school: any)
     {
-        if (this.selected.indexOf(school) != -1):
-
+        if (this.selected.indexOf(school) != -1)
+        {
             return;
-            
+        }
+
         this.selected.push(school);
     }
 
