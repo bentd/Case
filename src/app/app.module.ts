@@ -25,6 +25,7 @@ import { SignupPage } from "../pages/signup/signup";
 import { LoginPage } from "../pages/login/login";
 import { ForgotPage } from "../pages/forgot/forgot";
 import { SchoolPage } from "../pages/school/school";
+import { HomePage } from "../pages/home/home";
 
 @NgModule
 ({
@@ -36,6 +37,7 @@ import { SchoolPage } from "../pages/school/school";
         LoginPage,
         ForgotPage,
         SchoolPage,
+        HomePage,
     ],
 
     imports:
@@ -62,6 +64,7 @@ import { SchoolPage } from "../pages/school/school";
         LoginPage,
         ForgotPage,
         SchoolPage,
+        HomePage,
     ],
 
     providers:

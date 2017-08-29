@@ -24741,6 +24741,7 @@ ion-navbar.toolbar {
 
 .container {
   height: 100%;
+  overflow: auto;
   width: 100%;
 }
 
@@ -24748,7 +24749,11 @@ ion-navbar.toolbar {
   background: url(../assets/img/background.jpg);
 }
 
-.button {
+.toolbar .searchbar-ios input.searchbar-input {
+  background-color: white;
+}
+
+.case-button {
   background-color: maroon;
   border-radius: 2px;
   box-shadow: 1px 1px 1px black;
@@ -24756,7 +24761,7 @@ ion-navbar.toolbar {
   padding: 10px 20px;
 }
 
-.button-reverse {
+.case-button-reverse {
   background-color: blanchedalmond;
   border-radius: 2px;
   box-shadow: 1px 1px 1px black;
@@ -24838,27 +24843,65 @@ page-forgot .lnk {
   text-decoration: none;
 }
 
-page-login {
-  /*
-    ion-view.pane::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 44px;
-        background-color: red;
-    }
-*/
-  /*
-    .container
-    {
-        margin: auto;
-        width: 90%;
-    }
-*/
+page-home ion-card.post {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 40%;
+  padding: 5px;
+  margin: 20px auto;
+  width: 95%;
+}
+
+page-home ion-card.post div.post-image-container,
+page-home ion-card.post div.post-information-container {
+  padding: 5px;
+}
+
+page-home div.post-image-container {
+  position: relative;
+  width: 45%;
+}
+
+page-home div.post-image {
+  left: 50%;
+  min-height: calc(100% - 5px);
+  min-width: calc(100% - 5px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+page-home div.post-information-container {
+  text-align: center;
+  width: 55%;
+}
+
+page-home h1.post-title {
+  font-size: 16px;
+  height: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+page-home p.post-description {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+}
+
+page-home ion-col.col,
+page-home button.footer-button,
+page-home ion-icon.post-icon,
+page-home div.post-price,
+page-home div.post-contact {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 
 page-login button {
@@ -24912,13 +24955,30 @@ page-login #login-footer-login {
   float: right;
 }
 
-page-school .button-school {
-  margin: 10px;
+page-school ion-searchbar.searchbar-school {
+  background-color: white;
+  border: 0;
+  margin-bottom: 2px;
+}
+
+page-school ion-chip.selected {
   background-color: maroon;
-  border-radius: 2px;
-  box-shadow: 1px 1px 1px black;
   color: white;
-  padding: 10px 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto;
+  padding: auto;
+  width: 75%;
+}
+
+page-school button.case-button-submit {
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
 }
 
 page-signup .signup {

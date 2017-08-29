@@ -1,0 +1,69 @@
+page-home
+{
+    ion-card.post
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 40%;
+        padding: 5px;
+        margin: 20px auto;
+        width: 95%;
+    }
+
+    ion-card.post div.post-image-container,
+    ion-card.post div.post-information-container
+    {
+        padding: 5px;
+    }
+
+    div.post-image-container
+    {
+        position: relative;
+        width: 45%;
+    }
+
+    div.post-image
+    {
+        //background-attachment: fixed;
+        //background-position: center center;
+        //background-repeat: no-repeat;
+        left: 50%;
+        min-height: calc(100% - 5px);
+        min-width: calc(100% - 5px);
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    div.post-information-container
+    {
+        text-align: center;
+        width: 55%;
+    }
+
+    h1.post-title
+    {
+        font-size: 16px;
+        height: 25%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    p.post-description
+    {
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+    }
+
+    ion-col.col,
+    button.footer-button,
+    ion-icon.post-icon,
+    div.post-price,
+    div.post-contact
+    {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+}

@@ -1,31 +1,11 @@
 page-login
 {
-/*
-    ion-view.pane::before
-    {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 44px;
-        background-color: red;
-    }
-*/
     button
     {
         background-color: $secondary;
         color: $primary;
     }
 
-/*
-    .container
-    {
-        margin: auto;
-        width: 90%;
-    }
-*/
     .login
     {
         padding: 50px 20px;

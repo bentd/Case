@@ -35,6 +35,7 @@ $dark: black;
 .container
 {
     height: 100%;
+    overflow: auto;
     width: 100%;
 }
 
@@ -43,7 +44,12 @@ $dark: black;
     background: url(../assets/img/background.jpg);
 }
 
-.button
+.toolbar .searchbar-ios input.searchbar-input
+{
+    background-color: $light;
+}
+
+.case-button
 {
     background-color: $primary;
     border-radius: 2px;
@@ -52,7 +58,7 @@ $dark: black;
     padding: 10px 20px;
 }
 
-.button-reverse
+.case-button-reverse
 {
     background-color: $secondary;
     border-radius: 2px;

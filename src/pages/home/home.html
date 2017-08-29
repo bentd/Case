@@ -1,0 +1,61 @@
+<ion-header>
+
+    <ion-navbar>
+
+
+    </ion-navbar>
+
+    <ion-toolbar>
+        <ion-searchbar class="searchbar-school" placeholder="Search for book, course number, author.."></ion-searchbar>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+    <div class="container wooden-background">
+
+        <ion-card class="post" *ngFor="let post of posts">
+
+            <div class="post-image-container">
+
+                <div class="post-image" [style.background-image]="'url(' + post.image + ')'"></div>
+
+            </div>
+
+            <div class="post-information-container">
+
+                <h1 class="post-title">{{ post.title }}</h1>
+                <br>
+
+                <p class="post-description">{{ post.description }}</p>
+                <br>
+
+                <p class="post-condition">{{ post.condition }}</p>
+                <br>
+
+                <ion-row>
+
+                <ion-col col-4>
+                <button class="footer-button" ion-button icon-left clear small>
+                <ion-icon class="post-icon" name="pricetag"></ion-icon>
+                <div class="post-price">{{ post.price }}</div>
+                </button>
+                </ion-col>
+
+                <ion-col col-8>
+                <button class="footer-button" ion-button icon-left clear small>
+                <ion-icon class="post-icon" name="contact"></ion-icon>
+                <div class="post-contact">Contact</div>
+                </button>
+                </ion-col>
+
+                </ion-row>
+            </div>
+
+
+        </ion-card>
+
+    </div>
+
+</ion-content>

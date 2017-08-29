@@ -1,12 +1,33 @@
 page-school
 {
-  .button-school {
-    margin: 10px;
-    background-color: $primary;
-    border-radius: 2px;
-    box-shadow: 1px 1px 1px $dark;
-    color: $light;
-    padding: 10px 20px;
-  }
+    ion-searchbar.searchbar-school
+    {
+            background-color: white;
+            border: 0;
+            margin-bottom: 2px;
+    }
 
+    ion-chip.selected
+    {
+        background-color: $primary;
+        color: $light;
+        display: flex;
+        margin: 10px auto;
+        padding: auto;
+        width: 75%;
+    }
+
+    ion-label
+    {
+
+    }
+
+    button.case-button-submit
+    {
+        bottom: 20px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 90%;
+    }
 }

@@ -17,6 +17,7 @@ import 'rxjs/add/operator/map';
 import { NavController } from "ionic-angular";
 
 // Case
+import { HomePage } from "../home/home";
 import { schoolsList } from "./schools";
 
 @Component
@@ -71,7 +72,7 @@ export class SchoolPage
     {
         let search = event.target.value;
 
-        this.filteredSchools = search ? this.schools.filter(s => this.filter(s, search)) : [];
+        this.filteredSchools = search ? this.schools.filter(s => this.filter(s, search)).slice(0, 7) : [];
     }
 
     filter(school: any, search: String)
@@ -89,10 +90,8 @@ export class SchoolPage
         return school.abbr.toLowerCase().indexOf(abbr.toLowerCase()) === 0
     }
 
-/*
-    segueToWhereever()
+    segueToHome()
     {
-        this.controller.setRoot(Wherever);
+        this.controller.setRoot(HomePage);
     }
-*/
 }

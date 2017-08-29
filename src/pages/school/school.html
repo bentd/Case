@@ -2,22 +2,18 @@
 
     <ion-navbar></ion-navbar>
 
+    <ion-toolbar>
+        <ion-searchbar (ionInput)="filterSchools($event)" class="searchbar-school" placeholder="Please search for your school(s)"></ion-searchbar>
+    </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
 
-    <div ion-fixed style="height:0;"></div>
-
     <div class="container wooden-background">
 
-<<<<<<< Updated upstream
+        <!--<h1 class="school-heading"> Please choose a school(s) </h1>-->
 
-        <h1 class="school-heading"> Please choose a school(s) </h1>
-=======
-        <h1 class="school-heading">Please choose a school(s)</h1>
-
->>>>>>> Stashed changes
-        <ion-searchbar (ionInput)="filterSchools($event)"></ion-searchbar>
 
         <ion-list>
             <ion-item *ngFor="let school of filteredSchools" (click)="addSchool(school)">
@@ -26,12 +22,13 @@
         </ion-list>
 
         <ion-list>
-            <ion-item *ngFor="let school of selected">
-                <p>{{ school.title }}</p>
+            <ion-chip class="selected" *ngFor="let school of selected">
+                <ion-label>{{ school.title }}</ion-label>
                 <ion-icon name="close-circle" (click)="removeSchool(school)"></ion-icon>
-            </ion-item>
+            </ion-chip>
         </ion-list>
-        <button type="submit" class="button-school">Submit</button>
+
+        <button (click)="segueToHome()" type="submit" class="case-button case-button-submit">Submit</button>
 
     </div>
 
