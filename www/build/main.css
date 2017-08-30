@@ -24889,9 +24889,8 @@ page-home h1.post-title {
   white-space: nowrap;
 }
 
-page-home p.post-description {
-  text-overflow: -o-ellipsis-lastline;
-  overflow: hidden;
+page-home ion-row.post-footer-container {
+  height: 10%;
 }
 
 page-home ion-col.col,

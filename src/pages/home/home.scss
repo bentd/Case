@@ -52,8 +52,12 @@ page-home
 
     p.post-description
     {
-        text-overflow: -o-ellipsis-lastline;
-        overflow: hidden;
+    }
+
+
+    ion-row.post-footer-container
+    {
+        height: 10%;
     }
 
     ion-col.col,
