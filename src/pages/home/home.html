@@ -2,6 +2,8 @@
 
     <ion-navbar>
 
+      <ion-icon (click)="segueToSchool()" class='changeSchool' name="md-school"> Change School</ion-icon>
+      <ion-icon (click)="segueToSettings()" class='settings' name="md-settings"></ion-icon>
 
     </ion-navbar>
 
@@ -28,10 +30,10 @@
                 <h1 class="post-title">{{ post.title }}</h1>
                 <br>
 
-                <p class="post-description">{{ post.description }}</p>
+                <p class="post-condition">{{ post.condition }}</p>
                 <br>
 
-                <p class="post-condition">{{ post.condition }}</p>
+                <p class="post-description">{{ post.description }}</p>
                 <br>
 
                 <ion-row class="post-footer-container">
@@ -44,7 +46,7 @@
                 </ion-col>
 
                 <ion-col col-8>
-                <button class="footer-button" ion-button icon-left clear small>
+                <button (click)="showRadio()" class="footer-button" ion-button icon-left clear small>
                 <ion-icon class="post-icon" name="contact"></ion-icon>
                 <div class="post-contact">Contact</div>
                 </button>

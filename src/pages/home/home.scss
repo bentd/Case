@@ -1,5 +1,16 @@
 page-home
 {
+    .changeSchool
+    {
+      float: left;
+      margin-left: 2vw;
+    }
+
+    .settings
+    {
+      float: right;
+      margin-right: 2vw;
+    }
     ion-card.post
     {
         display: flex;
@@ -43,11 +54,9 @@ page-home
 
     h1.post-title
     {
-        font-size: 16px;
+        font-size: 5vw;
         height: 25%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+
     }
 
     p.post-description

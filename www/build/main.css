@@ -24843,6 +24843,16 @@ page-forgot .lnk {
   text-decoration: none;
 }
 
+page-home .changeSchool {
+  float: left;
+  margin-left: 2vw;
+}
+
+page-home .settings {
+  float: right;
+  margin-right: 2vw;
+}
+
 page-home ion-card.post {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24882,11 +24892,8 @@ page-home div.post-information-container {
 }
 
 page-home h1.post-title {
-  font-size: 16px;
+  font-size: 5vw;
   height: 25%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 page-home ion-row.post-footer-container {
@@ -25144,13 +25151,13 @@ page-welcome #welcome {
 }
 
 page-welcome #welcome h1 {
-  font-size: 49px;
-  font-weight: 900;
+  font-size: 11.5vw;
+  font-weight: 699;
 }
 
 page-welcome #welcome h5 {
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 6.5vw;
+  font-weight: 120;
 }
 
 page-welcome #buttons {

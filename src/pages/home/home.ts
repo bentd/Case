@@ -4,9 +4,13 @@ import { Component } from "@angular/core";
 
 // Ionic
 import { NavController } from "ionic-angular";
+import { AlertController } from 'ionic-angular';
 
 // Case
 //import { WelcomePage } from "../welcome/welcome";
+import { SchoolPage } from "../school/school";
+import { SettingsPage } from "../settings/settings";
+
 
 @Component
 ({
@@ -16,9 +20,12 @@ import { NavController } from "ionic-angular";
 export class HomePage
 {
 
+    testRadioOpen: boolean;
+    testRadioResult;
+
     posts: Array<any> = [];
 
-    constructor(public controller: NavController)
+    constructor(public controller: NavController, public alertCtrl: AlertController)
     {
         this.initializePosts();
     }
@@ -30,7 +37,7 @@ export class HomePage
             title: "Student's Book of College English",
             image: "../assets/img/books/english.jpg",
             description: "This book is essential for both ENC1101 and ENC1102! You really need to get this book to be successful!",
-            condition: "Decent",
+            condition: "Condition: Decent",
             price: 12.99
         };
 
@@ -56,6 +63,38 @@ export class HomePage
         this.posts.push(post2);
         this.posts.push(post3);
         console.log(this.posts);
+    }
+
+    showRadio() {
+      let alert = this.alertCtrl.create();
+    alert.setTitle('Lightsaber color');
+
+    alert.addInput({
+      type: 'radio',
+      label: 'Blue',
+      value: 'blue',
+      checked: true
+    });
+
+    alert.addButton('Cancel');
+    alert.addButton({
+      text: 'OK',
+      handler: data => {
+        this.testRadioOpen = false;
+        this.testRadioResult = data;
+      }
+    });
+    alert.present();
+    }
+
+    segueToSchool()
+    {
+      this.controller.setRoot(SchoolPage);
+    }
+
+    segueToSettings()
+    {
+      this.controller.setRoot(SettingsPage);
     }
 
 /*

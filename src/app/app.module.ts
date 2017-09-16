@@ -26,6 +26,7 @@ import { LoginPage } from "../pages/login/login";
 import { ForgotPage } from "../pages/forgot/forgot";
 import { SchoolPage } from "../pages/school/school";
 import { HomePage } from "../pages/home/home";
+import { SettingsPage } from "../pages/settings/settings";
 
 @NgModule
 ({
@@ -38,6 +39,7 @@ import { HomePage } from "../pages/home/home";
         ForgotPage,
         SchoolPage,
         HomePage,
+        SettingsPage,
     ],
 
     imports:
@@ -65,6 +67,7 @@ import { HomePage } from "../pages/home/home";
         ForgotPage,
         SchoolPage,
         HomePage,
+        SettingsPage
     ],
 
     providers:
