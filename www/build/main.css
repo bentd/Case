@@ -24853,6 +24853,11 @@ page-home .settings {
   margin-right: 2vw;
 }
 
+page-home .postButton {
+  float: right;
+  margin: 3vw;
+}
+
 page-home ion-card.post {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24860,10 +24865,10 @@ page-home ion-card.post {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  height: 40%;
+  height: 60vw;
   padding: 5px;
   margin: 20px auto;
-  width: 95%;
+  width: 95vw;
 }
 
 page-home ion-card.post div.post-image-container,
@@ -24873,7 +24878,7 @@ page-home ion-card.post div.post-information-container {
 
 page-home div.post-image-container {
   position: relative;
-  width: 45%;
+  width: 45vw;
 }
 
 page-home div.post-image {
@@ -24888,16 +24893,16 @@ page-home div.post-image {
 
 page-home div.post-information-container {
   text-align: center;
-  width: 55%;
+  width: 55vw;
 }
 
 page-home h1.post-title {
   font-size: 5vw;
-  height: 25%;
+  height: 10vw;
 }
 
 page-home ion-row.post-footer-container {
-  height: 10%;
+  height: 10vw;
 }
 
 page-home ion-col.col,
@@ -24907,7 +24912,7 @@ page-home div.post-price,
 page-home div.post-contact {
   margin: 0;
   padding: 0;
-  max-width: 100%;
+  max-width: 105vw;
 }
 
 page-login button {
@@ -24961,6 +24966,20 @@ page-login #login-footer-login {
   float: right;
 }
 
+page-post .bookPic {
+  height: 50vw;
+  margin: 0 auto;
+  width: 40vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  background-color: black;
+}
+
+page-post .submitButton {
+  float: right;
+  margin: 3vw;
+}
+
 page-school ion-searchbar.searchbar-school {
   background-color: white;
   border: 0;
@@ -24985,6 +25004,52 @@ page-school button.case-button-submit {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 90%;
+}
+
+page-settings .profilePic {
+  height: 50vw;
+  margin: 0 auto;
+  width: 50vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  background-color: black;
+  border-radius: 30vw;
+}
+
+page-settings .takePhoto {
+  width: 100vw;
+  margin-bottom: 3vw;
+  margin-top: 5vw;
+}
+
+page-settings .logoutButton {
+  width: 100vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+
+page-settings .changeEmail {
+  width: 100vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+
+page-settings .changePassword {
+  width: 100vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+
+page-settings .deleteAccount {
+  width: 100vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+
+page-settings .takePhoto {
+  width: 100vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
 }
 
 page-signup .signup {

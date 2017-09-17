@@ -11,14 +11,21 @@ page-home
       float: right;
       margin-right: 2vw;
     }
+
+    .postButton
+    {
+      float: right;
+      margin: 3vw;
+    }
+
     ion-card.post
     {
         display: flex;
         flex-wrap: nowrap;
-        height: 40%;
+        height: 60vw;
         padding: 5px;
         margin: 20px auto;
-        width: 95%;
+        width: 95vw;
     }
 
     ion-card.post div.post-image-container,
@@ -30,7 +37,7 @@ page-home
     div.post-image-container
     {
         position: relative;
-        width: 45%;
+        width: 45vw;
     }
 
     div.post-image
@@ -49,13 +56,13 @@ page-home
     div.post-information-container
     {
         text-align: center;
-        width: 55%;
+        width: 55vw;
     }
 
     h1.post-title
     {
         font-size: 5vw;
-        height: 25%;
+        height: 10vw;
 
     }
 
@@ -66,7 +73,7 @@ page-home
 
     ion-row.post-footer-container
     {
-        height: 10%;
+        height: 10vw;
     }
 
     ion-col.col,
@@ -77,6 +84,6 @@ page-home
     {
         margin: 0;
         padding: 0;
-        max-width: 100%;
+        max-width: 105vw;
     }
 }

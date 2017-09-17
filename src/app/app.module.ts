@@ -27,6 +27,7 @@ import { ForgotPage } from "../pages/forgot/forgot";
 import { SchoolPage } from "../pages/school/school";
 import { HomePage } from "../pages/home/home";
 import { SettingsPage } from "../pages/settings/settings";
+import { PostPage } from "../pages/post/post";
 
 @NgModule
 ({
@@ -40,6 +41,7 @@ import { SettingsPage } from "../pages/settings/settings";
         SchoolPage,
         HomePage,
         SettingsPage,
+        PostPage,
     ],
 
     imports:
@@ -67,7 +69,8 @@ import { SettingsPage } from "../pages/settings/settings";
         ForgotPage,
         SchoolPage,
         HomePage,
-        SettingsPage
+        SettingsPage,
+        PostPage,
     ],
 
     providers:

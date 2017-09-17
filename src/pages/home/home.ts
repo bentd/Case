@@ -10,6 +10,7 @@ import { AlertController } from 'ionic-angular';
 //import { WelcomePage } from "../welcome/welcome";
 import { SchoolPage } from "../school/school";
 import { SettingsPage } from "../settings/settings";
+import { PostPage } from "../post/post";
 
 
 @Component
@@ -78,7 +79,7 @@ export class HomePage
 
     alert.addButton('Cancel');
     alert.addButton({
-      text: 'OK',
+      text: 'Send Email',
       handler: data => {
         this.testRadioOpen = false;
         this.testRadioResult = data;
@@ -94,7 +95,12 @@ export class HomePage
 
     segueToSettings()
     {
-      this.controller.setRoot(SettingsPage);
+      this.controller.push(SettingsPage);
+    }
+
+    segueToPost()
+    {
+      this.controller.push(PostPage);
     }
 
 /*
