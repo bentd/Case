@@ -24844,18 +24844,22 @@ page-forgot .lnk {
 }
 
 page-home .changeSchool {
+  color: white;
   float: left;
   margin-left: 2vw;
 }
 
 page-home .settings {
   float: right;
-  margin-right: 2vw;
+  margin-right: 3vw;
+  color: white;
+  font-size: 5vw;
 }
 
 page-home .postButton {
   float: right;
   margin: 3vw;
+  padding: 5vw;
 }
 
 page-home ion-card.post {
@@ -24865,7 +24869,7 @@ page-home ion-card.post {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  height: 60vw;
+  height: 60hw;
   padding: 5px;
   margin: 20px auto;
   width: 95vw;
@@ -24898,11 +24902,11 @@ page-home div.post-information-container {
 
 page-home h1.post-title {
   font-size: 5vw;
-  height: 10vw;
+  height: 10hw;
 }
 
 page-home ion-row.post-footer-container {
-  height: 10vw;
+  height: 10hw;
 }
 
 page-home ion-col.col,
@@ -24975,9 +24979,22 @@ page-post .bookPic {
   background-color: black;
 }
 
+page-post .photoButton {
+  margin: 5vw;
+  margin-left: 36vw;
+}
+
 page-post .submitButton {
   float: right;
   margin: 3vw;
+}
+
+page-post .condition {
+  color: darkred;
+}
+
+page-post .title, page-post .condition, page-post .description, page-post .price {
+  background-color: transparent;
 }
 
 page-school ion-searchbar.searchbar-school {

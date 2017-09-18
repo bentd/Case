@@ -13,12 +13,23 @@ page-post
 
   .photoButton
   {
-
+    margin: 5vw;
+    margin-left: 36vw;
   }
 
   .submitButton
   {
     float: right;
     margin: 3vw;
+  }
+
+  .condition
+  {
+    color: darkred;
+  }
+
+  .title, .condition, .description, .price
+  {
+    background-color: transparent;
   }
 }

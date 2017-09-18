@@ -2,6 +2,7 @@ page-home
 {
     .changeSchool
     {
+      color: white;
       float: left;
       margin-left: 2vw;
     }
@@ -9,20 +10,24 @@ page-home
     .settings
     {
       float: right;
-      margin-right: 2vw;
+      margin-right: 3vw;
+      color: white;
+      font-size: 5vw;
+
     }
 
     .postButton
     {
       float: right;
       margin: 3vw;
+      padding: 5vw;
     }
 
     ion-card.post
     {
         display: flex;
         flex-wrap: nowrap;
-        height: 60vw;
+        height: 60hw;
         padding: 5px;
         margin: 20px auto;
         width: 95vw;
@@ -62,7 +67,7 @@ page-home
     h1.post-title
     {
         font-size: 5vw;
-        height: 10vw;
+        height: 10hw;
 
     }
 
@@ -73,7 +78,7 @@ page-home
 
     ion-row.post-footer-container
     {
-        height: 10vw;
+        height: 10hw;
     }
 
     ion-col.col,

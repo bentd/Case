@@ -70,6 +70,7 @@ export class HomePage
       let alert = this.alertCtrl.create();
     alert.setTitle('Lightsaber color');
 
+
     alert.addInput({
       type: 'radio',
       label: 'Blue',

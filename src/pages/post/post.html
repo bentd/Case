@@ -12,22 +12,32 @@
 
       <button class="photoButton case-button" >Take Photo</button>
 
-      <ion-item>
+      <ion-item class="title">
        <ion-label color="primary" stacked>Title</ion-label>
-       <ion-input type="email" placeholder="Book Title"></ion-input>
+       <ion-input type="title" placeholder="Book Title"></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item class="condition">
+        <ion-label>Condition</ion-label>
+        <ion-select [(ngModel)]="condition">
+          <ion-option value="New">New</ion-option>
+          <ion-option value="Like New">Like New</ion-option>
+          <ion-option value="Acceptable">Acceptable</ion-option>
+          <ion-option value="Used">Used</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="description">
        <ion-label color="primary" stacked>Description</ion-label>
-       <ion-input type="email" placeholder="This can include author, course number, instructor, etc.."></ion-input>
+       <ion-input type="description" placeholder="This can include author, course number, instructor, etc.."></ion-input>
       </ion-item>
 
-      <ion-item>
+      <ion-item class="price">
       <ion-label color="primary" stacked>Price</ion-label>
       <ion-input type="number" placeholder="Price"></ion-input>
       </ion-item>
 
-        <button class="submitButton case-button" >Submit</button>
+        <button (click)="showRadio()" class="submitButton case-button" >Submit</button>
 
     </div>
 
