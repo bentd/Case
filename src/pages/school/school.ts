@@ -37,7 +37,7 @@ export class SchoolPage
     abbrs: Array<String> = [];
     foo: Array<String> = ["apple", "banana"];
 
-    selected: Array<{title: String, abbr: String}> = [];
+    selected: {title: String, abbr: String};
 
     constructor(public controller: NavController)
     {
@@ -60,7 +60,7 @@ export class SchoolPage
             return;
         }
 
-        this.selected.push(school);
+        this.selected = school;
     }
 
     removeSchool(school: any)

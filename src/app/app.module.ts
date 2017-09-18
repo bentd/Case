@@ -41,7 +41,10 @@ import { PostPage } from "../pages/post/post";
         SchoolPage,
         HomePage,
         SettingsPage,
+<<<<<<< Updated upstream
         PostPage,
+=======
+>>>>>>> Stashed changes
     ],
 
     imports:
@@ -69,8 +72,12 @@ import { PostPage } from "../pages/post/post";
         ForgotPage,
         SchoolPage,
         HomePage,
+<<<<<<< Updated upstream
         SettingsPage,
         PostPage,
+=======
+        SettingsPage
+>>>>>>> Stashed changes
     ],
 
     providers:

@@ -18,12 +18,11 @@
 
             <form (ngSubmit)="createUser()" method="post">
 
-                <input [(ngModel)]="user.first" type="text"  required="required" name="first" placeholder="First Name"/>
-                <input [(ngModel)]="user.last" type="text" required="required" name="last" placeholder="Last Name" />
+                <input [(ngModel)]="user.firstName" type="text"  required="required" name="first" placeholder="First Name"/>
+                <input [(ngModel)]="user.lastName" type="text" required="required" name="last" placeholder="Last Name" />
                 <input [(ngModel)]="user.email" type="text" name="email" placeholder="Email Address" required="required"/>
-                <input [(ngModel)]="user.username" type="text" name="username" placeholder="Username" required="required"/>
                 <input [(ngModel)]="user.password" type="password" name="password" placeholder="Password" required="required"/>
-                <input [(ngModel)]="user.verify" type="password" name="verify" placeholder="Confirm Password" required="required"/>
+                <input [(ngModel)]="user.confirm" type="password" name="confirm" placeholder="Confirm Password" required="required"/>
 
                 <div>
                     <button ion-button block type="submit">Submit</button>
