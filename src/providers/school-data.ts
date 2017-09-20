@@ -10,15 +10,19 @@ export class SchoolData
 {
     constructor(public events: Events, public storage: Storage) { }
 
-    setSchool(school_id: number)
+    setSchool(school: any)
     {
-        this.storage.set("school_id", school_id);
+        this.storage.set("school", school);
     }
 
-    getSchool(): Promise<string>
+    getSchool(): Promise<any>
     {
-        return this.storage.get("school_id").then((school_id) => { return school_id; });
+        return this.storage.get("school").then((school) => { return school; });
     }
 
-
+    removeSchool()
+    {
+        //this.storage.clear();
+        this.storage.remove("school");
+    }
 }

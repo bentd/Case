@@ -27,10 +27,11 @@ page-home
     {
         display: flex;
         flex-wrap: nowrap;
-        height: 60hw;
         padding: 5px;
+        position: relative;
         margin: 20px auto;
         width: 95vw;
+        height: 57vw;
     }
 
     ion-card.post div.post-image-container,
@@ -51,15 +52,24 @@ page-home
         //background-position: center center;
         //background-repeat: no-repeat;
         left: 50%;
-        min-height: calc(100% - 5px);
-        min-width: calc(100% - 5px);
+        min-height: calc(90vw - 5px);
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
     }
 
+    img.post-image
+    {
+        max-height: calc(100% - 10px);
+        max-width: calc(100% - 10px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     div.post-information-container
     {
+        position: relative;
         text-align: center;
         width: 55vw;
     }
@@ -78,7 +88,9 @@ page-home
 
     ion-row.post-footer-container
     {
+        bottom: 0;
         height: 10hw;
+        position: absolute;
     }
 
     ion-col.col,

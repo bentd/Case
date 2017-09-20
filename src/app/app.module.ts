@@ -17,8 +17,9 @@ import { IonicErrorHandler } from "ionic-angular";
 import { IonicModule } from "ionic-angular";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
+import { IonicStorageModule } from '@ionic/storage';
 
-// Case
+// Case Module
 import { App } from "./app.component";
 import { WelcomePage } from "../pages/welcome/welcome";
 import { SignupPage } from "../pages/signup/signup";
@@ -28,6 +29,11 @@ import { SchoolPage } from "../pages/school/school";
 import { HomePage } from "../pages/home/home";
 import { SettingsPage } from "../pages/settings/settings";
 import { PostPage } from "../pages/post/post";
+
+// Case providers
+import { SchoolData } from "../providers/school-data";
+
+
 
 @NgModule
 ({
@@ -41,10 +47,7 @@ import { PostPage } from "../pages/post/post";
         SchoolPage,
         HomePage,
         SettingsPage,
-<<<<<<< Updated upstream
         PostPage,
-=======
->>>>>>> Stashed changes
     ],
 
     imports:
@@ -58,7 +61,8 @@ import { PostPage } from "../pages/post/post";
         BrowserAnimationsModule,
         MdButtonModule,
         MdCheckboxModule,
-        IonicModule.forRoot(App)
+        IonicModule.forRoot(App),
+        IonicStorageModule.forRoot()
     ],
 
     bootstrap: [IonicApp],
@@ -72,18 +76,16 @@ import { PostPage } from "../pages/post/post";
         ForgotPage,
         SchoolPage,
         HomePage,
-<<<<<<< Updated upstream
         SettingsPage,
         PostPage,
-=======
         SettingsPage
->>>>>>> Stashed changes
     ],
 
     providers:
     [
         StatusBar,
         SplashScreen,
+        SchoolData,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })

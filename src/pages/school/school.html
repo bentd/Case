@@ -2,7 +2,7 @@
 
     <ion-navbar></ion-navbar>
 
-    <ion-toolbar>
+    <ion-toolbar class="toolbar-school">
         <ion-searchbar (ionInput)="filterSchools($event)" class="searchbar-school" placeholder="Please search for your school(s)"></ion-searchbar>
     </ion-toolbar>
 
@@ -17,14 +17,14 @@
 
         <ion-list>
             <ion-item *ngFor="let school of filteredSchools" (click)="addSchool(school)">
-                {{ school.title }}
+                {{ school.name }}
             </ion-item>
         </ion-list>
 
         <ion-list>
-            <ion-chip class="selected" *ngFor="let school of selected">
-                <ion-label>{{ school.title }}</ion-label>
-                <ion-icon name="close-circle" (click)="removeSchool(school)"></ion-icon>
+            <ion-chip class="selected" *ngIf="selected">
+                <ion-label >{{ selected.name }}</ion-label>
+                <ion-icon name="close-circle" (click)="removeSchool(selected)"></ion-icon>
             </ion-chip>
         </ion-list>
 

@@ -1,10 +1,19 @@
 page-school
 {
+
+    ion-toolbar.toolbar-school
+    {
+        border-color: inherit;
+        border-style: none;
+        box-shadow: 0;
+    }
+
     ion-searchbar.searchbar-school
     {
             background-color: white;
             border: 0;
             margin-bottom: 2px;
+            box-shadow: 0;
     }
 
     ion-chip.selected

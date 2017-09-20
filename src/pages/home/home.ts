@@ -1,22 +1,26 @@
 // Angular
 import { Component } from "@angular/core";
-//import { ViewChild } from "@angular/core";
+import { Http } from '@angular/http';
+import { Headers } from '@angular/http';
 
 // Ionic
 import { NavController } from "ionic-angular";
 import { AlertController } from 'ionic-angular';
 
-// Case
-//import { WelcomePage } from "../welcome/welcome";
+// Case Modules
 import { SchoolPage } from "../school/school";
 import { SettingsPage } from "../settings/settings";
 import { PostPage } from "../post/post";
+
+// Case Providers
+import { SchoolData } from "../../providers/school-data";
 
 
 @Component
 ({
     selector: "page-home",
-    templateUrl: "home.html"
+    templateUrl: "home.html",
+    providers: [SchoolData]
 })
 export class HomePage
 {
@@ -24,11 +28,34 @@ export class HomePage
     testRadioOpen: boolean;
     testRadioResult;
 
+    school: any;
+
     posts: Array<any> = [];
 
-    constructor(public controller: NavController, public alertCtrl: AlertController)
+    constructor(public controller: NavController, public alertCtrl: AlertController, public schoolData: SchoolData, public http: Http)
     {
-        this.initializePosts();
+        this.initializePosts();        
+        this.schoolData.getSchool().then((school: any) => // GET SCHOOL ID
+        {
+            console.log(school);
+            console.log(school.id);
+            this.school = school;
+        }).then(() => // GET POSTS FROM SCHOOL
+        {
+            var headers = new Headers();
+            headers.append("Authorization", "Basic " + btoa("eyJhbGciOiJIUzI1NiIsImV4cCI6MTUwNTg3NjU3MiwiaWF0IjoxNTA1ODcyOTcyfQ.eyJlbWFpbCI6ImJlbnRkQG91dGxvb2suY29tIn0.K04R6kU5hSCK_8c-fDg-JWdmbMi2WDM4faRLntXTBDQ:"));
+            this.http.get("http://localhost:5000/posts", {headers: headers, params: {school_id: this.school.id}}).subscribe((response) =>
+            {
+                var posts = response.json()
+                console.log(posts);
+                for (var post in posts)
+                {
+                    this.posts.push(posts[post]);
+                }
+            })
+        });
+
+
     }
 
     initializePosts()
