@@ -61,8 +61,24 @@ import { SchoolData } from "../providers/school-data";
         BrowserAnimationsModule,
         MdButtonModule,
         MdCheckboxModule,
+        /*
+        IonicModule.forRoot(App, {}, // { locationStrategy: "path" },
+        {
+            links:
+            [
+                { component: WelcomePage, segment: "welcome" },
+                { component: SignupPage, segment: "signup" },
+                { component: LoginPage, segment: "login" },
+                { component: ForgotPage, segment: "forgot" },
+                { component: SchoolPage, segment: "school" },
+                { component: HomePage, segment: "home" },
+                { component: SettingsPage, segment: "settings" },
+                { component: PostPage, segment: "post" }
+            ]
+        }),
+        */
         IonicModule.forRoot(App),
-        IonicStorageModule.forRoot()
+        IonicStorageModule.forRoot(),
     ],
 
     bootstrap: [IonicApp],

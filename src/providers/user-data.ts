@@ -8,21 +8,44 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class SchoolData
 {
+    LOGGED_IN = "loggedIn";
+    EMAIL = "email";
+    FIRST_NAME = "firstName";
+    LAST_NAME = "lastName";
+    TOKEN = "token";
+    CONFIRMED = "confirmed";
+
     constructor(public events: Events, public storage: Storage) { }
 
-    login(){}
+    login(email: string,
+          confirmed: boolean)
+    {
+        this.storage.set(this.LOGGED_IN, true);
 
-    logout(){}
+        //this.events.publish("user:login");
 
-    createAccount(){}
+        // PLACE IN APP COMPONENT METHOD THAT GETS CALLED IN CONSTRUCTOR
+        //this.events.subscribe('user:login', () => {
+        //  this.enableMenu(true);
+        //});
+    }
 
-    deleteAccount(){}
+    logout()
+    {
+        this.storage.remove(this.LOGGED_IN);
+        this.storage.remove(this.TOKEN);
+    }
 
-    changeEmail(){}
+    setToken(token: string)
+    {
+        this.storage.set(this.TOKEN, token);
+    }
 
-    changePassword(){}
-
-    setToken(){}
-
-    getToken(){}
+    getToken(): Promise<string>
+    {
+        return this.storage.get(this.TOKEN).then((token) =>
+        {
+            return token;
+        })
+    }
 }

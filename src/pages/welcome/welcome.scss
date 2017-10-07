@@ -8,21 +8,35 @@ page-welcome
         }
     }
 
-    /* BACKGROUND */
+    /* MAIN */
 
-    #background
+    main
     {
         height: 80%;
-        opacity: 0.09;
         overflow-x: hidden;
+        position: relative;
         width: 100%;
         z-index: -1;
     }
+
+    main img
+    {
+        left: 50%;
+        opacity: 0.5;
+        position: absolute;
+        top: 68%;
+        transform: translate(-50%);
+        width: 20vw;
+        z-index: -100;
+    }
+
+    /* BACKGROUND */
 
     .letter
     {
         height: 25%;
         margin-left: -29900%;
+        opacity: 0.09;
         width: 30000%;
         z-index: -2;
     }
@@ -66,7 +80,7 @@ page-welcome
 
     /* WELCOME MESSAGE */
 
-    #welcome
+    header
     {
         color: $primary;
         display: block;
@@ -74,18 +88,19 @@ page-welcome
         left: 50%;
         position: absolute;
         text-align: center;
-        top: 30%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: 90%;
+        z-index: 100;
     }
 
-    #welcome h1
+    header h1
     {
         font-size: 11.5vw;
         font-weight: 699;
     }
 
-    #welcome h5
+    header h5
     {
         font-size: 6.5vw;
         font-weight: 120;
@@ -93,13 +108,13 @@ page-welcome
 
     /* BUTTONS */
 
-    #buttons
+    footer
     {
         text-align: center;
         height: 20%;
     }
 
-    #buttons button
+    footer button
     {
         background-color: $primary;
         color: $secondary;
@@ -111,7 +126,7 @@ page-welcome
         z-index: 100;
     }
 
-    #buttons button:hover
+    footer button:hover
     {
         background-color: hsl(0, 100%, 15%);
     }

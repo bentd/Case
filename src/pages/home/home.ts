@@ -34,7 +34,7 @@ export class HomePage
 
     constructor(public controller: NavController, public alertCtrl: AlertController, public schoolData: SchoolData, public http: Http)
     {
-        this.initializePosts();        
+        this.initializePosts();
         this.schoolData.getSchool().then((school: any) => // GET SCHOOL ID
         {
             console.log(school);

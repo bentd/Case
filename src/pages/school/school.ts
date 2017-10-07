@@ -55,7 +55,7 @@ export class SchoolPage
     {
         let search = event.target.value;
 
-        this.filteredSchools = search ? this.schools.filter(s => this.filter(s, search)).slice(0, 7) : [];
+        this.filteredSchools = search ? this.schools.filter(s => this.filter(s, search)).slice(0, 7) : this.schools;
     }
 
     filter(school: any, search: String)
