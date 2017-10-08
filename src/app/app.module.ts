@@ -29,6 +29,9 @@ import { SchoolPage } from "../pages/school/school";
 import { HomePage } from "../pages/home/home";
 import { SettingsPage } from "../pages/settings/settings";
 import { PostPage } from "../pages/post/post";
+import { EmailPage } from "../pages/email/email";
+import { EditPage } from "../pages/edit/edit";
+import { PasswordPage } from "../pages/password/password";
 
 // Case providers
 import { SchoolData } from "../providers/school-data";
@@ -48,6 +51,9 @@ import { SchoolData } from "../providers/school-data";
         HomePage,
         SettingsPage,
         PostPage,
+        EmailPage,
+        EditPage,
+        PasswordPage,
     ],
 
     imports:
@@ -94,7 +100,10 @@ import { SchoolData } from "../providers/school-data";
         HomePage,
         SettingsPage,
         PostPage,
-        SettingsPage
+        SettingsPage,
+        EmailPage,
+        EditPage,
+        PasswordPage,
     ],
 
     providers:

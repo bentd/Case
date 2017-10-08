@@ -24769,6 +24769,154 @@ ion-navbar.toolbar {
   padding: 10px 20px;
 }
 
+page-edit .container {
+  padding: 20px;
+}
+
+page-edit .forgot {
+  padding-top: 40px;
+}
+
+page-edit .forgot-heading {
+  font: 36px;
+  color: maroon;
+}
+
+page-edit .input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+page-edit .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-edit .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-edit .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-edit .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-edit .login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+page-edit .btn {
+  padding: 15px 30px;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
+}
+
+page-edit .btn--right {
+  float: right;
+}
+
+page-edit .icon {
+  display: inline-block;
+}
+
+page-edit .icon--min {
+  font-size: .9em;
+}
+
+page-edit .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+page-email .container {
+  padding: 20px;
+}
+
+page-email .forgot {
+  padding-top: 40px;
+}
+
+page-email .forgot-heading {
+  font: 36px;
+  color: maroon;
+}
+
+page-email .input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+page-email .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-email .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-email .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-email .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-email .login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+page-email .btn {
+  padding: 15px 30px;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
+}
+
+page-email .btn--right {
+  float: right;
+}
+
+page-email .icon {
+  display: inline-block;
+}
+
+page-email .icon--min {
+  font-size: .9em;
+}
+
+page-email .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+
 page-forgot .container {
   padding: 20px;
 }
@@ -24980,6 +25128,80 @@ page-login #forgot-link {
 page-login #login-footer-login {
   display: inline-block;
   float: right;
+}
+
+page-password .container {
+  padding: 20px;
+}
+
+page-password .forgot {
+  padding-top: 40px;
+}
+
+page-password .forgot-heading {
+  font: 36px;
+  color: maroon;
+}
+
+page-password .input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+page-password .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-password .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-password .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-password .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-password .login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+page-password .btn {
+  padding: 15px 30px;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
+}
+
+page-password .btn--right {
+  float: right;
+}
+
+page-password .icon {
+  display: inline-block;
+}
+
+page-password .icon--min {
+  font-size: .9em;
+}
+
+page-password .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
 }
 
 page-post .bookPic {
