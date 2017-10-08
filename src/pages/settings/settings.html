@@ -10,6 +10,14 @@
 
       <div class="profilePic"> </div>
 
+      <ion-list>
+
+          <button ion-item *ngFor="let setting of settings" (click)="setting.action">
+              {{ setting.title }}
+          </button>
+
+      </ion-list>
+<!--
       <button class="takePhoto case-button">Take Photo</button>
       <br>
       <button class="logoutButton case-button"> Logout</button>
@@ -19,6 +27,7 @@
       <button class="changePassword case-button"> Change Password</button>
       <br>
       <button (click)="showConfirm()" class="deleteAccount case-button"> Delete Account</button>
+-->
 
     </div>
 

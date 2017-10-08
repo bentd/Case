@@ -8,7 +8,12 @@ import { AlertController } from 'ionic-angular';
 
 
 // Case
-// mport { BoilerPage } from "../boiler/boiler";
+// import { BoilerPage } from "../boiler/boiler";
+import { EmailPage } from "../email/email";
+import { PasswordPage } from "../password/password";
+import { EditPage } from "../edit/edit";
+
+
 
 @Component
 ({
@@ -17,6 +22,27 @@ import { AlertController } from 'ionic-angular';
 })
 export class SettingsPage
 {
+
+    settings: Array<any> =
+    [
+        {
+            title: "Change Email",
+            action: "EmailPage"
+        },
+        {
+            title: "Change Password",
+            action: "PasswordPage"
+        },
+        {
+            title: "Logout",
+            action: "LogoutPage"
+        },
+        {
+            title: "Delete Account",
+            action: "DeletePage"
+        },
+    ];
+
     constructor(public controller: NavController, public alertCtrl: AlertController) { }
 
   showConfirm() {
