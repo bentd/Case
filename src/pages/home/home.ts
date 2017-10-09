@@ -78,7 +78,7 @@ export class HomePage
             user: "John Watkins",
             title: "Student's Book of College Biology",
             image: "../assets/img/books/biology.jpg",
-            description: "This book is essential for both ENC1101 and ENC1102! You really need to get this book to be successful!",
+            description: "This book is essential for both BIO1101! You really need to get this book to be successful!",
             condition: "Decent",
             price: 12.99
         };
@@ -87,7 +87,7 @@ export class HomePage
             user: "Jessica Watkins",
             title: "Student's Book of College Calculus",
             image: "assets/img/books/calculus.jpg",
-            description: "This book is essential for both ENC1101 and ENC1102! You really need to get this book to be successful!",
+            description: "This book is essential for both MAC2312! You really need to get this book to be successful!",
             condition: "Decent",
             price: 12.99
         };
