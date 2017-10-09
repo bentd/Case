@@ -8,7 +8,7 @@
     </ion-navbar>
 
     <ion-toolbar>
-        <ion-searchbar class="searchbar-school" placeholder="Search for book, course number, author.."></ion-searchbar>
+        <ion-searchbar (ionInput)="filterPosts($event)" class="searchbar-school" placeholder="Search for book, course number, author.."></ion-searchbar>
     </ion-toolbar>
 
 </ion-header>
@@ -19,7 +19,7 @@
 
       <button class="postButton case-button"  (click)=segueToPost()>Post</button>
 
-        <ion-card class="post" *ngFor="let post of posts">
+        <ion-card class="post" *ngFor="let post of filteredPosts">
 
             <div class="post-image-container">
 

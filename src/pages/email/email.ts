@@ -19,13 +19,5 @@ export class EmailPage
 {
     constructor(public controller: NavController) { }
 
-    segueToLogIn()
-    {
-        this.controller.setRoot(LoginPage);
-    }
 
-    segueToSignUp()
-    {
-        this.controller.setRoot(SignupPage);
-    }
 }

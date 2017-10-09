@@ -30,7 +30,10 @@ export class HomePage
 
     school: any;
 
+    search: String;
+
     posts: Array<any> = [];
+    filteredPosts: Array<any> = [];
 
     constructor(public controller: NavController, public alertCtrl: AlertController, public schoolData: SchoolData, public http: Http)
     {
@@ -55,11 +58,13 @@ export class HomePage
             })
         });
 
-
+        this.filteredPosts = this.posts;
     }
 
     initializePosts()
     {
+        console.log("initializing posts");
+
         var post1: any = {
             user: "Gabriella Watkins",
             title: "Student's Book of College English",
@@ -92,6 +97,33 @@ export class HomePage
         this.posts.push(post3);
         console.log(this.posts);
     }
+
+    filterPosts(event: any)
+    {
+        console.log(event.target.value);
+        let search = event.target.value;
+
+        this.filteredPosts = search ? this.posts.filter(s => this.filter(s, search)) : this.posts;
+    }
+
+    filter(post: any, search: String)
+    {
+        console.log(this.filterByTitle(post, search));
+        console.log(this.filterByDescription(post, search));
+        return this.filterByTitle(post, search) || this.filterByDescription(post, search);
+    }
+
+    filterByTitle(post: any, search: String)
+    {
+        return post.title.toLowerCase().indexOf(search.toLowerCase()) != -1
+    }
+
+    filterByDescription(post: any, search: String)
+    {
+        return post.description.toLowerCase().indexOf(search.toLowerCase()) != -1
+    }
+
+
 
     showRadio() {
       let alert = this.alertCtrl.create();

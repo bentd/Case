@@ -11,8 +11,6 @@ import { AlertController } from 'ionic-angular';
 // import { BoilerPage } from "../boiler/boiler";
 import { EmailPage } from "../email/email";
 import { PasswordPage } from "../password/password";
-import { EditPage } from "../edit/edit";
-
 
 
 @Component
@@ -22,24 +20,27 @@ import { EditPage } from "../edit/edit";
 })
 export class SettingsPage
 {
-
     settings: Array<any> =
     [
         {
             title: "Change Email",
-            action: "EmailPage"
+            action: this.segueToEmail,
+            controller: this.controller
         },
         {
             title: "Change Password",
-            action: "PasswordPage"
+            action: this.segueToPassword,
+            controller: this.controller
         },
         {
             title: "Logout",
-            action: "LogoutPage"
+            action: this.showConfirm,
+            alertCtrl: this.alertCtrl
         },
         {
             title: "Delete Account",
-            action: "DeletePage"
+            action: this.showConfirm,
+            alertCtrl: this.alertCtrl
         },
     ];
 
@@ -66,12 +67,15 @@ export class SettingsPage
    });
    confirm.present();
  }
+
+ segueToPassword()
+ {
+     this.controller.push(PasswordPage);
+ }
+
+ segueToEmail()
+ {
+     this.controller.push(EmailPage);
+ }
+
 }
-
-
-/*
-    segueToWhereever()
-    {
-        this.controller.setRoot(Wherever);
-    }
-*/
