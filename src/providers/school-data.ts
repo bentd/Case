@@ -10,6 +10,16 @@ export class SchoolData
 {
     constructor(public events: Events, public storage: Storage) { }
 
+    getSchools(): Promise<any>
+    {
+        this.http.get("http://localhost:5000/schools").subscribe((response) =>
+        {
+            this.schools = response.json();
+            console.log("this.schools 1: ");
+            console.log(this.schools)
+        });
+    }
+
     setSchool(school: any)
     {
         this.storage.set("school", school);

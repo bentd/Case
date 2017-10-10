@@ -28,7 +28,7 @@ export class SchoolPage
 
     constructor(public controller: NavController, public http: Http, public schoolData: SchoolData)
     {
-        this.http.get("http://216.162.146.156:5000/schools").subscribe((response) =>
+        this.http.get("http://localhost:5000/schools").subscribe((response) =>
         {
             this.schools = response.json();
             console.log("this.schools 1: ");
