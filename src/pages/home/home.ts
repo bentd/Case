@@ -1,7 +1,7 @@
 // Angular
 import { Component } from "@angular/core";
 import { Http } from '@angular/http';
-import { Headers } from '@angular/http';
+
 
 // Ionic
 import { NavController } from "ionic-angular";
@@ -41,21 +41,10 @@ export class HomePage
         this.schoolData.getSchool().then((school: any) => // GET SCHOOL ID
         {
             console.log(school);
-            console.log(school.id);
             this.school = school;
         }).then(() => // GET POSTS FROM SCHOOL
         {
-            var headers = new Headers();
-            headers.append("Authorization", "Basic " + btoa("eyJhbGciOiJIUzI1NiIsImV4cCI6MTUwNTg3NjU3MiwiaWF0IjoxNTA1ODcyOTcyfQ.eyJlbWFpbCI6ImJlbnRkQG91dGxvb2suY29tIn0.K04R6kU5hSCK_8c-fDg-JWdmbMi2WDM4faRLntXTBDQ:"));
-            this.http.get("http://localhost:5000/posts", {headers: headers, params: {school_id: this.school.id}}).subscribe((response) =>
-            {
-                var posts = response.json()
-                console.log(posts);
-                for (var post in posts)
-                {
-                    this.posts.push(posts[post]);
-                }
-            })
+
         });
 
         this.filteredPosts = this.posts;

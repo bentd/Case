@@ -34,9 +34,10 @@ import { EditPage } from "../pages/edit/edit";
 import { PasswordPage } from "../pages/password/password";
 
 // Case providers
+import { BackendData } from "../providers/backend-data";
 import { SchoolData } from "../providers/school-data";
-
-
+import { UserData } from "../providers/user-data";
+import { PostData } from "../providers/post-data";
 
 @NgModule
 ({
@@ -111,6 +112,9 @@ import { SchoolData } from "../providers/school-data";
         StatusBar,
         SplashScreen,
         SchoolData,
+        BackendData,
+        UserData,
+        PostData,
         { provide: ErrorHandler, useClass: IonicErrorHandler }
     ]
 })

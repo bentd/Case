@@ -28,17 +28,19 @@ export class SchoolPage
 
     constructor(public controller: NavController, public http: Http, public schoolData: SchoolData)
     {
-        this.http.get("http://localhost:5000/schools").subscribe((response) =>
+        this.schoolData.setSchools().then(() =>
         {
-            this.schools = response.json();
-            console.log("this.schools 1: ");
-            console.log(this.schools)
+            this.schoolData.getSchools().then((schools: any) =>
+            {
+                this.schools = schools;
+                console.log(schools);
+                console.log("inside getSchools");
+            })
         });
 
-        console.log("this.schools 2: ");
         console.log(this.schools);
 
-        this.schoolData.removeSchool();
+        this.schoolData.deleteSchool(); // reset school choice
     }
 
     addSchool(school: any)

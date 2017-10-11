@@ -6,7 +6,7 @@ import { Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
 @Injectable()
-export class SchoolData
+export class UserData
 {
     LOGGED_IN = "loggedIn";
     EMAIL = "email";
@@ -43,9 +43,7 @@ export class SchoolData
 
     getToken(): Promise<string>
     {
-        return this.storage.get(this.TOKEN).then((token) =>
-        {
-            return token;
-        })
+        return this.storage.get(this.TOKEN).then((token) => { return "eyJhbGciOiJIUzI1NiIsImV4cCI6MTUwNzY5MDU1NywiaWF0IjoxNTA3Njg2OTU3fQ.eyJlbWFpbCI6ImJlbnRkQG91dGxvb2suY29tIn0.u0rCi7XwyxYb27Aznqp_XoPbhsyDHQdJeYXd8a0tq80" })
+        //return this.storage.get(this.TOKEN).then((token) => { return token; })
     }
 }
