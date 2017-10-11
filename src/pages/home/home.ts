@@ -116,14 +116,14 @@ export class HomePage
 
     showRadio() {
       let alert = this.alertCtrl.create();
-    alert.setTitle('Lightsaber color');
+    alert.setTitle('Gabriella W.');
 
 
     alert.addInput({
       type: 'radio',
-      label: 'Blue',
+      label: 'gabriella92@gmail.com',
       value: 'blue',
-      checked: true
+      //checked: true
     });
 
     alert.addButton('Cancel');

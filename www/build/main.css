@@ -25001,8 +25001,8 @@ page-home .settings {
 
 page-home .postButton {
   float: right;
-  margin: 3vw;
-  padding: 5vw;
+  margin: 4.5vw;
+  padding: 3vw 5vh;
 }
 
 page-home ion-card.post {
@@ -25016,7 +25016,7 @@ page-home ion-card.post {
   position: relative;
   margin: 20px auto;
   width: 95vw;
-  height: 57vw;
+  height: 59vw;
 }
 
 page-home ion-card.post div.post-image-container,
@@ -25065,13 +25065,22 @@ page-home ion-row.post-footer-container {
 }
 
 page-home ion-col.col,
-page-home button.footer-button,
-page-home ion-icon.post-icon,
-page-home div.post-price,
-page-home div.post-contact {
+page-home button.footer-button {
   margin: 0;
   padding: 0;
-  max-width: 105vw;
+  margin-bottom: .0vh;
+}
+
+page-home div.post-contact {
+  padding-left: 1vw;
+}
+
+page-home .post-icon {
+  margin-left: 7vw;
+}
+
+page-home div.post-price {
+  padding-right: .07vw;
 }
 
 page-login button {

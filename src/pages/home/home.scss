@@ -19,8 +19,10 @@ page-home
     .postButton
     {
       float: right;
-      margin: 3vw;
-      padding: 5vw;
+      margin: 4.5vw;
+      padding: 3vw 5vh;
+
+
     }
 
     ion-card.post
@@ -31,7 +33,8 @@ page-home
         position: relative;
         margin: 20px auto;
         width: 95vw;
-        height: 57vw;
+        height: 59vw;
+
     }
 
     ion-card.post div.post-image-container,
@@ -95,12 +98,32 @@ page-home
 
     ion-col.col,
     button.footer-button,
-    ion-icon.post-icon,
-    div.post-price,
-    div.post-contact
+    //ion-icon.post-icon,
+    //div.post-price,
+    //div.post-contact
     {
         margin: 0;
         padding: 0;
-        max-width: 105vw;
+        //max-width: 105vw;
+        margin-bottom: .0vh;
     }
+
+    div.post-contact,
+    //.post-icon
+    {
+        padding-left: 1vw;
+    }
+
+    .post-icon
+    {
+        margin-left: 7vw;
+
+    }
+
+    div.post-price
+    {
+        padding-right: .07vw;
+    }
+
+
 }
