@@ -19,11 +19,12 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(https://necolas.github.io/normalize.css/7.0.0/normalize.css);
 
-$primary: maroon;
-$secondary: blanchedalmond;
-$danger: red;
-$light: white;
-$dark: black;
+
+//$primary: maroon;
+//$secondary: blanchedalmond;
+//$danger: red;
+//$light: white;
+//$dark: black;
 
 *
 {
@@ -46,23 +47,23 @@ $dark: black;
 
 .toolbar .searchbar-ios input.searchbar-input
 {
-    background-color: $light;
+    background-color: white;
 }
 
 .case-button
 {
-    background-color: $primary;
+    background-color: maroon;
     border-radius: 2px;
-    box-shadow: 1px 1px 1px $dark;
-    color: $light;
+    box-shadow: 1px 1px 1px black;
+    color: white;
     padding: 10px 20px;
 }
 
 .case-button-reverse
 {
-    background-color: $secondary;
+    background-color: blanchedalmond;
     border-radius: 2px;
-    box-shadow: 1px 1px 1px $dark;
-    color: $primary;
+    box-shadow: 1px 1px 1px black;
+    color: maroon;
     padding: 10px 20px;
 }

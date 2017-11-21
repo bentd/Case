@@ -1,133 +1,96 @@
 page-welcome
 {
-    @keyframes slide
+
+    @keyframes up
     {
+        0%
+        {
+            position: absolute;
+        }
+
         100%
         {
-            margin-left: 0%;
+            position: absolute;
+            bottom: 0%;
         }
     }
 
-    /* MAIN */
+    .pushedUp
+    {
+        animation: up 1s;
+    }
+
+    $padding: 8px;
+    $padding-double: 16px;
+
+    $border-radius: 25px;
 
     main
     {
-        height: 80%;
-        overflow-x: hidden;
+        background:  #662200;
         position: relative;
+        height: 100vh;
+        width: 100vw;
+        padding: $padding;
+    }
+
+    div.swatch
+    {
+        box-shadow: 0.5px 0.5px 2px black;
+        border-radius: $border-radius;
+        position: absolute;
+        width: calc(100% - #{$padding-double});
+    }
+
+    div#tutorial
+    {
+        background-image: url(../assets/img/book2.jpg);
+        background-size: cover;
+        height: calc(84% - 2 * #{$padding});
+    }
+
+    div#login
+    {
+        background: #993300;
+        height: calc(92% - 2 * #{$padding});
+        color: white;
+
+    }
+
+    div#signup
+    {
+        background: #802b00;
+        height: calc(100% - 2 * #{$padding});
+    }
+
+    button.account-button
+    {
+        color: white;
+        background: transparent;
+        padding-top: calc(18% - 30px);
+        position: absolute;
+        height: 8%;
+        bottom: 0%;
         width: 100%;
-        z-index: -1;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
     }
 
-    main img
+    .account-button span
     {
-        left: 50%;
-        opacity: 0.5;
+        font-size: 25px;
         position: absolute;
-        top: 68%;
-        transform: translate(-50%);
-        width: 20vw;
-        z-index: -100;
-    }
-
-    /* BACKGROUND */
-
-    .letter
-    {
-        height: 25%;
-        margin-left: -29900%;
-        opacity: 0.09;
-        width: 30000%;
-        z-index: -2;
-    }
-
-    #c
-    {
-        animation: slide 1000s linear infinite;
-        background: url(../assets/img/c.jpg);
-        background-repeat: repeat-x;
-        background-size: contain;
-        transition-timing-function: ease-in;
-    }
-
-    #a
-    {
-        animation: slide 1000s 200ms linear infinite;
-        background: url(../assets/img/a.jpg);
-        background-repeat: repeat-x;
-        background-size: contain;
-        transition-timing-function: ease-in;
-    }
-
-    #s
-    {
-        animation: slide 1000s 300ms linear infinite;
-        background: url(../assets/img/s.jpg);
-        background-repeat: repeat-x;
-        background-size: contain;
-        transition-timing-function: ease-in;
-    }
-
-    #e
-    {
-        animation: slide 1000s 400ms linear infinite;
-        background: url(../assets/img/e.jpg);
-        background-repeat: repeat-x;
-        background-size: contain;
-        transition-timing-function: ease-in;
-    }
-
-
-    /* WELCOME MESSAGE */
-
-    header
-    {
-        color: $primary;
-        display: block;
-        box-sizing: border-box;
-        left: 50%;
-        position: absolute;
-        text-align: center;
         top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%;
-        z-index: 100;
     }
 
-    header h1
+    button#login
     {
-        font-size: 11.5vw;
-        font-weight: 699;
+
     }
 
-    header h5
+    button#signup
     {
-        font-size: 6.5vw;
-        font-weight: 120;
-    }
-
-    /* BUTTONS */
-
-    footer
-    {
-        text-align: center;
-        height: 20%;
-    }
-
-    footer button
-    {
-        background-color: $primary;
-        color: $secondary;
-        border: solid;
-        display: block;
-        font-size: 24px;
-        height: 50%;
-        width: 100%;
-        z-index: 100;
-    }
-
-    footer button:hover
-    {
-        background-color: hsl(0, 100%, 15%);
     }
 }

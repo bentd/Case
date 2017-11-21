@@ -1,32 +1,20 @@
 <ion-content>
 
-    <div class="container wooden-background" ion-fixed>
+    <main ion-fixed>
 
-            <main>
+        <div (pan)="tutorialUp($event)" class="swatch" id="tutorial" [style.z-index]="zIntro">
+            <h1><b> Case</b></h1>
+            <h2>Sell high, buy low</h2>
+        </div>
 
-                <div class="letter" id="c"></div>
-                <div class="letter" id="a"></div>
-                <div class="letter" id="s"></div>
-                <div class="letter" id="e"></div>
+        <div [style.z-index]="zLogIn" class="swatch" id="login">
+            <button (click)="openLogIn()" class="account-button" id="login"><span>LOG IN</span></button>
+        </div>
 
-                <img src="../assets/img/books.png">
+        <div [style.z-index]="zSignUp" class="swatch" id="signup">
+            <button (click)="openSignUp()" class="account-button" id="signup"><span>SIGN UP</span></button>
+        </div>
 
-                <header>
-
-                    <h1>Welcome to Case</h1>
-                    <h5>Sell your textbooks today</h5>
-
-                </header>
-
-            </main>
-
-            <footer>
-
-                <button (click)=segueToLogIn()>Log In</button>
-                <button (click)=segueToSignUp()>Sign Up</button>
-
-            </footer>
-
-    </div>
+    </main>
 
 </ion-content>

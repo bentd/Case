@@ -24769,6 +24769,149 @@ ion-navbar.toolbar {
   padding: 10px 20px;
 }
 
+page-edit .container {
+  padding: 20px;
+}
+
+page-edit .forgot {
+  padding-top: 40px;
+}
+
+page-edit .forgot-heading {
+  font: 36px;
+  color: maroon;
+}
+
+page-edit .input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+page-edit .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-edit .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-edit .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-edit .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-edit .login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+page-edit .btn {
+  padding: 15px 30px;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
+}
+
+page-edit .btn--right {
+  float: right;
+}
+
+page-edit .icon {
+  display: inline-block;
+}
+
+page-edit .icon--min {
+  font-size: .9em;
+}
+
+page-edit .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+page-email .container {
+  padding: 20px;
+}
+
+page-email .forgot {
+  padding-top: 40px;
+}
+
+page-email .forgot-heading {
+  font-size: 8vw;
+  color: maroon;
+  margin-bottom: 5vh;
+}
+
+page-email .input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.7em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  box-sizing: border-box;
+  transition: background-color 0.5s ease-in-out;
+}
+
+page-email .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-email .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-email .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-email .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-email .button {
+  margin: 2vh;
+  padding: 2vh 6vw;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
+}
+
+page-email .btn--right {
+  float: right;
+}
+
+page-email .icon {
+  display: inline-block;
+}
+
+page-email .icon--min {
+  font-size: .9em;
+}
+
+page-email .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+
 page-forgot .container {
   padding: 20px;
 }
@@ -24843,6 +24986,25 @@ page-forgot .lnk {
   text-decoration: none;
 }
 
+page-home .changeSchool {
+  color: white;
+  float: left;
+  margin-left: 2vw;
+}
+
+page-home .settings {
+  float: right;
+  margin-right: 3vw;
+  color: white;
+  font-size: 5vw;
+}
+
+page-home .postButton {
+  float: right;
+  margin: 4.5vw;
+  padding: 3vw 5vh;
+}
+
 page-home ion-card.post {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24850,103 +25012,376 @@ page-home ion-card.post {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  height: 40%;
   padding: 5px;
+  position: relative;
   margin: 20px auto;
-  width: 95%;
+  width: 95vw;
+  height: 59vw;
 }
 
-page-home ion-card.post div {
+page-home ion-card.post div.post-image-container,
+page-home ion-card.post div.post-information-container {
   padding: 5px;
 }
 
 page-home div.post-image-container {
   position: relative;
-  width: 45%;
+  width: 45vw;
 }
 
 page-home div.post-image {
-  background-position: center;
-  background-size: cover;
   left: 50%;
-  min-height: 100%;
-  min-width: 100%;
+  min-height: calc(90vw - 5px);
   position: absolute;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
+page-home img.post-image {
+  max-height: calc(100% - 10px);
+  max-width: calc(100% - 10px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 page-home div.post-information-container {
+  position: relative;
   text-align: center;
-  width: 55%;
+  width: 55vw;
+}
+
+page-home h1.post-title {
+  font-size: 5vw;
+  height: 10hw;
+}
+
+page-home ion-row.post-footer-container {
+  bottom: 0;
+  height: 10hw;
+  position: absolute;
 }
 
 page-home ion-col.col,
-page-home button.footer-button,
-page-home ion-icon.post-icon,
-page-home div.post-price,
-page-home div.post-contact {
+page-home button.footer-button {
   margin: 0;
   padding: 0;
-  max-width: 100%;
+  margin-bottom: .0vh;
 }
 
-page-login button {
-  background-color: blanchedalmond;
-  color: maroon;
+page-home div.post-contact {
+  padding-left: 1vw;
 }
 
-page-login .login {
-  padding: 50px 20px;
+page-home .post-icon {
+  margin-left: 7vw;
 }
 
-page-login .login-header {
-  color: maroon;
-  font-size: 2em;
+page-home div.post-price {
+  padding-right: .07vw;
 }
 
-page-login .login input {
+/*page-login
+{
+    button
+    {
+        background-color: $secondary;
+        color: $primary;
+    }
+
+    .login
+    {
+        padding: 50px 20px;
+    }
+
+    .login-header
+    {
+        color: $primary;
+        font-size: 2em;
+    }
+
+    .login input
+    {
+        color: $light;
+        background: transparent;
+        border: none;
+        border-bottom: 1px dotted $light;
+        box-sizing: border-box;
+        font-size: 1.3em;
+        padding: 20px 10px;
+        transition: background-color 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .login input::-moz-placeholder,
+    .login input::-ms-input-placeholder,
+    .login input::-webkit-input-placeholder
+    {
+        color: $dark;
+    }
+
+    footer
+    {
+        margin-top: 20px;
+    }
+
+    #login-footer-forgot
+    {
+        display: inline-block;
+        float: left;
+    }
+
+    #forgot-link
+    {
+        display: block;
+        padding-top: 0.5em;
+    }
+
+    #login-footer-login
+    {
+        display: inline-block;
+        float: right;
+    }
+
+    #login-button
+    {
+
+    }
+}*/
+/*.container {
+    background-image: url(../assets/img/book2.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    border-bottom-left-radius:15%;
+    border-bottom-right-radius:15%;
+
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30vh;
+    color: white;
+}
+
+.login
+{
+    text-align: center;
+    background-color: darkred;
+    margin-top: 80%;
+    border-bottom-left-radius:15%;
+    border-bottom-right-radius:15%;
+
+}*/
+section.swatch {
+  box-shadow: 0.2px 0.2px 1px black;
+  border-bottom-left-radius: 12%;
+  border-bottom-right-radius: 12%;
+  position: absolute;
+}
+
+.back_arrow {
+  float: left;
+  position: absolute;
   color: white;
+  margin-left: 3.5vw;
+  margin-top: 2vh;
+  font-size: 8vw;
+}
+
+main {
+  background-color: white;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+.email {
+  border-radius: 5px;
+  width: 90%;
+  position: relative;
+  margin-left: 5vw;
+}
+
+.password {
+  border-radius: 5px;
+  width: 90%;
+  position: relative;
+  margin-left: 5vw;
+  margin-top: 2vh;
+}
+
+section#tutorial {
+  background-color: white;
+  background-size: cover;
+  width: 100%;
+  height: 81%;
+  z-index: 1;
+}
+
+h1, h2 {
+  text-align: center;
+  color: white;
+  margin-top: 5vh;
+  font-size: 12vw;
+}
+
+.forgot {
+  background-color: transparent;
+  margin: 5.5vw;
+  font-size: 4vw;
+  color: maroon;
+}
+
+section#login {
+  background: #993300;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+  color: white;
+}
+
+.login_button {
+  position: absolute;
+  margin-top: 83vh;
+  color: white;
+  margin-left: 40vw;
+  background-color: #993300;
+  font-size: 8vw;
+}
+
+section#signup {
+  background: #802b00;
+  width: 100%;
+  height: 99%;
+  z-index: -2;
+}
+
+.signup_button {
+  position: absolute;
+  margin-top: 92vh;
+  color: white;
+  margin-left: 36vw;
+  background-color: #802b00;
+  font-size: 8vw;
+}
+
+page-password .container {
+  padding: 20px;
+}
+
+page-password .forgot {
+  padding-top: 40px;
+}
+
+page-password .forgot-heading {
+  font: 36px;
+  color: maroon;
+}
+
+page-password .input-txt {
+  width: 100%;
+  padding: 20px 10px;
   background: transparent;
   border: none;
-  border-bottom: 1px dotted white;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
   box-sizing: border-box;
-  font-size: 1.3em;
-  padding: 20px 10px;
   transition: background-color 0.5s ease-in-out;
+}
+
+page-password .input-txt:-moz-placeholder {
+  color: darkgray;
+}
+
+page-password .input-txt:-ms-input-placeholder {
+  color: darkgray;
+}
+
+page-password .input-txt::-webkit-input-placeholder {
+  color: darkgray;
+}
+
+page-password .input-txt:focus {
+  background-color: darkgray;
+}
+
+page-password .login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
   width: 100%;
 }
 
-page-login .login input::-moz-placeholder,
-page-login .login input::-ms-input-placeholder,
-page-login .login input::-webkit-input-placeholder {
-  color: black;
+page-password .btn {
+  padding: 15px 30px;
+  border: none;
+  background: maroon;
+  color: blanchedalmond;
 }
 
-page-login .login-footer {
-  margin-top: 20px;
-}
-
-page-login #login-footer-forgot {
-  display: inline-block;
-  float: left;
-}
-
-page-login #forgot-link {
-  display: block;
-  padding-top: 0.5em;
-}
-
-page-login #login-footer-login {
-  display: inline-block;
+page-password .btn--right {
   float: right;
+}
+
+page-password .icon {
+  display: inline-block;
+}
+
+page-password .icon--min {
+  font-size: .9em;
+}
+
+page-password .lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+page-post .bookPic {
+  height: 50vw;
+  margin: 0 auto;
+  width: 40vw;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  background-color: black;
+}
+
+page-post .photoButton {
+  margin: 5vw;
+  margin-left: 36vw;
+}
+
+page-post .submitButton {
+  float: right;
+  margin: 3vw;
+}
+
+page-post .condition {
+  color: darkred;
+}
+
+page-post .title, page-post .condition, page-post .description, page-post .price {
+  background-color: transparent;
+}
+
+page-school ion-toolbar.toolbar-school {
+  border-color: inherit;
+  border-style: none;
+  box-shadow: 0;
 }
 
 page-school ion-searchbar.searchbar-school {
   background-color: white;
   border: 0;
   margin-bottom: 2px;
+  box-shadow: 0;
 }
 
 page-school ion-chip.selected {
@@ -24969,195 +25404,181 @@ page-school button.case-button-submit {
   width: 90%;
 }
 
-page-signup .signup {
-  margin-top: 50px;
+page-settings .profilePic {
+  height: 50vw;
+  margin: 0 auto;
+  width: 50vw;
+  margin-top: 3vw;
+  margin-bottom: 7vw;
+  background-color: black;
+  border-radius: 30vw;
 }
 
-page-signup .signup-header {
-  color: maroon;
-  font-size: 36px;
-  margin-bottom: 0.5em;
-  text-align: center;
+page-settings .settings-buttons {
+  width: 100vw;
 }
 
-page-signup .signup form {
-  text-align: center;
+page-signup
+section.swatch {
+  box-shadow: 0.2px 0.2px 1px black;
+  border-bottom-left-radius: 12%;
+  border-bottom-right-radius: 12%;
+  position: absolute;
 }
 
-page-signup .signup input {
-  padding: 20px 10px;
-  background: transparent;
-  border: none;
-  font-size: 1em;
-  color: white;
-  border-bottom: 1px dotted white;
-  width: 90%;
-  box-sizing: border-box;
-  transition: background-color 0.5s ease-in-out;
-}
-
-page-signup .signup input:last-child {
-  background-color: maroon;
-  font-size: 1.3em;
-}
-
-page-signup .signup input::-moz-placeholder,
-page-signup .signup input::-ms-input-placeholder,
-page-signup .signup input::-webkit-input-placeholder {
-  color: darkgray;
-}
-
-page-signup .signup input::hover {
-  background-color: maroon;
-}
-
-page-signup form div {
-  margin-top: 60px;
-}
-
-page-signup .signup #submit {
-  box-sizing: border-box;
-  display: block;
-  box-shadow: 1px 1px 1px black;
-}
-
-page-signup .signup-footer {
-  margin: 10px 0;
-  overlow: hidden;
+.back_arrow {
   float: left;
-  width: 100%;
-}
-
-page-signup .btn {
-  padding: 15px 30px;
-  border: none;
-  background: white;
-  color: #5D92BA;
-}
-
-page-signup .btn--right {
-  float: right;
-}
-
-page-signup .icon {
-  display: inline-block;
-}
-
-page-signup .lnk {
-  font-size: .8em;
-  line-height: 3em;
+  position: absolute;
   color: white;
-  text-decoration: none;
+  margin-left: 3.5vw;
+  margin-top: 2vh;
+  font-size: 8vw;
 }
 
-page-welcome {
-  /* BACKGROUND */
-  /* WELCOME MESSAGE */
-  /* BUTTONS */
+main {
+  background-color: white;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
 }
 
-@-webkit-keyframes slide {
-  100% {
-    margin-left: 0%;
-  }
+.firstname, .lastname, .slides {
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5vw;
 }
 
-@keyframes slide {
-  100% {
-    margin-left: 0%;
-  }
-}
-
-page-welcome #background {
-  height: 80%;
-  opacity: 0.09;
-  overflow-x: hidden;
+section#tutorial {
+  background-color: white;
+  background-size: cover;
   width: 100%;
-  z-index: -1;
+  height: 81%;
+  z-index: 1;
 }
 
-page-welcome .letter {
-  height: 25%;
-  margin-left: -29900%;
-  width: 30000%;
+section#login {
+  background: #993300;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+  color: white;
+}
+
+.login_button {
+  position: absolute;
+  margin-top: 83vh;
+  color: white;
+  margin-left: 40vw;
+  background-color: #993300;
+  font-size: 8vw;
+}
+
+section#signup {
+  background: #802b00;
+  width: 100%;
+  height: 99%;
   z-index: -2;
 }
 
-page-welcome #c {
-  -webkit-animation: slide 1000s linear infinite;
-  animation: slide 1000s linear infinite;
-  background: url(../assets/img/c.jpg);
-  background-repeat: repeat-x;
-  background-size: contain;
-  transition-timing-function: ease-in;
-}
-
-page-welcome #a {
-  -webkit-animation: slide 1000s 200ms linear infinite;
-  animation: slide 1000s 200ms linear infinite;
-  background: url(../assets/img/a.jpg);
-  background-repeat: repeat-x;
-  background-size: contain;
-  transition-timing-function: ease-in;
-}
-
-page-welcome #s {
-  -webkit-animation: slide 1000s 300ms linear infinite;
-  animation: slide 1000s 300ms linear infinite;
-  background: url(../assets/img/s.jpg);
-  background-repeat: repeat-x;
-  background-size: contain;
-  transition-timing-function: ease-in;
-}
-
-page-welcome #e {
-  -webkit-animation: slide 1000s 400ms linear infinite;
-  animation: slide 1000s 400ms linear infinite;
-  background: url(../assets/img/e.jpg);
-  background-repeat: repeat-x;
-  background-size: contain;
-  transition-timing-function: ease-in;
-}
-
-page-welcome #welcome {
-  color: maroon;
-  display: block;
-  box-sizing: border-box;
-  left: 50%;
+.signup_button {
   position: absolute;
+  margin-top: 92vh;
+  color: white;
+  margin-left: 36vw;
+  background-color: #802b00;
+  font-size: 8vw;
+}
+
+page-welcome {
+  /*.container {
+        background-image: url(../assets/img/book2.jpg);
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        border-bottom-left-radius:15%;
+        border-bottom-right-radius:15%;
+
+
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 30vh;
+        color: white;
+    }
+
+    .login
+    {
+        text-align: center;
+        background-color: darkred;
+        margin-top: 80%;
+        border-bottom-left-radius:15%;
+        border-bottom-right-radius:15%;
+
+    }*/
+}
+
+page-welcome div.swatch {
+  box-shadow: 0.2px 0.2px 1px black;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  position: absolute;
+  width: calc(100% - 20px);
+  margin: 10px;
+}
+
+page-welcome main {
+  background: #662200;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+page-welcome div#tutorial {
+  background-image: url(../assets/img/book2.jpg);
+  background-size: cover;
+  height: calc(82% - 20px);
+}
+
+page-welcome h1, page-welcome h2 {
   text-align: center;
-  top: 30%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 90%;
+  color: white;
+  margin-top: 5vh;
+  font-size: 12vw;
 }
 
-page-welcome #welcome h1 {
-  font-size: 49px;
-  font-weight: 900;
+page-welcome h1 {
+  margin-bottom: 5vh;
 }
 
-page-welcome #welcome h5 {
-  font-size: 28px;
-  font-weight: 400;
+page-welcome h2 {
+  font-size: 9vw;
+  margin-left: 3.5vw;
 }
 
-page-welcome #buttons {
-  text-align: center;
-  height: 20%;
+page-welcome div#login {
+  background: #993300;
+  height: calc(91% - 20px);
+  color: white;
 }
 
-page-welcome #buttons button {
-  background-color: maroon;
-  color: blanchedalmond;
-  border: solid;
-  display: block;
-  font-size: 24px;
-  height: 50%;
+page-welcome .account-button {
+  color: white;
+  background: transparent;
+  font-size: 30px;
+  padding-top: calc(18% - 30px);
+  position: absolute;
+  height: 12%;
+  bottom: 0%;
   width: 100%;
-  z-index: 100;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
-page-welcome #buttons button:hover {
-  background-color: #4d0000;
+page-welcome div#signup {
+  background: #802b00;
+  height: calc(99% - 20px);
 }

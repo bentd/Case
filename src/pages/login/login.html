@@ -1,4 +1,4 @@
-<ion-header>
+<!--<ion-header>
 
     <ion-navbar></ion-navbar>
 
@@ -34,5 +34,29 @@
         </div>
 
     </div>
+
+</ion-content> -->
+
+
+<ion-content>
+
+    <main ion-fixed>
+
+        <section class="swatch" id="tutorial">
+            <ion-icon name="ios-arrow-back-outline" class="back_arrow" (click)=segueToWelcome()></ion-icon>
+            <h1><b> Case</b></h1> <br>
+            <ion-item class="email">
+                <ion-input type="text" placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item class="password">
+                <ion-input type="text" placeholder="password"></ion-input>
+            </ion-item>
+                <button class="forgot" (click)=segueToForgot()> <b>Forgot your password? </b></button>
+
+        </section>
+        <section class="swatch" id="login"><button class="login_button" >Log In </button></section>
+        <section class="swatch" id="signup"><button class="signup_button" > Sign Up </button></section>
+
+    </main>
 
 </ion-content>

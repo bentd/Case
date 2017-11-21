@@ -1,4 +1,4 @@
-<ion-header>
+<!--<ion-header>
 
     <ion-navbar>
 
@@ -8,7 +8,7 @@
 
 <ion-content>
 
-    <div class="container wooden-background" ion-fixed>
+    <div class="container " ion-fixed>
 
         <div class="signup">
 
@@ -33,5 +33,35 @@
         </div>
 
    </div>
+
+</ion-content>-->
+
+<ion-content>
+
+    <main ion-fixed>
+
+        <section class="swatch" id="tutorial">
+            <ion-icon name="ios-arrow-back-outline" class="back_arrow" (click)=segueToWelcome()></ion-icon>
+            <h1><b> Case</b></h1> <br>
+
+                <ion-slides class="slides">
+                    <ion-slide>
+                        <ion-item class="firstname">
+                            <ion-input type="text" placeholder="first name"></ion-input>
+                        </ion-item>
+                    </ion-slide>
+                    <ion-slide>
+                        <ion-item class="lastname">
+                            <ion-input type="text" placeholder="last name"></ion-input>
+                        </ion-item>
+                    </ion-slide>
+                </ion-slides>
+
+
+        </section>
+        <section class="swatch" id="login"><button class="login_button" >Log In </button></section>
+        <section class="swatch" id="signup"><button class="signup_button" > Sign Up </button></section>
+
+    </main>
 
 </ion-content>

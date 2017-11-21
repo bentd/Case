@@ -8,6 +8,8 @@ import { NavController } from "ionic-angular";
 // Case
 import { ForgotPage } from "../forgot/forgot";
 import { SchoolPage } from "../school/school";
+import { WelcomePage } from "../welcome/welcome";
+
 
 @Component
 ({
@@ -20,13 +22,13 @@ export class LoginPage
 
     constructor(public controller: NavController) { }
 
+    segueToWelcome()
+    {
+        this.controller.push(WelcomePage);
+    }
+
     segueToForgot()
     {
         this.controller.push(ForgotPage);
-    }
-
-    segueToSchool()
-    {
-        this.controller.push(SchoolPage);
     }
 }

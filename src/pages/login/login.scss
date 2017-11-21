@@ -1,9 +1,9 @@
-page-login
+/*page-login
 {
     button
     {
-        background-color: $secondary;
-        color: $primary;
+        background-color: blanchedalmond;
+        color: maroon;
     }
 
     .login
@@ -13,16 +13,16 @@ page-login
 
     .login-header
     {
-        color: $primary;
+        color: maroon;
         font-size: 2em;
     }
 
     .login input
     {
-        color: $light;
+        color: white;
         background: transparent;
         border: none;
-        border-bottom: 1px dotted $light;
+        border-bottom: 1px dotted white;
         box-sizing: border-box;
         font-size: 1.3em;
         padding: 20px 10px;
@@ -34,7 +34,7 @@ page-login
     .login input::-ms-input-placeholder,
     .login input::-webkit-input-placeholder
     {
-        color: $dark;
+        color: black;
     }
 
     footer
@@ -64,4 +64,142 @@ page-login
     {
 
     }
+}*/
+
+
+/*.container {
+    background-image: url(../assets/img/book2.jpg);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    border-bottom-left-radius:15%;
+    border-bottom-right-radius:15%;
+
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30vh;
+    color: white;
+}
+
+.login
+{
+    text-align: center;
+    background-color: darkred;
+    margin-top: 80%;
+    border-bottom-left-radius:15%;
+    border-bottom-right-radius:15%;
+
+}*/
+
+section.swatch
+{
+    box-shadow: 0.2px 0.2px 1px black;
+    border-bottom-left-radius:12%;
+    border-bottom-right-radius:12%;
+    position: absolute;
+}
+
+.back_arrow
+{
+    float: left;
+    position: absolute;
+    color: white;
+    margin-left: 3.5vw;
+    margin-top: 2vh;
+    font-size: 8vw;
+
+}
+
+main
+{
+    background-color: white;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.email
+{
+    border-radius: 5px;
+    width: 90%;
+    position: relative;
+    margin-left: 5vw;
+}
+.password
+{
+    border-radius: 5px;
+    width: 90%;
+    position: relative;
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
+
+section#tutorial
+{
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+    height: 81%;
+    z-index: 1;
+}
+
+h1, h2
+{
+    text-align: center;
+    color: white;
+    margin-top: 5vh;
+    font-size: 12vw;
+}
+
+.forgot
+{
+    background-color: transparent;
+    margin: 5.5vw;
+    font-size: 4vw;
+    color: maroon;
+}
+
+section#login
+{
+    background: #993300;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+    color: white;
+
+}
+
+.login_button
+{
+    position: absolute;
+    margin-top: 83vh;
+    color: white;
+    margin-left: 40vw;
+    background-color: #993300;
+    font-size: 8vw;
+}
+
+
+
+section#signup
+{
+    background: #802b00;
+    width: 100%;
+    height: 99%;
+    z-index: -2;
+}
+
+.signup_button
+{
+    position: absolute;
+    margin-top: 92vh;
+    color: white;
+    margin-left: 36vw;
+    background-color: #802b00;
+    font-size: 8vw;
 }

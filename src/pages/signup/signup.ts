@@ -1,7 +1,8 @@
 // Angular
 import { Component } from "@angular/core";
 import { Http } from '@angular/http';
-//import { ViewChild } from "@angular/core";
+import { ViewChild } from "@angular/core";
+import { Slides } from 'ionic-angular';
 
 // Ionic
 import { NavController } from "ionic-angular";
@@ -14,8 +15,11 @@ import { WelcomePage } from "../welcome/welcome";
     selector: "page-signup",
     templateUrl: "signup.html"
 })
+
+
 export class SignupPage
 {
+    @ViewChild(Slides) slides: Slides;
 
     user = {};
 
@@ -32,4 +36,6 @@ export class SignupPage
         //console.log(this.http.get("localhost:8080/"));
         this.http.post("http://127.0.0.1:8080/adduser/", this.user).subscribe();
     }
+
+
 }
