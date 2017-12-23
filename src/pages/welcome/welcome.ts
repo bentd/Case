@@ -1,14 +1,15 @@
 // Angular
 import { Component } from "@angular/core";
-import { ElementRef } from "@angular/core";
-import { ViewChild } from "@angular/core";
+//import { ElementRef } from "@angular/core";
+//import { ViewChild } from "@angular/core";
 
 // Ionic
 import { NavController } from "ionic-angular";
+import { Hammer } from "ionic-angular/gestures/hammer";
 
 // Case
 import { LoginPage } from "../login/login";
-import { SignupPage } from "../signup/signup";
+// import { SignupPage } from "../signup/signup";
 
 @Component
 ({
@@ -17,59 +18,43 @@ import { SignupPage } from "../signup/signup";
 })
 export class WelcomePage
 {
-    zIndices: Array<number> = [-1, -2, -3];
+    swatch1: any;
+    swatch2: any;
+    swatch3: any;
 
-    get zIntro(): number
-    {
-        return this.zIndices[0];
-    }
-    get zLogIn(): number
-    {
-        return this.zIndices[1];
-    }
-    get zSignUp(): number
-    {
-        return this.zIndices[2];
-    }
+    isVisible: any = false;
 
     constructor(public controller: NavController)
     {
+
     }
 
     ngAfterViewInit()
     {
-        var tutorialSwatch = document.getElementById("tutorial");
-        console.log(tutorialSwatch);
-        tutorialSwatch.addEventListener("click", this.tutorialUp);
+        this.swatch1 = document.getElementById("swatch1");
+        this.swatch2 = document.getElementById("swatch2");
+        this.swatch3 = document.getElementById("swatch3");
+
+        var touchTarget = document.getElementById("touch-target");
+
+        var DIRECTION_VERTICAL = { direction: 24 };
+        //https://github.com/ionic-team/ionic/issues/5767
+        //http://hammerjs.github.io/getting-started/
+        //http://hammerjs.github.io/api/
+        let gesture1 = Hammer(touchTarget, DIRECTION_VERTICAL);
+
+        gesture1.get('swipe').set(DIRECTION_VERTICAL);
+
+        gesture1.on("swipe", (event) => { console.log(event); this.isVisible = (event.angle < 0); });
     }
 
-    tutorialUp(event: Event)
-    {
-        console.log(event);
-    }
-
-    openIntroduction()
-    {
-        this.zIndices = [-1, -2, -3];
-    }
-
-    openLogIn()
-    {
-        this.zIndices = [-2, -1, -3];
-    }
-
-    openSignUp()
-    {
-        this.zIndices = [-3, -2, -1];
-    }
-
-    segueToLogIn()
+    segueToLogin()
     {
         this.controller.push(LoginPage);
     }
 
-    segueToSignUp()
+    segueToSignup()
     {
-        this.controller.push(SignupPage);
+        this.controller.push(LoginPage);
     }
 }

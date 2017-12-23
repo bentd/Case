@@ -1,15 +1,12 @@
 // Angular
 import { Component } from "@angular/core";
-import { ViewChild } from "@angular/core";
+//import { ViewChild } from "@angular/core";
 
 // Ionic
 import { NavController } from "ionic-angular";
 
 // Case
-import { ForgotPage } from "../forgot/forgot";
-import { SchoolPage } from "../school/school";
-import { WelcomePage } from "../welcome/welcome";
-
+// mport { BoilerPage } from "../boiler/boiler";
 
 @Component
 ({
@@ -18,17 +15,12 @@ import { WelcomePage } from "../welcome/welcome";
 })
 export class LoginPage
 {
-    @ViewChild("ion-navbar button") button: any;
-
     constructor(public controller: NavController) { }
 
-    segueToWelcome()
+/*
+    segueToWhereever()
     {
-        this.controller.push(WelcomePage);
+        this.controller.setRoot(Wherever);
     }
-
-    segueToForgot()
-    {
-        this.controller.push(ForgotPage);
-    }
+*/
 }
