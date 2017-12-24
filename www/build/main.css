@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -13003,16 +13004,16 @@ ion-textarea {
 }
 
 .text-input::-moz-placeholder {
-  color: #999;
+  color: linen;
 }
 
 .text-input:-ms-input-placeholder {
-  color: #999;
+  color: linen;
 }
 
 .text-input::-webkit-input-placeholder {
   text-indent: 0;
-  color: #999;
+  color: linen;
 }
 
 textarea.text-input {
@@ -25678,6 +25679,35 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+#content {
+  background: -webkit-gradient(linear, right bottom, left top, from(maroon), color-stop(#802b00), to(#993300));
+  background: linear-gradient(to left top, maroon, #802b00, #993300);
+  border-radius: 4px;
+}
+
+#name {
+  font-size: 6vw;
+  padding: 4vh 7vw 4vh;
+  font-family: montserrat;
+  color: white;
+  text-align: left;
+}
+
+ion-slides {
+  margin-top: -15vh;
+}
+
+ion-content#content ion-slides ion-slide ion-item#fullname,
+ion-item#email,
+ion-item#collegeAttend {
+  padding: 0;
+  width: 85%;
+  background-color: transparent;
+  color: linen;
+  margin: 2vh auto 3vh !important;
+  font-size: 4vw;
+}
+
 @-webkit-keyframes show1 {
   000% {
     height: calc(100% - 04% - calc(2 * 4px));
@@ -25815,7 +25845,7 @@ page-welcome * {
 }
 
 page-welcome main {
-  background: #662200;
+  background: white;
   height: 100vh;
   padding: 4px;
   position: relative;
@@ -25824,8 +25854,8 @@ page-welcome main {
 
 page-welcome div.swatch {
   border-radius: 12px;
-  -webkit-box-shadow: 0px 2px 2px black;
-  box-shadow: 0px 2px 2px black;
+  -webkit-box-shadow: 0px 1.5px 1.5px black;
+  box-shadow: 0px 1.5px 1.5px black;
   color: white;
   left: 50%;
   position: absolute;
@@ -25835,7 +25865,7 @@ page-welcome div.swatch {
 }
 
 page-welcome div#swatch1 {
-  background-image: url(../assets/imgs/welcome.jpg);
+  background-image: url(../assets/imgs/background.jpeg);
   background-size: cover;
   z-index: -1;
 }
@@ -25887,6 +25917,8 @@ page-welcome h1#title {
   top: 20%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  font-family: montserrat;
+  font-weight: 600;
 }
 
 page-welcome div#touch-target {
@@ -25908,6 +25940,7 @@ page-welcome button.account-button {
 
 page-welcome button.account-button span {
   font-size: 25px;
+  font-family: montserrat;
   left: 50%;
   position: absolute;
   top: 50%;

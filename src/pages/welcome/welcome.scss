@@ -60,7 +60,7 @@ page-welcome
 
     main
     {
-        background:  $background;
+        background: white;
         height: 100vh;
         padding: $padding;
         position: relative;
@@ -70,7 +70,7 @@ page-welcome
     div.swatch
     {
         border-radius: $border-radius;
-        box-shadow: 0px 2px 2px black;
+        box-shadow: 0px 1.5px 1.5px black;
         color: white;
         left: 50%;
         position: absolute;
@@ -80,7 +80,7 @@ page-welcome
 
     div#swatch1
     {
-        background-image: url(../assets/imgs/welcome.jpg);
+        background-image: url(../assets/imgs/background.jpeg);
         background-size: cover;
         z-index: -1;
     }
@@ -113,6 +113,8 @@ page-welcome
         left: 50%;
         top: 20%;
         transform: translateX(-50%);
+        font-family: montserrat;
+        font-weight: 600;
     }
 
     div#touch-target
@@ -137,6 +139,7 @@ page-welcome
     button.account-button span
     {
         font-size: 25px;
+        font-family: montserrat;
         left: 50%;
         position: absolute;
         top: 50%;

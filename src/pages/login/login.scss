@@ -1,0 +1,40 @@
+
+#content
+{
+    background: linear-gradient(to left top, maroon, #802b00, #993300);;
+    border-radius: 4px;
+
+
+}
+
+
+#name
+{
+    font-size: 6vw;
+    padding: 4vh 7vw 4vh;
+    font-family: montserrat;
+    color: white;
+    text-align: left;
+
+
+}
+
+ion-slides
+{
+    //width: 95vw;
+    margin-top: -15vh;
+}
+
+ion-content#content ion-slides ion-slide ion-item#fullname,
+ion-item#email,
+ion-item#collegeAttend
+{
+
+    padding: 0;
+    width:85%;
+    background-color: transparent;
+    color: linen;
+    margin: 2vh auto 3vh !important;
+    font-size: 4vw;
+
+}
