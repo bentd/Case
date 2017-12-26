@@ -9,6 +9,7 @@ import { Hammer } from "ionic-angular/gestures/hammer";
 
 // Case
 import { LoginPage } from "../login/login";
+import { HomePage } from "../home/home";
 // import { SignupPage } from "../signup/signup";
 
 @Component
@@ -48,9 +49,9 @@ export class WelcomePage
         gesture1.on("swipe", (event) => { console.log(event); this.isVisible = (event.angle < 0); });
     }
 
-    segueToLogin()
+    segueToHome()
     {
-        this.controller.push(LoginPage);
+        this.controller.push(HomePage);
     }
 
     segueToSignup()

@@ -7,10 +7,21 @@
             <h1 id="title">Case</h1>
             <!--<h2 id="description">Sell High<br>Buy Low</h2>-->
             <div id="touch-target"></div>
+
+            <div class="wrapper">
+                <ion-item id="user">
+                    <ion-input type="text" placeholder="Username"></ion-input>
+                </ion-item>
+                <ion-item id="user">
+                    <ion-input type="text" placeholder="Password"></ion-input>
+                </ion-item>
+            </div>
+
+
         </div>
 
         <div class="swatch" [class.hidden2]="!isVisible" [class.visible2]="isVisible" id="swatch2">
-            <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>LOG IN</span></button>
+            <button *ngIf="isVisible" (click)="segueToHome()" class="account-button" id="login"><span>LOG IN</span></button>
         </div>
 
         <div class="swatch" [class.hidden3]="!isVisible" [class.visible3]="isVisible" id="swatch3">

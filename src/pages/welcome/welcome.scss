@@ -125,6 +125,22 @@ page-welcome
         width: 100%;
     }
 
+    .wrapper
+    {
+        margin-top: 35vh;
+    }
+
+    ion-item#user
+    {
+        background: transparent;
+        width: 80vw;
+        margin: auto;
+        padding:  0;
+
+
+    }
+
+
     button.account-button
     {
         background: transparent;
