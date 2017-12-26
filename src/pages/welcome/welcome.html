@@ -1,22 +1,29 @@
 <ion-content>
+<main ion-fixed>
 
-    <main ion-fixed>
+    <div class="swatch visible1" [class.hidden1]="!isVisible" [class.visible1]="isVisible" id="swatch1">
+    <h1 id="title">Case</h1>
+    <!--<h2 id="description">Sell High<br>Buy Low</h2>-->
+    <div class="hidden" id="wrapper">
 
-        <div class="swatch" [class.hidden1]="!isVisible" [class.visible1]="isVisible" id="swatch1">
+    <ion-item id="user">
+    <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
 
-            <h1 id="title">Case</h1>
-            <!--<h2 id="description">Sell High<br>Buy Low</h2>-->
-            <div id="touch-target"></div>
-        </div>
+    <ion-item id="user">
+    <ion-input type="text" placeholder="Password"></ion-input>
+    </ion-item>
 
-        <div class="swatch" [class.hidden2]="!isVisible" [class.visible2]="isVisible" id="swatch2">
-            <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>LOG IN</span></button>
-        </div>
+    </div>
+    </div>
 
-        <div class="swatch" [class.hidden3]="!isVisible" [class.visible3]="isVisible" id="swatch3">
-            <button *ngIf="isVisible" (click)="segueToSignup()" class="account-button" id="signup"><span>SIGN UP</span></button>
-        </div>
+    <div class="swatch visible2" [class.hidden2]="!isVisible" [class.visible2]="isVisible" id="swatch2">
+    <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>LOG IN</span></button>
+    </div>
 
-    </main>
+    <div class="swatch visible3" [class.hidden3]="!isVisible" [class.visible3]="isVisible" id="swatch3">
+    <button *ngIf="isVisible" (click)="segueToSignup()" class="account-button" id="signup"><span>SIGN UP</span></button>
+    </div>
 
+</main>
 </ion-content>

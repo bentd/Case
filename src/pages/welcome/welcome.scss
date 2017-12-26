@@ -1,6 +1,6 @@
 page-welcome
 {
-    $padding: 4px;
+    $padding: 0px;
     $padding2x: calc(2 * #{$padding});
     $border-radius: 12px;
     $width: calc(100% - #{$padding2x});
@@ -20,37 +20,22 @@ page-welcome
     @keyframes show1
     {
         000% { height: $vhidden1; width: $whidden1; }
+        075% { height: $vhidden1; width: $whidden1; }
         100% { height: $visible1; width: $width; }
     }
 
     @keyframes show2
     {
         000% { height: $vhidden2; width: $whidden2; }
+        075% { height: $vhidden2; width: $whidden2; }
         100% { height: $visible2; width: $width; }
     }
 
     @keyframes show3
     {
         000% { height: $vhidden3; width: $whidden3; }
+        075% { height: $vhidden3; width: $whidden3; }
         100% { height: $visible3; width: $width; }
-    }
-
-    @keyframes hide1
-    {
-        000% { height: $visible1; width: $width; }
-        100% { height: $vhidden1; width: $whidden1; }
-    }
-
-    @keyframes hide2
-    {
-        000% { height: $visible2; width: $width; }
-        100% { height: $vhidden2; width: $whidden2; }
-    }
-
-    @keyframes hide3
-    {
-        000% { height: $visible3; width: $width; }
-        100% { height: $vhidden3; width: $whidden3; }
     }
 
     *
@@ -58,9 +43,13 @@ page-welcome
         color: white;
     }
 
+    ion-content
+    {
+        background-color: black !important;
+    }
+
     main
     {
-        background: white;
         height: 100vh;
         padding: $padding;
         position: relative;
@@ -102,9 +91,9 @@ page-welcome
     .hidden3 { animation: hide3 0.2s forwards }
 
 
-    .visible1 { animation: show1 0.2s forwards }
-    .visible2 { animation: show2 0.2s forwards }
-    .visible3 { animation: show3 0.2s forwards }
+    .visible1 { animation: show1 1.5s forwards }
+    .visible2 { animation: show2 1.5s forwards }
+    .visible3 { animation: show3 1.5s forwards }
 
     h1#title
     {
@@ -149,4 +138,25 @@ page-welcome
     button#login{ }
 
     button#signup{ }
+
+    #wrapper
+    {
+        margin-top: 35vh;
+    }
+
+    ion-item#user
+    {
+        background: transparent;
+        width: 80vw;
+        margin: auto;
+        padding:  0;
+
+
+    }
+
+    .hidden
+    {
+        display: none;
+        height: 0;
+    }
 }

@@ -25679,6 +25679,15 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.toolbar-background {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.back-button {
+  color: linen !important;
+}
+
 #content {
   background: -webkit-gradient(linear, right bottom, left top, from(maroon), color-stop(#802b00), to(#993300));
   background: linear-gradient(to left top, maroon, #802b00, #993300);
@@ -25710,133 +25719,91 @@ ion-item#collegeAttend {
 
 @-webkit-keyframes show1 {
   000% {
-    height: calc(100% - 04% - calc(2 * 4px));
-    width: calc(100% - 00% - calc(2 * 4px));
+    height: calc(100% - 04% - calc(2 * 0px));
+    width: calc(100% - 00% - calc(2 * 0px));
+  }
+  075% {
+    height: calc(100% - 04% - calc(2 * 0px));
+    width: calc(100% - 00% - calc(2 * 0px));
   }
   100% {
-    height: calc(100% - 16% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
+    height: calc(100% - 16% - calc(2 * 0px));
+    width: calc(100% - calc(2 * 0px));
   }
 }
 
 @keyframes show1 {
   000% {
-    height: calc(100% - 04% - calc(2 * 4px));
-    width: calc(100% - 00% - calc(2 * 4px));
+    height: calc(100% - 04% - calc(2 * 0px));
+    width: calc(100% - 00% - calc(2 * 0px));
+  }
+  075% {
+    height: calc(100% - 04% - calc(2 * 0px));
+    width: calc(100% - 00% - calc(2 * 0px));
   }
   100% {
-    height: calc(100% - 16% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
+    height: calc(100% - 16% - calc(2 * 0px));
+    width: calc(100% - calc(2 * 0px));
   }
 }
 
 @-webkit-keyframes show2 {
   000% {
-    height: calc(100% - 02% - calc(2 * 4px));
-    width: calc(100% - 02% - calc(2 * 4px));
+    height: calc(100% - 02% - calc(2 * 0px));
+    width: calc(100% - 02% - calc(2 * 0px));
+  }
+  075% {
+    height: calc(100% - 02% - calc(2 * 0px));
+    width: calc(100% - 02% - calc(2 * 0px));
   }
   100% {
-    height: calc(100% - 08% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
+    height: calc(100% - 08% - calc(2 * 0px));
+    width: calc(100% - calc(2 * 0px));
   }
 }
 
 @keyframes show2 {
   000% {
-    height: calc(100% - 02% - calc(2 * 4px));
-    width: calc(100% - 02% - calc(2 * 4px));
+    height: calc(100% - 02% - calc(2 * 0px));
+    width: calc(100% - 02% - calc(2 * 0px));
+  }
+  075% {
+    height: calc(100% - 02% - calc(2 * 0px));
+    width: calc(100% - 02% - calc(2 * 0px));
   }
   100% {
-    height: calc(100% - 08% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
+    height: calc(100% - 08% - calc(2 * 0px));
+    width: calc(100% - calc(2 * 0px));
   }
 }
 
 @-webkit-keyframes show3 {
   000% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - 04% - calc(2 * 4px));
+    height: calc(100% - 00% - calc(2 * 0px));
+    width: calc(100% - 04% - calc(2 * 0px));
+  }
+  075% {
+    height: calc(100% - 00% - calc(2 * 0px));
+    width: calc(100% - 04% - calc(2 * 0px));
   }
   100% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
+    height: calc(100% - 00% - calc(2 * 0px));
+    width: calc(100% - calc(2 * 0px));
   }
 }
 
 @keyframes show3 {
   000% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - 04% - calc(2 * 4px));
+    height: calc(100% - 00% - calc(2 * 0px));
+    width: calc(100% - 04% - calc(2 * 0px));
+  }
+  075% {
+    height: calc(100% - 00% - calc(2 * 0px));
+    width: calc(100% - 04% - calc(2 * 0px));
   }
   100% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-}
-
-@-webkit-keyframes hide1 {
-  000% {
-    height: calc(100% - 16% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-  100% {
-    height: calc(100% - 04% - calc(2 * 4px));
-    width: calc(100% - 00% - calc(2 * 4px));
-  }
-}
-
-@keyframes hide1 {
-  000% {
-    height: calc(100% - 16% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-  100% {
-    height: calc(100% - 04% - calc(2 * 4px));
-    width: calc(100% - 00% - calc(2 * 4px));
-  }
-}
-
-@-webkit-keyframes hide2 {
-  000% {
-    height: calc(100% - 08% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-  100% {
-    height: calc(100% - 02% - calc(2 * 4px));
-    width: calc(100% - 02% - calc(2 * 4px));
-  }
-}
-
-@keyframes hide2 {
-  000% {
-    height: calc(100% - 08% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-  100% {
-    height: calc(100% - 02% - calc(2 * 4px));
-    width: calc(100% - 02% - calc(2 * 4px));
-  }
-}
-
-@-webkit-keyframes hide3 {
-  000% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-  100% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - 04% - calc(2 * 4px));
-  }
-}
-
-@keyframes hide3 {
-  000% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - calc(2 * 4px));
-  }
-  100% {
-    height: calc(100% - 00% - calc(2 * 4px));
-    width: calc(100% - 04% - calc(2 * 4px));
+    height: calc(100% - 00% - calc(2 * 0px));
+    width: calc(100% - calc(2 * 0px));
   }
 }
 
@@ -25844,10 +25811,13 @@ page-welcome * {
   color: white;
 }
 
+page-welcome ion-content {
+  background-color: black !important;
+}
+
 page-welcome main {
-  background: white;
   height: 100vh;
-  padding: 4px;
+  padding: 0px;
   position: relative;
   width: 100vw;
 }
@@ -25861,7 +25831,7 @@ page-welcome div.swatch {
   position: absolute;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: calc(100% - calc(2 * 4px));
+  width: calc(100% - calc(2 * 0px));
 }
 
 page-welcome div#swatch1 {
@@ -25896,18 +25866,18 @@ page-welcome .hidden3 {
 }
 
 page-welcome .visible1 {
-  -webkit-animation: show1 0.2s forwards;
-  animation: show1 0.2s forwards;
+  -webkit-animation: show1 1.5s forwards;
+  animation: show1 1.5s forwards;
 }
 
 page-welcome .visible2 {
-  -webkit-animation: show2 0.2s forwards;
-  animation: show2 0.2s forwards;
+  -webkit-animation: show2 1.5s forwards;
+  animation: show2 1.5s forwards;
 }
 
 page-welcome .visible3 {
-  -webkit-animation: show3 0.2s forwards;
-  animation: show3 0.2s forwards;
+  -webkit-animation: show3 1.5s forwards;
+  animation: show3 1.5s forwards;
 }
 
 page-welcome h1#title {
@@ -25946,4 +25916,20 @@ page-welcome button.account-button span {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+page-welcome #wrapper {
+  margin-top: 35vh;
+}
+
+page-welcome ion-item#user {
+  background: transparent;
+  width: 80vw;
+  margin: auto;
+  padding: 0;
+}
+
+page-welcome .hidden {
+  display: none;
+  height: 0;
 }

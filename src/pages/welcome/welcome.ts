@@ -1,15 +1,11 @@
 // Angular
 import { Component } from "@angular/core";
-//import { ElementRef } from "@angular/core";
-//import { ViewChild } from "@angular/core";
 
 // Ionic
-import { NavController } from "ionic-angular";
-import { Hammer } from "ionic-angular/gestures/hammer";
+import { NavController } from 'ionic-angular';
 
 // Case
-import { LoginPage } from "../login/login";
-// import { SignupPage } from "../signup/signup";
+import { SignupPage } from "../signup/signup";
 
 @Component
 ({
@@ -21,40 +17,33 @@ export class WelcomePage
     swatch1: any;
     swatch2: any;
     swatch3: any;
+    loginWrapper: any;
 
-    isVisible: any = false;
+    isVisible: any = true;
 
-    constructor(public controller: NavController)
+    constructor(private controller: NavController)
     {
 
     }
+
 
     ngAfterViewInit()
     {
         this.swatch1 = document.getElementById("swatch1");
         this.swatch2 = document.getElementById("swatch2");
         this.swatch3 = document.getElementById("swatch3");
-
-        var touchTarget = document.getElementById("touch-target");
-
-        var DIRECTION_VERTICAL = { direction: 24 };
-        //https://github.com/ionic-team/ionic/issues/5767
-        //http://hammerjs.github.io/getting-started/
-        //http://hammerjs.github.io/api/
-        let gesture1 = Hammer(touchTarget, DIRECTION_VERTICAL);
-
-        gesture1.get('swipe').set(DIRECTION_VERTICAL);
-
-        gesture1.on("swipe", (event) => { console.log(event); this.isVisible = (event.angle < 0); });
+        this.loginWrapper = document.getElementById("wrapper");
     }
+
 
     segueToLogin()
     {
-        this.controller.push(LoginPage);
+        this.loginWrapper.classList.remove("hidden");
     }
 
     segueToSignup()
     {
-        this.controller.push(LoginPage);
+        this.loginWrapper.classList.add("hidden");
+        this.controller.push(SignupPage);
     }
 }
