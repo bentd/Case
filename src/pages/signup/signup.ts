@@ -24,6 +24,11 @@ export class SignupPage
 	    config.set("android", "backButtonText", "");
     }
 
+    nextSlide()
+    {
+
+    }
+
     segueToHome()
     {
         this.controller.setRoot(HomePage);

@@ -1,56 +1,59 @@
-<ion-header><ion-navbar></ion-navbar></ion-header>
+<ion-header>
+<ion-navbar>
 
+</ion-navbar>
+</ion-header>
 
 <ion-content id="content">
+<ion-slides pager="true">
 
-    <!--<h2 id="explain">Please fill out the information below</h2>-->
+    <ion-slide>
+    <h1 class="name">What's your full name?</h1>
+    <ion-item id="fullname">
+    <ion-input placeholder="full name" clearInput></ion-input>
+    </ion-item>
+    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+    </ion-slide>
 
-        <ion-slides pager="true">
+    <ion-slide>
+    <h1 class="name">What's your email?</h1>
+    <ion-item id="fullname">
+    <ion-input placeholder="email" clearInput></ion-input>
+    </ion-item>
+    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+    </ion-slide>
 
-                <ion-slide>
-                    <h1 id="name">What's your full name?</h1>
-                    <ion-item id="fullname">
-                       <ion-input placeholder="full name" clearInput></ion-input>
-                    </ion-item>
-                </ion-slide>
+    <ion-slide>
+    <h1 class="name">Where did you go to school?</h1>
+    <ion-item id="email">
+    <ion-input placeholder="college" clearInput></ion-input>
+    </ion-item>
+    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+    </ion-slide>
 
-                <ion-slide>
-                    <h1 id="name">What's your email?</h1>
-                    <ion-item id="fullname">
-                       <ion-input placeholder="email" clearInput></ion-input>
-                    </ion-item>
-               </ion-slide>
+    <ion-slide>
+    <h1 class="name">What year are you in school?</h1>
+    <ion-item id="email">
+    <ion-input placeholder="year" clearInput></ion-input>
+    </ion-item>
+    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+    </ion-slide>
 
-                <ion-slide>
-                    <h1 id="name">Where did you go to school?</h1>
-                    <ion-item id="email">
-                       <ion-input placeholder="college" clearInput></ion-input>
-                    </ion-item>
-                </ion-slide>
+    <ion-slide>
+    <h1 class="name">Create a password</h1>
+    <ion-item id="email">
+    <ion-input placeholder="password" clearInput></ion-input>
+    </ion-item>
+    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+    </ion-slide>
 
-                <ion-slide>
-                    <h1 id="name">What year are you in school?</h1>
-                    <ion-item id="email">
-                       <ion-input placeholder="year" clearInput></ion-input>
-                    </ion-item>
-                </ion-slide>
+    <ion-slide>
+    <h1 class="name">Confirm your password</h1>
+    <ion-item id="email">
+    <ion-input placeholder="confirm password" clearInput></ion-input>
+    </ion-item>
+    <button id="submit" (click)="segueToHome()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+    </ion-slide>
 
-                <ion-slide>
-                    <h1 id="name">Create a password</h1>
-                    <ion-item id="email">
-                       <ion-input placeholder="password" clearInput></ion-input>
-                    </ion-item>
-                </ion-slide>
-
-                <ion-slide>
-                    <h1 id="name">Confirm your password</h1>
-                    <ion-item id="email">
-                       <ion-input placeholder="confirm password" clearInput></ion-input>
-                    </ion-item>
-                </ion-slide>
-
-            </ion-slides>
-
-            <button id="submit" (click)="segueToHome()">  <ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-
+</ion-slides>
 </ion-content>
