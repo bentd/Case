@@ -50,9 +50,10 @@ button.swiper-pagination-bullet-active
     font-size: 10vw;
     color: linen;
     background-color: transparent !important;
-    float: right;
-    margin-right: 6vw;
-    margin-top: -34vh;
+    //float: right;
+    top: 10vh;
+    //position: absolute;
+    //z-index: 10;
 }
 
 
@@ -63,6 +64,8 @@ ion-slides
 {
     //width: 95vw;
     margin-top: -15vh;
+    //position: relative;
+    //z-index: 1;
 }
 
 ion-content#content ion-slides ion-slide ion-item#fullname,
