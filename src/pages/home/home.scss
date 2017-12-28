@@ -19,4 +19,17 @@ page-home {
         background: linear-gradient(to left top, #990000, #7f0000);;
     }
 
+    ion-content.content.content-ios
+    {
+        background: linear-gradient(to left top, #f8f8f8, #fdfdfd);;
+    }
+
+    #info
+    {
+        width: 90vw;
+        height: 30vh;
+        border-color: black;
+        margin: auto auto 3vh;
+    }
+
 }
