@@ -14,6 +14,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { SignupPage } from '../pages/signup/signup';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule
 ({
@@ -23,6 +24,7 @@ import { SignupPage } from '../pages/signup/signup';
         HomePage,
         WelcomePage,
         SignupPage,
+        ProfilePage,
     ],
 
     imports:
@@ -39,6 +41,7 @@ import { SignupPage } from '../pages/signup/signup';
         HomePage,
         WelcomePage,
         SignupPage,
+        ProfilePage,
     ],
 
     providers:

@@ -16,7 +16,7 @@ page-home {
 
     ion-header
     {
-        background: linear-gradient(to left top, #990000, #7f0000);;
+        background: linear-gradient(to right top, #7f0000, #990000);;
     }
 
     ion-content.content.content-ios
@@ -31,5 +31,12 @@ page-home {
         border-color: black;
         margin: auto auto 3vh;
     }
+
+    button.fab.fab-ios
+    {
+        background-color: #7f0000;
+    }
+
+
 
 }

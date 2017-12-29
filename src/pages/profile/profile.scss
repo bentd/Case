@@ -1,0 +1,59 @@
+page-profile
+{
+
+    $profile-pic-size: 18vh;
+
+    .toolbar-background
+    {
+        background: linear-gradient(to bottom, #660000, #730000);
+        border-color: transparent !important;
+    }
+
+    ion-navbar.toolbar.toolbar-ios
+    {
+        height: 10vh;
+    }
+
+    div.toolbar-background
+    {
+        border-bottom-width: 0px !important;
+    }
+
+    .back-button-ios
+    {
+    }
+
+    .scroll-content
+    {
+        margin: 0;
+        height: 0 !important;
+    }
+
+    .fixed-content
+    {
+        margin-top: 10vh;
+    }
+
+    div#profile-pic-container
+    {
+        height: 10vh;
+        width: 100vw;
+        background: linear-gradient(to bottom, #730000, maroon);
+    }
+
+    img#profile-pic
+    {
+        height: $profile-pic-size;
+        width: $profile-pic-size;
+        border-radius: $profile-pic-size;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+
+
+
+
+}
