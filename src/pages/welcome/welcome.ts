@@ -1,16 +1,24 @@
 // Angular
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 // Ionic
-import { NavController } from 'ionic-angular';
+import { IonicPage } from "ionic-angular";
+import { NavController } from "ionic-angular";
+import { NavParams } from "ionic-angular";
 
-// Case
-import { SignupPage } from "../signup/signup";
+// App
+// import { SignupPage } from "../signup/signup";
+// import { BoilerPage } from "../boiler/boiler";
 
+@IonicPage
+({
+    name: "welcome",
+    segment: "welcome"
+})
 @Component
 ({
-    selector: "page-welcome",
-    templateUrl: "welcome.html"
+    selector: 'page-welcome',
+    templateUrl: 'welcome.html',
 })
 export class WelcomePage
 {
@@ -21,11 +29,10 @@ export class WelcomePage
 
     isVisible: any = true;
 
-    constructor(public controller: NavController)
+    constructor(public controller: NavController, public params: NavParams)
     {
 
     }
-
 
     ngAfterViewInit()
     {
@@ -35,7 +42,6 @@ export class WelcomePage
         this.loginWrapper = document.getElementById("wrapper");
     }
 
-
     segueToLogin()
     {
         this.loginWrapper.classList.remove("hidden");
@@ -44,6 +50,6 @@ export class WelcomePage
     segueToSignup()
     {
         this.loginWrapper.classList.add("hidden");
-        this.controller.push(SignupPage);
+        this.controller.push("signup");
     }
 }

@@ -1,29 +1,33 @@
-
 // Angular
 import { Component } from "@angular/core";
 //import { ViewChild } from "@angular/core";
+
 // Ionic
-import { NavController } from 'ionic-angular';
-import { Config } from 'ionic-angular';
+import { IonicPage } from "ionic-angular";
+import { NavController } from "ionic-angular";
+import { NavParams } from "ionic-angular";
+import { Config } from "ionic-angular";
 
-// Case
-// mport { BoilerPage } from "../boiler/boiler";
-import { HomePage } from '../home/home';
+// App
+// import { HomePage } from '../home/home';
 
-
+@IonicPage
+({
+    name: "signup",
+    segment: "signup"
+})
 @Component
 ({
-    selector: "page-signup",
-    templateUrl: "signup.html"
+  selector: "page-signup",
+  templateUrl: "signup.html",
 })
 export class SignupPage
 {
-    constructor(public controller: NavController, public config: Config)
+    constructor(public controller: NavController, public params: NavParams, config: Config)
     {
-    	config.set("ios", "backButtonText", "");
-	    config.set("android", "backButtonText", "");
+        config.set("ios", "backButtonText", "");
+        config.set("android", "backButtonText", "");
     }
-
     nextSlide()
     {
 
@@ -31,14 +35,6 @@ export class SignupPage
 
     segueToHome()
     {
-        this.controller.setRoot(HomePage);
+        this.controller.setRoot("home");
     }
-
-/*
-    segueToWhereever()
-    {
-        this.controller.setRoot(Wherever);
-    }
-*/
-
 }

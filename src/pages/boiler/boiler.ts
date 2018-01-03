@@ -11,22 +11,17 @@ import { NavParams } from "ionic-angular";
 
 @IonicPage
 ({
-    name: "home",
-    segment: "home"
+    name: "boiler",
+    segment: "boiler"
 })
 @Component
 ({
-    selector: 'page-home',
-    templateUrl: 'home.html',
+    selector: 'page-boiler',
+    templateUrl: 'boiler.html',
 })
-export class HomePage
+export class BoilerPage
 {
     constructor(public controller: NavController, public params: NavParams)
     {
-    }
-
-    segueToProfile()
-    {
-        this.controller.push("profile");
     }
 }
