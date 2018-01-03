@@ -1,17 +1,17 @@
 import { NgModule } from "@angular/core";
 import { IonicPageModule } from "ionic-angular";
-import { BoilerPage } from "./boiler";
+import { SettingsPage } from "./settings";
 
 @NgModule
 ({
     declarations:
     [
-        BoilerPage,
+        SettingsPage,
     ],
 
     imports:
     [
-        IonicPageModule.forChild(BoilerPage),
+        IonicPageModule.forChild(SettingsPage),
     ],
 })
-export class BoilerPageModule { }
+export class SettingsPageModule { }
