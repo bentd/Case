@@ -1,11 +1,7 @@
 // Angular
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { NavController } from 'ionic-angular';
 import { Config } from 'ionic-angular';
-import { SettingsPage } from '../settings/settings';
->>>>>>> a4947e3bdb1197ad563da91ce0b92658ed71061b
 
 // Ionic
 import { IonicPage } from "ionic-angular";
@@ -31,15 +27,8 @@ export class ProfilePage
     {
     }
 
-<<<<<<< HEAD
-    ionViewDidLoad()
-    {
-    }
-=======
     segueToSettings()
     {
         this.controller.push(SettingsPage);
     }
-
->>>>>>> a4947e3bdb1197ad563da91ce0b92658ed71061b
 }
