@@ -1,6 +1,5 @@
 page-profile
 {
-
     $profile-pic-size: 18vh;
 
     .toolbar-background
@@ -39,6 +38,7 @@ page-profile
         height: 10vh;
         width: 100vw;
         background: linear-gradient(to bottom, #730000, maroon);
+        position: relative;
     }
 
     img#profile-pic
@@ -51,9 +51,20 @@ page-profile
         left: 50%;
         transform: translate(-50%, 50%);
     }
+<<<<<<< HEAD
 
 
+    ul
+    {
+        margin-top: 12vh;
+    }
 
+    li
+    {
+        display: inline;
 
+    }
 
+=======
+>>>>>>> 143dda0d121f89e71676d867ff46e2f2bba4f3ab
 }
