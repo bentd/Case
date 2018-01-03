@@ -1,13 +1,18 @@
 // Angular
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { ErrorHandler } from "@angular/core";
+import { NgModule } from "@angular/core";
 
 // Ionic
 import { IonicApp } from "ionic-angular";
 import { IonicErrorHandler } from "ionic-angular";
 import { IonicModule } from "ionic-angular";
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { StatusBar } from "@ionic-native/status-bar";
+
+// App
+import { App } from "./app.component";
+import { RootPage } from "../pages/root/root";
 
 // App
 import { App } from './app.component';
