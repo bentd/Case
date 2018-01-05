@@ -1,32 +1,20 @@
-<ion-header no-border>
-    <ion-navbar>
-    </ion-navbar>
+<ion-header>
+<ion-navbar>
+
+    <ion-title>CART</ion-title>
+
+</ion-navbar>
+
 </ion-header>
 
+
 <ion-content>
-<main ion-fixed>
 
+    <ion-item id="total">
+        <h1> x item(s): Total <b>$135.84</b></h1>
+    </ion-item>
 
-    <div id="profile-pic-container">
-    <img id="profile-pic" src="../assets/imgs/kim.png">
-    </div>
-
-<div padding>
-    <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
-      <ion-segment-button value="selling">
-         SELLING
-      </ion-segment-button>
-      <ion-segment-button value="sold">
-          SOLD
-      </ion-segment-button>
-      <ion-segment-button value="likes">
-         LIKES
-      </ion-segment-button>
-    </ion-segment>
-</div>
-
-<div [ngSwitch]="phase">
-    <ion-list *ngSwitchCase="'selling'">
+    <ion-list>
         <div class="cart-item">
             <div class="cart-item-image-container">
                 <img class="cart-item-image" src="../assets/imgs/books/biology.jpg">
@@ -83,26 +71,5 @@
 
         </div>
     </ion-list>
-    <ion-list *ngSwitchCase="'sold'">
-        <ion-card id="info">
-              <ion-card-content>
-                <!-- Add card content here! -->
-              </ion-card-content>
-        </ion-card>
-        <ion-card id="info">
-              <ion-card-content>
-                <!-- Add card content here! -->
-              </ion-card-content>
-        </ion-card>
-    </ion-list>
-    <ion-list *ngSwitchCase="'likes'">
-        <ion-card id="info">
-              <ion-card-content>
-                <!-- Add card content here! -->
-              </ion-card-content>
-        </ion-card>
-    </ion-list>
-</div>
-</main>
 
 </ion-content>

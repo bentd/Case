@@ -14,10 +14,6 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { App } from "./app.component";
 import { RootPage } from "../pages/root/root";
 
-// App
-import { App } from './app.component';
-import { RootPage } from '../pages/root/root';
-
 
 @NgModule
 ({
