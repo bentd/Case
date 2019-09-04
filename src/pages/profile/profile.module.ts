@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { IonicPageModule } from "ionic-angular";
 import { ProfilePage } from "./profile";
-import { BookCardModule } from "../../elements/book/book.module";
 
 @NgModule
 ({
@@ -12,7 +11,6 @@ import { BookCardModule } from "../../elements/book/book.module";
 
     imports:
     [
-        BookCardModule,
         IonicPageModule.forChild(ProfilePage),
     ],
 })

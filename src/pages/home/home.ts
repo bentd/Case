@@ -21,9 +21,6 @@ import { NavParams } from "ionic-angular";
 })
 export class HomePage
 {
-    phase: string = "books";
-
-
     constructor(public controller: NavController, public params: NavParams)
     {
     }
@@ -31,10 +28,5 @@ export class HomePage
     segueToProfile()
     {
         this.controller.push("profile");
-    }
-
-    onInput(event: any)
-    {
-
     }
 }

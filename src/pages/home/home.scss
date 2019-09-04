@@ -24,31 +24,17 @@ page-home
         background: linear-gradient(to left top, #f8f8f8, #fdfdfd);;
     }
 
-    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated
+    #info
     {
-        border-color: darkred;
-    }
-
-    .segment-md .segment-button
-    {
-        color: maroon;
-        text-transform: lowercase;
-    }
-
-    .segment-button
-    {
-        margin-top: -2.5vh;
-        margin-bottom: 2.5vh;
+        width: 90vw;
+        height: 30vh;
+        border-color: black;
+        margin: auto auto 3vh;
     }
 
     button.fab.fab-ios
     {
         background-color: #7f0000;
-    }
-
-    ion-icon
-    {
-        color: white;
     }
 
 

@@ -1,41 +1,16 @@
-<ion-header no-border>
-<ion-navbar>
+<ion-header>
 
+<ion-navbar>
+<ion-title id="">Kimberly Champagne<br>FSU</ion-title>
 </ion-navbar>
+
 </ion-header>
 
 <ion-content>
 <main ion-fixed>
 
-
     <div id="profile-pic-container">
-    <div id="profile-pic"></div>
-    </div>
-
-    <div padding>
-    <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
-
-        <ion-segment-button value="selling">SELLING</ion-segment-button>
-        <ion-segment-button value="sold">SOLD</ion-segment-button>
-        <ion-segment-button value="likes">LIKES</ion-segment-button>
-
-    </ion-segment>
-    </div>
-
-    <div [ngSwitch]="phase">
-
-        <ion-list *ngSwitchCase="'selling'">
-        <bookcard></bookcard>
-        </ion-list>
-
-        <ion-list *ngSwitchCase="'sold'">
-        <bookcard></bookcard>
-        </ion-list>
-
-        <ion-list *ngSwitchCase="'likes'">
-        <bookcard></bookcard>
-        </ion-list>
-
+    <img id="profile-pic" src="../assets/imgs/background.jpeg">
     </div>
 
 </main>

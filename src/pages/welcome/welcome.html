@@ -7,34 +7,22 @@
     <div class="hidden" id="wrapper">
 
     <ion-item id="user">
-    <ion-label> <ion-icon name="md-person"></ion-icon></ion-label>
-    <ion-input type="text" placeholder="username"></ion-input>
+    <ion-input type="text" placeholder="Username"></ion-input>
     </ion-item>
 
     <ion-item id="user">
-    <ion-label> <ion-icon name="md-lock"></ion-icon></ion-label>
-    <ion-input type="text" placeholder="password"></ion-input>
+    <ion-input type="text" placeholder="Password"></ion-input>
     </ion-item>
-
-    <div class="btn-forgot">
-
-        <button id="forgot" ion-button (click)="segueToFor()"> Forgot password? </button>
-
-        <button id="submit" ion-button icon-only>
-            <ion-icon name="md-arrow-forward"></ion-icon>
-        </button>
-
-    </div>
 
     </div>
     </div>
 
     <div class="swatch visible2" [class.hidden2]="!isVisible" [class.visible2]="isVisible" id="swatch2">
-    <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>login</span></button>
+    <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>LOG IN</span></button>
     </div>
 
     <div class="swatch visible3" [class.hidden3]="!isVisible" [class.visible3]="isVisible" id="swatch3">
-    <button *ngIf="isVisible" (click)="segueToSignup()" class="account-button" id="signup"><span>sign up</span></button>
+    <button *ngIf="isVisible" (click)="segueToSignup()" class="account-button" id="signup"><span>SIGN UP</span></button>
     </div>
 
 </main>

@@ -1,18 +1,14 @@
 page-profile
 {
-    $profile-pic-size: 16vh;
-
-
+    $profile-pic-size: 18vh;
 
     .toolbar-background
     {
         background: linear-gradient(to bottom, #660000, #730000);
         border-color: transparent !important;
-        border: none;
-        top: 0;
     }
 
-    ion-title.toolbar.toolbar-ios
+    ion-navbar.toolbar.toolbar-ios
     {
         height: 10vh;
     }
@@ -22,6 +18,9 @@ page-profile
         border-bottom-width: 0px !important;
     }
 
+    .back-button-ios
+    {
+    }
 
     .scroll-content
     {
@@ -42,11 +41,8 @@ page-profile
         position: relative;
     }
 
-    div#profile-pic
+    img#profile-pic
     {
-        background: url(../assets/imgs/kim.png);
-        background-position: center;
-        background-size: 200%;
         height: $profile-pic-size;
         width: $profile-pic-size;
         border-radius: $profile-pic-size;
@@ -54,97 +50,16 @@ page-profile
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 50%);
-        border: 2px solid white;
-
     }
 
-    ion-segment
+    ul
     {
-        margin-top: 8vh;
-
+        margin-top: 12vh;
     }
 
-    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated
+    li
     {
-        border-color: maroon;
-    }
-
-    .segment-md .segment-button
-    {
-        color: maroon;
-    }
-
-    div.cart-item
-    {
-        border-bottom: 1px solid black;
-        border-top: 1px solid black;
-        //height: 24vh;
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
-    div.cart-item-image-container
-    {
-        height: 25vh;
-        width: 31vw;
-        padding: 10px;
-        position: relative;
-        margin: 1vh 14vw 2vh 3vw;
-    }
-
-    img.cart-item-image
-    {
-        min-width: calc(31vw - 20px) !important;
-        min-height: calc(25vh - 20px) !important;
-        position: absolute;
-        border-radius: 1.5%;
-
-    }
-
-    div.cart-item
-    {
-        border-bottom: 0.5px solid darkgrey;
-        border-top: transparent;
-    }
-
-
-    .cart-item-description h1
-    {
-        width: 50vw;
-        margin-top: 2vh;
-        text-transform: uppercase;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-weight: 300;
-        font-size: 22px;
-    }
-
-    .cart-item-description h2
-    {
-        font-weight: 340;
-        font-size: 15px;
-        margin-top: -1vh;
-
-    }
-
-    .cart-item-description h3
-    {
-        font-weight: 400;
-        font-size: 20px;
-        margin-top: 1.5vh;
-    }
-
-    .cart-item-description h4
-    {
-        font-weight: 300;
-        font-size: 16px;
-        margin-top: -.6vh;
-    }
-
-    *
-    {
-        //box-sizing: content-box;
+        display: inline;
 
     }
 }

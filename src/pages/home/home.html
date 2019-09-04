@@ -1,43 +1,50 @@
 <ion-header>
+  <ion-navbar>
 
-    <ion-navbar>
-    <!--<button ion-button menuToggle>Toggle Menu</button>-->
-    <ion-title>Case</ion-title>
-    </ion-navbar>
+      <!--<button ion-button menuToggle>Toggle Menu</button>-->
 
-    <ion-searchbar id="search"
-    [(ngModel)]="myInput"
-    [showCancelButton]="shouldShowCancel"
-    (ionInput)="onInput($event)"
-    (ionCancel)="onCancel($event)">
-    </ion-searchbar>
+
+    <ion-title>
+      Case
+  </ion-title>
+
+  </ion-navbar>
+
+  <ion-searchbar id="search"
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+  </ion-searchbar>
 
 </ion-header>
 
 <ion-content padding>
 
-    <div padding>
-    <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
-    <ion-segment-button value="books">Books</ion-segment-button>
-    <ion-segment-button value="guides">Study Guides</ion-segment-button>
-    </ion-segment>
-    </div>
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here! -->
+                  </ion-card-content>
+            </ion-card>
 
-    <!--switch-->
-    <div [ngSwitch]="phase">
-    <ion-list *ngSwitchCase="'books'">
-    <bookcard></bookcard>
-    <bookcard></bookcard>
-    <bookcard></bookcard>
-    </ion-list>
-    </div>
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here! -->
+                  </ion-card-content>
+            </ion-card>
+
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here! -->
+                  </ion-card-content>
+            </ion-card>
 
 
-    <ion-fab right bottom id="btn">
-    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
-    <ion-fab-list side="top">
-    <button ion-fab (click)="segueToProfile()"><ion-icon name="logo-facebook"></ion-icon></button>
-    </ion-fab-list>
-    </ion-fab>
+        <ion-fab right bottom id="btn">
+            <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+            <ion-fab-list side="top">
+              <button ion-fab (click)="segueToProfile()"><ion-icon name="logo-facebook"></ion-icon></button>
+            </ion-fab-list>
+        </ion-fab>
 
 </ion-content>
