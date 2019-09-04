@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Case</ion-title>
+
+    <button  class="cart" ion-button>
+      <ion-icon name="md-cart"></ion-icon>
+    </button>
+
+  </ion-navbar>
+
+  <ion-searchbar
+    placeholder="Search for book, course number, author.."
+    [showCancelButton]="true"
+    (ionInput)="onSearchInput($event)"
+    (ionCancel)="onSearchCancel($event)">
+  </ion-searchbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<ion-card class="post">
+
+  <ion-card-content>
+      <div class="post-image-contanier">
+          <img style="height: 165px; width: 130px;" class="post-image" src="../assets/img/books/biology.jpg">
+      </div>
+
+      <div class="post-information-container">
+
+                <h1 class="post-title">Biology for Non-Majors</h1>
+                <br>
+
+                <p class="post-condition">Condition: Like New</p>
+                <br>
+
+                <p class="post-description"> BIO 1101 </p>
+                <br>
+
+                <!--<ion-row class="post-footer-container">-->
+
+                <ion-col col-4>
+                <button class="footer-button" ion-button icon-left clear small>
+                <ion-icon class="post-icon" name="pricetag"></ion-icon>
+                <div class="post-price">$35.75</div>
+                </button>
+                </ion-col>
+
+                <ion-col col-8>
+                <button (click)="showRadio()" class="footer-button" ion-button icon-right clear small>
+                <ion-icon class="post-icon" name="contact"></ion-icon>
+                <div class="post-contact">Contact</div>
+                </button>
+                </ion-col>
+
+                <!--</ion-row>-->
+            </div>
+
+  </ion-card-content>
+
+</ion-card>
+</ion-content>

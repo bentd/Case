@@ -1,129 +1,66 @@
-page-home
-{
-    .changeSchool
+page-home {
+
+    .cart
     {
-      color: white;
-      float: left;
-      margin-left: 2vw;
+        float: right;
+        background-color: transparent;
     }
 
-    .settings
-    {
-      float: right;
-      margin-right: 3vw;
-      color: white;
-      font-size: 5vw;
 
+
+    .searchbar
+    {
+        background-color: maroon;
+        //border-bottom-right-radius: 1em;
+        //border-bottom-left-radius: 1em;
+        padding-bottom: 1vh;
+        margin-top: -1.5vh;
     }
 
-    .postButton
+    .searchbar-input-container
     {
-      float: right;
-      margin: 4.5vw;
-      padding: 3vw 5vh;
-
-
+        margin: 3vw;
     }
 
-    ion-card.post
+    .title, .price, .condition, .Description
+    {
+        font-size: 3vw;
+        margin-left: 9vw;
+        white-space: nowrap;
+        padding-top: 1vh;
+    }
+
+    .post
     {
         display: flex;
-        flex-wrap: nowrap;
-        padding: 5px;
-        position: relative;
-        margin: 20px auto;
-        width: 95vw;
-        height: 59vw;
 
     }
 
-    ion-card.post div.post-image-container,
-    ion-card.post div.post-information-container
+    .background
     {
-        padding: 5px;
+        background-color: #f8f8f8;
     }
 
-    div.post-image-container
+    .case
+
+    
+
+    .card-div
     {
-        position: relative;
-        width: 45vw;
+        //margin: 1.5px;
+        width: 100vw;
+        margin-left: auto;
+        margin-bottom: 2vh;
     }
 
-    div.post-image
+    .more-more
     {
-        //background-attachment: fixed;
-        //background-position: center center;
-        //background-repeat: no-repeat;
-        left: 50%;
-        min-height: calc(90vw - 5px);
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    img.post-image
-    {
-        max-height: calc(100% - 10px);
-        max-width: calc(100% - 10px);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    div.post-information-container
-    {
-        position: relative;
-        text-align: center;
-        width: 55vw;
-    }
-
-    h1.post-title
-    {
-        font-size: 5vw;
-        height: 10hw;
-
-    }
-
-    p.post-description
-    {
+        margin: 2vh;
+        font-size: 35px;
+        background-color: white;
     }
 
 
-    ion-row.post-footer-container
-    {
-        bottom: 0;
-        height: 10hw;
-        position: absolute;
-    }
-
-    ion-col.col,
-    button.footer-button,
-    //ion-icon.post-icon,
-    //div.post-price,
-    //div.post-contact
-    {
-        margin: 0;
-        padding: 0;
-        //max-width: 105vw;
-        margin-bottom: .0vh;
-    }
-
-    div.post-contact,
-    //.post-icon
-    {
-        padding-left: 1vw;
-    }
-
-    .post-icon
-    {
-        margin-left: 7vw;
-
-    }
-
-    div.post-price
-    {
-        padding-right: .07vw;
-    }
 
 
 }
