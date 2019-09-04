@@ -1,11 +1,96 @@
 <ion-header>
 <ion-navbar>
 
-    <ion-title>new</ion-title>
+    <ion-title>case</ion-title>
 
 </ion-navbar>
 </ion-header>
 
 
 <ion-content>
+<div class="add-photo-container">
+    <h1> <ion-icon name="ios-camera"></ion-icon> Add photo(s)</h1>
+
+
+        <button ion-button icon-only id="add">
+        <ion-icon name="ios-camera"></ion-icon>
+        </button>
+
+        <button ion-button icon-only id="photo">
+        <ion-icon name="ios-camera"></ion-icon>
+        </button>
+
+        <button ion-button icon-only id="photo">
+        <ion-icon name="ios-camera"></ion-icon>
+        </button>
+</div>
+
+<div class="add-title-container">
+    <h1 id="title"> <ion-icon name="ios-create"></ion-icon> Add book title </h1>
+        <ion-item id="rounded">
+            <ion-label fixed>Title</ion-label>
+            <ion-input type="text" value=""></ion-input>
+        </ion-item>
+</div>
+
+<div class="split">
+    <div id="add-condition-container">
+        <h1 id="title"> Choose condition </h1>
+        <ion-item id="rounded3">
+          <ion-label >Condition</ion-label>
+              <ion-select [(ngModel)]="condition">
+                <ion-option value="new">New</ion-option>
+                <ion-option value="Like New">Like New</ion-option>
+                <ion-option value="Good">Good</ion-option>
+                <ion-option value="Used">Used</ion-option>
+              </ion-select>
+        </ion-item>
+    </div>
+
+    <div id="add-edition-container">
+        <h1 id="title"> Add edition # </h1>
+        <ion-item id="rounded2">
+            <ion-label fixed>edition</ion-label>
+            <ion-input type="number" value=""></ion-input>
+        </ion-item>
+    </div>
+</div>
+
+<div class="add-author-container">
+    <h1 id="title"> <ion-icon name="ios-person"></ion-icon> Add book author</h1>
+        <ion-item id="rounded">
+            <ion-label fixed>Author</ion-label>
+            <ion-input type="text" value=""></ion-input>
+        </ion-item>
+</div>
+
+<div class="split">
+    <div id="add-price-container">
+        <h1 id="title"><ion-icon name="ios-pricetag"></ion-icon> Choose price </h1>
+        <ion-item id="rounded2">
+            <ion-label fixed>price</ion-label>
+            <ion-input type="number" value=""></ion-input>
+        </ion-item>
+    </div>
+
+    <div id="add-course-container">
+        <h1 id="title"> Add Course # </h1>
+        <ion-item id="rounded2">
+            <ion-label fixed>course</ion-label>
+            <ion-input type="text" value=""></ion-input>
+        </ion-item>
+    </div>
+</div>
+
+
+
+<button ion-button id="submit"> Submit </button>
+
+
+
+
+
+
+
+
 </ion-content>
