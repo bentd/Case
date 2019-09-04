@@ -1,4 +1,4 @@
-// http://ionicframework.com/docs/theming/
+// http://ionicframework.com/docs/v2/theming/
 
 
 // App Global Sass
@@ -14,3 +14,56 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@import url(https://fonts.googleapis.com/css?family=Bellefair);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://necolas.github.io/normalize.css/7.0.0/normalize.css);
+
+
+//$primary: maroon;
+//$secondary: blanchedalmond;
+//$danger: red;
+//$light: white;
+//$dark: black;
+
+*
+{
+    font-family: "Josefin Sans";
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+
+.wooden-background
+{
+    background: url(../assets/img/background.jpg);
+}
+
+.toolbar .searchbar-ios input.searchbar-input
+{
+    background-color: white;
+}
+
+.case-button
+{
+    background-color: maroon;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.case-button-reverse
+{
+    background-color: blanchedalmond;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+    color: maroon;
+    padding: 10px 20px;
+}

@@ -1,0 +1,20 @@
+<ion-content>
+
+    <main ion-fixed>
+
+        <div (pan)="tutorialUp($event)" class="swatch" id="tutorial" [style.z-index]="zIntro">
+            <h1><b> Case</b></h1>
+            <h2>Sell high, buy low</h2>
+        </div>
+
+        <div [style.z-index]="zLogIn" class="swatch" id="login">
+            <button (click)="segueToLogIn()" class="account-button" id="login"><span>LOG IN</span></button>
+        </div>
+
+        <div [style.z-index]="zSignUp" class="swatch" id="signup">
+            <button (click)="segueToSignUp()" class="account-button" id="signup"><span>SIGN UP</span></button>
+        </div>
+
+    </main>
+
+</ion-content>

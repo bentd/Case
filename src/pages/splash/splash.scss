@@ -1,0 +1,56 @@
+page-splash
+{
+    @keyframes slide
+    {
+        100%
+        {
+            margin-left: 0%;
+        }
+    }
+
+    [background]
+    {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    [letter]
+    {
+        height: 25%;
+        margin-left: -199900%;
+        width: 200000%;
+    }
+
+    [c]
+    {
+        animation: slide 6000s linear infinite;
+        background: url(../assets/img/c.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    [a]
+    {
+        animation: slide 6000s linear infinite;
+        background: url(../assets/img/a.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    [s]
+    {
+        animation: slide 6000s linear infinite;
+        background: url(../assets/img/s.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    [e]
+    {
+        animation: slide 6000s linear infinite;
+        background: url(../assets/img/e.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+}

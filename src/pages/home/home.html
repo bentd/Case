@@ -1,101 +1,67 @@
 <ion-header>
-  <ion-navbar>
 
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+    <ion-navbar>
 
-    <ion-title>Case</ion-title>
+      <ion-icon (click)="segueToSchool()" class='changeSchool' name="md-school"> Change School</ion-icon>
+      <ion-icon (click)="segueToSettings()" class='settings' name="md-settings"></ion-icon>
 
-    <button  class="cart" ion-button>
-      <ion-icon name="md-cart"></ion-icon>
-    </button>
+    </ion-navbar>
 
-  </ion-navbar>
-
-  <ion-searchbar
-    placeholder="Search for book, course number, author.."
-    [showCancelButton]="true"
-    (ionInput)="onSearchInput($event)"
-    (ionCancel)="onSearchCancel($event)">
-  </ion-searchbar>
+    <ion-toolbar>
+        <ion-searchbar (ionInput)="filterPosts($event)" class="searchbar-school" placeholder="Search for book, course number, author.."></ion-searchbar>
+    </ion-toolbar>
 
 </ion-header>
 
-<ion-content class="background" padding>
+<ion-content>
 
-<ion-card class="card-div">
+    <div class="container wooden-background">
 
-  <ion-card-content class="post">
+      <button class="postButton case-button"  (click)=segueToPost()>Post</button>
 
-      <div class="post-image-container">
-          <img style="height: 25vh; width: 35vw;" class="post-image" src="../assets/img/books/biology.jpg">
-      </div>
+        <ion-card class="post" *ngFor="let post of filteredPosts">
 
-      <div style="float: right;" class="post-info-container">
-          <h1 class="title"> Biology for Non-Majors </h1>
-          <h2 class="price"> $45.27 </h2>
-          <h3 class="condition"> Condition: Like New </h3>
-          <h4 class="Description"> Description </h4>
-      </div>
+            <div class="post-image-container">
 
-  </ion-card-content>
+                <!--<div class="post-image" [style.background-image]="'url(' + post.image + ')'"></div>-->
 
+                <img class="post-image" [src]="post.image">
 
-</ion-card>
+            </div>
 
-<ion-card class="card-div">
+            <div class="post-information-container">
 
-  <ion-card-content class="post">
+                <h1 class="post-title">{{ post.title }}</h1>
+                <br>
 
-      <div class="post-image-container">
-          <img style="height: 25vh; width: 35vw;" class="post-image" src="../assets/img/books/english.jpg">
-      </div>
+                <p class="post-condition">{{ post.condition }}</p>
+                <br>
 
-      <div style="float: right;" class="post-info-container">
-          <h1 class="title"> Biology for Non-Majors </h1>
-          <h2 class="price"> $45.27 </h2>
-          <h3 class="condition"> Condition: Like New </h3>
-          <h4 class="Description"> Description </h4>
-      </div>
+                <p class="post-description">{{ post.description }}</p>
+                <br>
 
-  </ion-card-content>
+                <!--<ion-row class="post-footer-container">-->
 
-</ion-card>
+                <ion-col col-4>
+                <button class="footer-button" ion-button icon-left clear small>
+                <ion-icon class="post-icon" name="pricetag"></ion-icon>
+                <div class="post-price">{{ post.price }}</div>
+                </button>
+                </ion-col>
 
-<ion-card class="card-div">
+                <ion-col col-8>
+                <button (click)="showRadio()" class="footer-button" ion-button icon-right clear small>
+                <ion-icon class="post-icon" name="contact"></ion-icon>
+                <div class="post-contact">Contact</div>
+                </button>
+                </ion-col>
 
-  <ion-card-content class="post">
-
-      <div class="post-image-container">
-          <img style="height: 25vh; width: 35vw;" class="post-image" src="../assets/img/books/calculus.jpg">
-      </div>
-
-      <div style="float: right;" class="post-info-container">
-          <h1 class="title"> Biology for Non-Majors </h1>
-          <h2 class="price"> $45.27 </h2>
-          <h3 class="condition"> Condition: Like New </h3>
-          <h4 class="Description"> Description </h4>
-      </div>
-
-  </ion-card-content>
-
-</ion-card>
+                <!--</ion-row>-->
+            </div>
 
 
-<ion-fab bottom right>
-   <button ion-fab style="background-color: maroon;">
-   <ion-icon name="md-arrow-dropdown"></ion-icon></button>
-   <ion-fab-list side="top">
-     <button ion-fab>
-     <ion-icon name="md-cog"></ion-icon></button>
-     <button ion-fab>
-     <ion-icon name="ios-mail"></ion-icon></button>
-     <button ion-fab>
-     <ion-icon name="md-notifications-outline"></ion-icon></button>
-   </ion-fab-list>
+        </ion-card>
 
+    </div>
 
-<!--</ion-content>
-
-<!--try floating action button  -->
+</ion-content>
