@@ -1,0 +1,86 @@
+page-email
+{
+
+    .container
+    {
+        padding: 20px;
+    }
+
+    .forgot
+    {
+      padding-top: 40px;
+    }
+
+    .forgot-heading
+    {
+      font-size: 8vw;
+      color: $primary;
+      margin-bottom: 5vh;
+    }
+
+    .input-txt
+    {
+      width: 100%;
+      padding: 20px 10px;
+      background: transparent;
+      border: none;
+      font-size: 1.7em;
+      color: white;
+      border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -moz-transition: background-color 0.5s ease-in-out;
+      -o-transition: background-color 0.5s ease-in-out;
+      -webkit-transition: background-color 0.5s ease-in-out;
+      transition: background-color 0.5s ease-in-out;
+    }
+    .input-txt:-moz-placeholder
+    {
+      color: darkgray;
+    }
+    .input-txt:-ms-input-placeholder
+    {
+      color: darkgray;
+    }
+    .input-txt::-webkit-input-placeholder
+    {
+      color: darkgray;
+    }
+    .input-txt:focus
+    {
+      background-color: darkgray;
+    }
+
+    .button
+    {
+      margin: 2vh;
+      padding: 2vh 6vw;
+      border: none;
+      background: $primary;
+      color: $secondary;
+    }
+
+    .btn--right
+    {
+      float: right;
+    }
+
+    .icon
+    {
+      display: inline-block;
+    }
+
+    .icon--min
+    {
+      font-size: .9em;
+    }
+
+    .lnk
+    {
+      font-size: .8em;
+      line-height: 3em;
+      color: white;
+      text-decoration: none;
+    }
+}

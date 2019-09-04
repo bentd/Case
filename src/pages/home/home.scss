@@ -1,42 +1,129 @@
 page-home
 {
-    .toolbar-background
+    .changeSchool
     {
-        background: linear-gradient(to left top, #990000, #7f0000);;
-        border-color: transparent !important;
+      color: white;
+      float: left;
+      margin-left: 2vw;
+    }
+
+    .settings
+    {
+      float: right;
+      margin-right: 3vw;
+      color: white;
+      font-size: 5vw;
 
     }
 
-    ion-searchbar#search
+    .postButton
     {
-        background: linear-gradient(to left top, #990000, #7f0000);;
-        border-color: transparent;
+      float: right;
+      margin: 4.5vw;
+      padding: 3vw 5vh;
+
 
     }
 
-    ion-header
+    ion-card.post
     {
-        background: linear-gradient(to right top, #7f0000, #990000);;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 5px;
+        position: relative;
+        margin: 20px auto;
+        width: 95vw;
+        height: 59vw;
+
     }
 
-    ion-content.content.content-ios
+    ion-card.post div.post-image-container,
+    ion-card.post div.post-information-container
     {
-        background: linear-gradient(to left top, #f8f8f8, #fdfdfd);;
+        padding: 5px;
     }
 
-    #info
+    div.post-image-container
     {
-        width: 90vw;
-        height: 30vh;
-        border-color: black;
-        margin: auto auto 3vh;
+        position: relative;
+        width: 45vw;
     }
 
-    button.fab.fab-ios
+    div.post-image
     {
-        background-color: #7f0000;
+        //background-attachment: fixed;
+        //background-position: center center;
+        //background-repeat: no-repeat;
+        left: 50%;
+        min-height: calc(90vw - 5px);
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
+    img.post-image
+    {
+        max-height: calc(100% - 10px);
+        max-width: calc(100% - 10px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    div.post-information-container
+    {
+        position: relative;
+        text-align: center;
+        width: 55vw;
+    }
+
+    h1.post-title
+    {
+        font-size: 5vw;
+        height: 10hw;
+
+    }
+
+    p.post-description
+    {
+    }
+
+
+    ion-row.post-footer-container
+    {
+        bottom: 0;
+        height: 10hw;
+        position: absolute;
+    }
+
+    ion-col.col,
+    button.footer-button,
+    //ion-icon.post-icon,
+    //div.post-price,
+    //div.post-contact
+    {
+        margin: 0;
+        padding: 0;
+        //max-width: 105vw;
+        margin-bottom: .0vh;
+    }
+
+    div.post-contact,
+    //.post-icon
+    {
+        padding-left: 1vw;
+    }
+
+    .post-icon
+    {
+        margin-left: 7vw;
+
+    }
+
+    div.post-price
+    {
+        padding-right: .07vw;
+    }
 
 
 }

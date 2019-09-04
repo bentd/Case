@@ -1,59 +1,37 @@
 <ion-header>
-<ion-navbar>
 
-</ion-navbar>
+    <ion-navbar>
+
+    </ion-navbar>
+
 </ion-header>
 
-<ion-content id="content">
-<ion-slides pager="true">
+<ion-content>
 
-    <ion-slide>
-    <h1 class="name">What's your full name?</h1>
-    <ion-item id="fullname">
-    <ion-input placeholder="full name" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+    <div class="container wooden-background" ion-fixed>
 
-    <ion-slide>
-    <h1 class="name">What's your email?</h1>
-    <ion-item id="fullname">
-    <ion-input placeholder="email" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+        <div class="signup">
 
-    <ion-slide>
-    <h1 class="name">Where did you go to school?</h1>
-    <ion-item id="email">
-    <ion-input placeholder="college" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+            <h1 class="signup-header">
+                Create Your Account
+            </h1>
 
-    <ion-slide>
-    <h1 class="name">What year are you in school?</h1>
-    <ion-item id="email">
-    <ion-input placeholder="year" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+            <form (ngSubmit)="createUser()" method="post">
 
-    <ion-slide>
-    <h1 class="name">Create a password</h1>
-    <ion-item id="email">
-    <ion-input placeholder="password" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+                <input [(ngModel)]="user.firstName" type="text"  required="required" name="first" placeholder="First Name"/>
+                <input [(ngModel)]="user.lastName" type="text" required="required" name="last" placeholder="Last Name" />
+                <input [(ngModel)]="user.email" type="text" name="email" placeholder="Email Address" required="required"/>
+                <input [(ngModel)]="user.password" type="password" name="password" placeholder="Password" required="required"/>
+                <input [(ngModel)]="user.confirm" type="password" name="confirm" placeholder="Confirm Password" required="required"/>
 
-    <ion-slide>
-    <h1 class="name">Confirm your password</h1>
-    <ion-item id="email">
-    <ion-input placeholder="confirm password" clearInput></ion-input>
-    </ion-item>
-    <button id="submit" (click)="segueToHome()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+                <div>
+                    <button ion-button block type="submit">Submit</button>
+                </div>
 
-</ion-slides>
+            </form>
+
+        </div>
+
+   </div>
+
 </ion-content>

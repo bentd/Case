@@ -1,29 +1,32 @@
 <ion-content>
-<main ion-fixed>
 
-    <div class="swatch visible1" [class.hidden1]="!isVisible" [class.visible1]="isVisible" id="swatch1">
-    <h1 id="title">Case</h1>
-    <!--<h2 id="description">Sell High<br>Buy Low</h2>-->
-    <div class="hidden" id="wrapper">
+    <div class="container wooden-background" ion-fixed>
 
-    <ion-item id="user">
-    <ion-input type="text" placeholder="Username"></ion-input>
-    </ion-item>
+            <main>
 
-    <ion-item id="user">
-    <ion-input type="text" placeholder="Password"></ion-input>
-    </ion-item>
+                <div class="letter" id="c"></div>
+                <div class="letter" id="a"></div>
+                <div class="letter" id="s"></div>
+                <div class="letter" id="e"></div>
+
+                <!--<img src="../assets/img/books.png">-->
+
+                <header>
+
+                    <h1>Welcome to Case</h1>
+                    <h5>Sell your textbooks today!</h5>
+
+                </header>
+
+                <section>
+
+                    <button class="login button" (click)=segueToLogIn()>Log In</button>
+                    <button class="signup button" (click)=segueToSignUp()>Sign Up</button>
+
+                </section>
+
+            </main>
 
     </div>
-    </div>
 
-    <div class="swatch visible2" [class.hidden2]="!isVisible" [class.visible2]="isVisible" id="swatch2">
-    <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>LOG IN</span></button>
-    </div>
-
-    <div class="swatch visible3" [class.hidden3]="!isVisible" [class.visible3]="isVisible" id="swatch3">
-    <button *ngIf="isVisible" (click)="segueToSignup()" class="account-button" id="signup"><span>SIGN UP</span></button>
-    </div>
-
-</main>
 </ion-content>

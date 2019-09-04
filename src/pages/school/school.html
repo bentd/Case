@@ -1,0 +1,35 @@
+<ion-header>
+
+    <ion-navbar></ion-navbar>
+
+    <ion-toolbar class="toolbar-school">
+        <ion-searchbar (ionInput)="filterSchools($event)" class="searchbar-school" placeholder="Please search for your school"></ion-searchbar>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+    <div class="container wooden-background">
+
+        <!--<h1 class="school-heading"> Please choose a school(s) </h1>-->
+
+
+        <ion-list>
+            <ion-item *ngFor="let school of filteredSchools" (click)="addSchool(school)">
+                {{ school.name }}
+            </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-chip class="selected" *ngIf="selected">
+                <ion-label >{{ selected.name }}</ion-label>
+                <ion-icon name="close-circle" (click)="removeSchool(selected)"></ion-icon>
+            </ion-chip>
+        </ion-list>
+
+        <button (click)="segueToHome()" type="submit" class="case-button case-button-submit">Submit</button>
+
+    </div>
+
+</ion-content>

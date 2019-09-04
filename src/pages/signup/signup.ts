@@ -1,40 +1,35 @@
 // Angular
 import { Component } from "@angular/core";
+import { Http } from '@angular/http';
 //import { ViewChild } from "@angular/core";
 
 // Ionic
-import { IonicPage } from "ionic-angular";
 import { NavController } from "ionic-angular";
-import { NavParams } from "ionic-angular";
-import { Config } from "ionic-angular";
 
-// App
-// import { HomePage } from '../home/home';
+// Case
+import { WelcomePage } from "../welcome/welcome";
 
-@IonicPage
-({
-    name: "signup",
-    segment: "signup"
-})
 @Component
 ({
-  selector: "page-signup",
-  templateUrl: "signup.html",
+    selector: "page-signup",
+    templateUrl: "signup.html"
 })
 export class SignupPage
 {
-    constructor(public controller: NavController, public params: NavParams, config: Config)
-    {
-        config.set("ios", "backButtonText", "");
-        config.set("android", "backButtonText", "");
-    }
-    nextSlide()
-    {
 
+    user = {};
+
+    constructor(public controller: NavController, public http: Http) { }
+
+    segueToWelcome()
+    {
+        this.controller.setRoot(WelcomePage);
     }
 
-    segueToHome()
+    createUser()
     {
-        this.controller.setRoot("home");
+        console.log(this.user);
+        //console.log(this.http.get("localhost:8080/"));
+        this.http.post("http://127.0.0.1:8080/adduser/", this.user).subscribe();
     }
 }

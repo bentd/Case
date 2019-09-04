@@ -1,94 +1,98 @@
 page-signup
 {
-    ion-header.header
+    .signup
     {
-        background-image: none !important;
+      margin-top: 50px;
     }
 
-    ion-navbar div.toolbar-background
+    .signup-header
     {
-        background-color: transparent !important;
-        border-color: transparent !important;
+      color: $primary;
+      font-size: 36px;
+      margin-bottom: 0.5em;
+      text-align: center;
     }
 
-    button.back-button
+    .signup form
     {
-        color: linen !important;
+        text-align: center;
     }
 
-    ion-slides
+    .signup input
     {
-        z-index: 1;
-        height: 100vh;
+
+      padding: 20px 10px;
+      background: transparent;
+      border: none;
+      font-size: 1em;
+      color: $light;
+      border-bottom: 1px dotted $light;
+      width: 90%;
+      box-sizing: border-box;
+      transition: background-color 0.5s ease-in-out;
     }
 
-    button#next,
-    button#submit
+    .signup input:last-child
     {
-        margin-left: 75%;
+        background-color: $primary;
+        font-size: 1.3em;
     }
 
-    button#submit
+    .signup input::-moz-placeholder,
+    .signup input::-ms-input-placeholder,
+    .signup input::-webkit-input-placeholder
     {
-        z-index: 10;
+      color: darkgray;
     }
 
-    button.swiper-pagination-bullet-active
+    .signup input::hover
     {
-        background-color: linen;
+      background-color: $primary;
     }
 
-    ion-content#content
+    form div
     {
-        background: linear-gradient(to left top, maroon, #802b00, #993300);
-        border-radius: 4px;
+        margin-top: 60px;
     }
 
-    .name
+    .signup #submit
     {
-        font-size: 6vw;
-        padding: 4vh 7vw 4vh;
-        font-family: montserrat;
-        color: white;
-        text-align: left;
-
-
+        box-sizing: border-box;
+        display: block;
+        box-shadow: 1px 1px 1px $dark;
     }
 
-    #submit,
-    #next
+    .signup-footer
     {
-        font-size: 10vw;
-        color: linen;
-        background-color: transparent !important;
-        //float: right;
-        top: 10vh;
-        //position: absolute;
-        //z-index: 10;
+      margin: 10px 0;
+      overlow: hidden;
+      float: left;
+      width: 100%;
     }
 
-
-
-
-
-    ion-slides
+    .btn
     {
-        //width: 95vw;
-        margin-top: -15vh;
-        //position: relative;
-        //z-index: 1;
+      padding: 15px 30px;
+      border: none;
+      background: white;
+      color: #5D92BA;
     }
 
-    ion-content#content ion-slides ion-slide ion-item#fullname,
-    ion-item#email,
-    ion-item#collegeAttend
+    .btn--right
     {
+      float: right;
+    }
 
-        padding: 0;
-        width:85%;
-        background-color: transparent;
-        color: linen;
-        margin: 2vh auto 3vh !important;
-        font-size: 4vw;
+    .icon
+    {
+      display: inline-block;
+    }
+
+    .lnk
+    {
+      font-size: .8em;
+      line-height: 3em;
+      color: white;
+      text-decoration: none;
     }
 }

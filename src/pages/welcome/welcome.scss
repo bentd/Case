@@ -1,162 +1,151 @@
 page-welcome
 {
-    $padding: 0px;
-    $padding2x: calc(2 * #{$padding});
-    $border-radius: 12px;
-    $width: calc(100% - #{$padding2x});
-
-    $visible1: calc(100% - 16% - #{$padding2x});
-    $visible2: calc(100% - 08% - #{$padding2x});
-    $visible3: calc(100% - 00% - #{$padding2x});
-
-    $vhidden1: calc(100% - 04% - #{$padding2x});
-    $vhidden2: calc(100% - 02% - #{$padding2x});
-    $vhidden3: calc(100% - 00% - #{$padding2x});
-
-    $whidden1: calc(100% - 00% - #{$padding2x});
-    $whidden2: calc(100% - 02% - #{$padding2x});
-    $whidden3: calc(100% - 04% - #{$padding2x});
-
-    @keyframes show1
+    @keyframes slide
     {
-        000% { height: $vhidden1; width: $whidden1; }
-        075% { height: $vhidden1; width: $whidden1; }
-        100% { height: $visible1; width: $width; }
+        100%
+        {
+            margin-left: 0%;
+        }
     }
 
-    @keyframes show2
-    {
-        000% { height: $vhidden2; width: $whidden2; }
-        075% { height: $vhidden2; width: $whidden2; }
-        100% { height: $visible2; width: $width; }
-    }
-
-    @keyframes show3
-    {
-        000% { height: $vhidden3; width: $whidden3; }
-        075% { height: $vhidden3; width: $whidden3; }
-        100% { height: $visible3; width: $width; }
-    }
-
-    *
-    {
-        color: white;
-    }
-
-    ion-content
-    {
-        background-color: black !important;
-    }
+    /* MAIN */
 
     main
     {
-        height: 100vh;
-        padding: $padding;
+        height: 100%;
+        overflow-x: hidden;
         position: relative;
-        width: 100vw;
-    }
-
-    div.swatch
-    {
-        border-radius: $border-radius;
-        box-shadow: 0px 1.5px 1.5px black;
-        color: white;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-        width: $width;
-    }
-
-    div#swatch1
-    {
-        background-image: url(../assets/imgs/background.jpeg);
-        background-size: cover;
+        width: 100%;
         z-index: -1;
     }
 
-    div#swatch2
+    main img
     {
-        background: $light;
+        left: 50%;
+        opacity: 0.5;
+        position: absolute;
+        top: 68%;
+        transform: translate(-50%);
+        width: 20vw;
+        z-index: -100;
+    }
+
+    /* BACKGROUND */
+
+    .letter
+    {
+        height: 25%;
+        margin-left: -29900%;
+        opacity: 0.09;
+        width: 30000%;
         z-index: -2;
     }
 
-    div#swatch3
+    #c
     {
-        background: $dark;
-        z-index: -3;
+        animation: slide 1000s linear infinite;
+        background: url(../assets/img/c.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
     }
 
-    .hidden1 { animation: hide1 0.2s forwards }
-    .hidden2 { animation: hide2 0.2s forwards }
-    .hidden3 { animation: hide3 0.2s forwards }
-
-
-    .visible1 { animation: show1 1.5s forwards }
-    .visible2 { animation: show2 1.5s forwards }
-    .visible3 { animation: show3 1.5s forwards }
-
-    h1#title
+    #a
     {
-        position: absolute;
-        font-size: 8vh;
-        left: 50%;
-        top: 20%;
-        transform: translateX(-50%);
-        font-family: montserrat;
-        font-weight: 600;
+        animation: slide 1000s 200ms linear infinite;
+        background: url(../assets/img/a.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
     }
 
-    div#touch-target
+    #s
     {
-        position: absolute;
-        bottom: 0%;
-        height: 40px;
-        width: 100%;
+        animation: slide 1000s 300ms linear infinite;
+        background: url(../assets/img/s.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
     }
 
-    button.account-button
+    #e
     {
-        background: transparent;
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-        bottom: 0%;
-        height: 8vh;
-        position: absolute;
-        width: 100%;
+        animation: slide 1000s 400ms linear infinite;
+        background: url(../assets/img/e.jpg);
+        background-repeat: repeat-x;
+        background-size: contain;
+        transition-timing-function: ease-in;
     }
 
-    button.account-button span
+
+    /* WELCOME MESSAGE */
+
+    header
     {
-        font-size: 25px;
-        font-family: montserrat;
+        color: $primary;
+        display: block;
+        box-sizing: border-box;
         left: 50%;
         position: absolute;
-        top: 50%;
+        text-align: center;
+        top: 40%;
         transform: translate(-50%, -50%);
+        width: 90%;
+        z-index: 100;
     }
 
-    button#login{ }
-
-    button#signup{ }
-
-    #wrapper
+    header h1
     {
-        margin-top: 35vh;
+        font-size: 11.5vw;
+        font-weight: 699;
     }
 
-    ion-item#user
+    header h5
     {
-        background: transparent;
-        width: 80vw;
-        margin: auto;
-        padding:  0;
+        font-size: 6.5vw;
+        font-weight: 120;
+    }
 
+    /* BUTTONS */
+
+    section
+    {
+        left: 50%;
+        position: absolute;
+        top: 80%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    section button
+    {
+        background-color: $primary;
+        border-radius: 6px;
+        box-shadow: 1px 1px 1px black;
+        color: $secondary;
+        font-size: 24px;
+        margin: 12px auto;
+        //opacity: 0.75;
+        padding: 6px;
+        width: 100%;
+        z-index: 100;
+    }
+
+    section button:active
+    {
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    .login, .signup
+    {
+        display: block;
+        z-index: 200;
 
     }
 
-    .hidden
+    button:hover
     {
-        display: none;
-        height: 0;
+        background-color: tra;
     }
 }
