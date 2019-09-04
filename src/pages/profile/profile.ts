@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage } from "ionic-angular";
 import { NavController } from "ionic-angular";
 import { NavParams } from "ionic-angular";
-//import { Config } from 'ionic-angular'
+import { Config } from 'ionic-angular'
 
 // App
 // import { BoilerPage } from "../boiler/boiler";

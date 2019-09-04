@@ -1,1 +1,13 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-split-pane>
+
+    <ion-menu enabled swipeEnabled [type]="overlay" [content]="appcontent">
+    <ion-content>
+    <ion-list>
+    <ion-item menuClose detail-none>Close Menu</ion-item>
+    </ion-list>
+    </ion-content>
+    </ion-menu>
+
+    <ion-nav #appcontent [root]="rootPage" main></ion-nav>
+
+</ion-split-pane>

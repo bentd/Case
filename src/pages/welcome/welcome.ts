@@ -52,9 +52,4 @@ export class WelcomePage
         this.loginWrapper.classList.add("hidden");
         this.controller.push("signup");
     }
-
-    segueToForgot()
-    {
-        this.controller.push("forgot");
-    }
 }

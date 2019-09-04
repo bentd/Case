@@ -12,13 +12,13 @@
     <h1> <ion-icon name="ios-camera"></ion-icon> Add photo(s)</h1>
 
 
-        <button ion-button icon-only id="add" >
+        <button ion-button icon-only id="add" (click)="presentActionSheet()">
         <ion-icon name="ios-camera"></ion-icon>
         </button>
 
-        <!--<ion-card *ngFor="let photo of photos">
-            <img src="{{photo}}"/>
-        </ion-card>-->
+        <button ion-button icon-only id="photo">
+        <ion-icon name="ios-camera"></ion-icon>
+        </button>
 
         <button ion-button icon-only id="photo">
         <ion-icon name="ios-camera"></ion-icon>

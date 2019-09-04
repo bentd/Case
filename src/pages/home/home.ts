@@ -32,4 +32,9 @@ export class HomePage
     {
         this.controller.push("profile");
     }
+
+    onInput(event: any)
+    {
+
+    }
 }

@@ -8,7 +8,6 @@ import { NavParams } from "ionic-angular";
 
 // App
 // import { BoilerPage } from "../boiler/boiler";
-import { EmailPage } from "../email/email";
 
 @IonicPage
 ({
@@ -25,10 +24,4 @@ export class SettingsPage
     constructor(public controller: NavController, public params: NavParams)
     {
     }
-
-    segueToEmail()
-    {
-        this.controller.setRoot("email");
-    }
-
 }

@@ -1,111 +1,43 @@
-<ion-menu [content]="content">
-</ion-menu>
-
 <ion-header>
-  <ion-navbar>
 
-      <!--<button ion-button menuToggle>Toggle Menu</button>-->
+    <ion-navbar>
+    <!--<button ion-button menuToggle>Toggle Menu</button>-->
+    <ion-title>Case</ion-title>
+    </ion-navbar>
 
-
-    <ion-title>
-      Case
-  </ion-title>
-
-  </ion-navbar>
-
-  <ion-searchbar id="search"
-  [(ngModel)]="myInput"
-  [showCancelButton]="shouldShowCancel"
-  (ionInput)="onInput($event)"
-  (ionCancel)="onCancel($event)">
-  </ion-searchbar>
+    <ion-searchbar id="search"
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+    </ion-searchbar>
 
 </ion-header>
 
-<!--segment-->
 <ion-content padding>
+
     <div padding>
-        <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
-          <ion-segment-button value="books">
-             Books
-          </ion-segment-button>
-          <ion-segment-button value="guides">
-              study guides
-          </ion-segment-button>
-      </ion-segment>
+    <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
+    <ion-segment-button value="books">Books</ion-segment-button>
+    <ion-segment-button value="guides">Study Guides</ion-segment-button>
+    </ion-segment>
     </div>
 
     <!--switch-->
     <div [ngSwitch]="phase">
-        <ion-list *ngSwitchCase="'books'">
-            <ion-card class="item">
-                  <!--<ion-card-content>-->
-                      <div class="item-container">
-                        <div class="photo-container">
-                            <img src="../assets/imgs/books/biology.jpg">
-                        </div>
-                        <div class="info-container">
-                            <h1 class="book-title">Introduction to Biology: Apparent Life</h1>
-                            <h2 class="book-author">by Dr. Stephen Ramsier</h2>
-
-                            <div class="grey">
-                                <h3 class="condition-edition">Like New ∙ 7th Edition</h3>
-                                <h4 class="professor-course"> Prof. Battler ∙ BIO1101</h4>
-                            </div>
-                            <h5 class="price">$45.65</h5>
-                            <!--<h5 id="course"> BIO1101 </h5>-->
-                        </div>
-                    </div>
-                  <!--</ion-card-content>-->
-            </ion-card>
-            <ion-card class="item">
-                  <ion-card-content>
-                    <!-- Add card content here! -->
-                  </ion-card-content>
-            </ion-card>
-
-        </ion-list>
-        <ion-list *ngSwitchCase="'guides'">
-            <ion-card id="info">
-                  <ion-card-content>
-                    <!-- Add card content here! -->
-                  </ion-card-content>
-            </ion-card>
-            <ion-card id="info">
-                  <ion-card-content>
-                    <!-- Add card content here! -->
-                  </ion-card-content>
-            </ion-card>
-        </ion-list>
+    <ion-list *ngSwitchCase="'books'">
+    <bookcard></bookcard>
+    <bookcard></bookcard>
+    <bookcard></bookcard>
+    </ion-list>
     </div>
 
 
-
-
-            <!--<ion-card id="info">
-                  <ion-card-content>
-                    <!-- Add card content here!
-                  </ion-card-content>
-            </ion-card>
-
-            <ion-card id="info">
-                  <ion-card-content>
-                    <!-- Add card content here!
-                  </ion-card-content>
-            </ion-card>
-
-            <ion-card id="info">
-                  <ion-card-content>
-                    <!-- Add card content here!
-                  </ion-card-content>
-            </ion-card>
-
-
-        <ion-fab right bottom id="btn">
-            <button ion-fab mini><ion-icon name="add"></ion-icon></button>
-            <ion-fab-list side="top">
-              <button ion-fab (click)="segueToProfile()"><ion-icon name="logo-facebook"></ion-icon></button>
-            </ion-fab-list>
-        </ion-fab>-->
+    <ion-fab right bottom id="btn">
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+    <button ion-fab (click)="segueToProfile()"><ion-icon name="logo-facebook"></ion-icon></button>
+    </ion-fab-list>
+    </ion-fab>
 
 </ion-content>

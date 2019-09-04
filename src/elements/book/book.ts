@@ -17,7 +17,7 @@ import { NavParams } from "ionic-angular";
 })
 @Component
 ({
-    selector: 'book-card',
+    selector: 'bookcard',
     templateUrl: 'book.html',
 })
 export class BookCard

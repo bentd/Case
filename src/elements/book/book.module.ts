@@ -13,5 +13,10 @@ import { BookCard } from "./book";
     [
         IonicPageModule.forChild(BookCard),
     ],
+
+    exports:
+    [
+        BookCard,
+    ],
 })
 export class BookCardModule { }
