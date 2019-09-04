@@ -1,28 +1,23 @@
 <ion-split-pane>
 
-    <ion-menu enabled swipeEnabled [type]="overlay" [content]="appcontent">
+    <ion-menu [enabled]="loggedIn" swipeEnabled [type]="overlay" [content]="appcontent">
     <ion-content>
 
         <ion-item id="profile-section">
-             <ion-avatar item-start>
-               <img src="../assets/imgs/kim.png">
-             </ion-avatar>
-             <h2 class="profile-name">Kimberly C.</h2>
-             <h3 class="profile-name">kimmychampagne@aol.com</h3>
+        <ion-avatar item-start><img src="../assets/imgs/kim.png"></ion-avatar>
+        <h2 class="profile-name">Kimberly C.</h2>
+        <h3 class="profile-name">kimmychampagne@aol.com</h3>
+        </ion-item>
 
-           </ion-item>
-
-
-    <ion-list class="menu-list">
-    <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon" name="ios-notifications-outline"></ion-icon>Notifications</button></ion-item>
-    <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon" name="ios-mail-outline"></ion-icon>Messages</button></ion-item>
-    <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon-person" name="ios-person-outline"></ion-icon>Profile</button></ion-item>
-    <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToSettings()" menuToggle><ion-icon class="menu-icon" name="ios-settings-outline"></ion-icon>Settings</button></ion-item>
-    <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon" name="ios-browsers-outline"></ion-icon>Past Orders</button></ion-item>
-    <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToWelcome()" menuToggle><ion-icon class="menu-icon" name="ios-return-left"></ion-icon>Logout</button></ion-item>
-
-    </ion-list>
-
+        <ion-list class="menu-list">
+        <ion-item menuClose detail-none>Close Menu</ion-item>
+        <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon" name="ios-notifications-outline"></ion-icon>Notifications</button></ion-item>
+        <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon" name="ios-mail-outline"></ion-icon>Messages</button></ion-item>
+        <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon-person" name="ios-person-outline"></ion-icon>Profile</button></ion-item>
+        <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToSettings()" menuToggle><ion-icon class="menu-icon" name="ios-settings-outline"></ion-icon>Settings</button></ion-item>
+        <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToProfile()" menuToggle><ion-icon class="menu-icon" name="ios-browsers-outline"></ion-icon>Past Orders</button></ion-item>
+        <ion-item no-lines><button class="all-buttons" ion-button (click)="segueToWelcome()" menuToggle><ion-icon class="menu-icon" name="ios-return-left"></ion-icon>Logout</button></ion-item>
+        </ion-list>
 
     </ion-content>
     </ion-menu>

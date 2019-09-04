@@ -8,22 +8,7 @@
 
 
 <ion-content>
-
-    <div class="title-container">
-        <h1> <ion-icon name="ios-create"></ion-icon> Add book title </h1>
-
-        <div class="title-input">
-            <ion-textarea id="everything"> </ion-textarea>
-        </div>
-    </div>
-
-    <div class="title-container">
-        <h1> <ion-icon name="ios-create"></ion-icon> Add book author</h1>
-        <div class="title-input">
-            <ion-textarea id="everything"> </ion-textarea>
-        </div>
-    </div>
-
+<div class="add-photo-container">
     <h1> <ion-icon name="ios-camera"></ion-icon> Add photo(s)</h1>
 
 
@@ -31,8 +16,6 @@
         <ion-icon name="ios-camera"></ion-icon>
         </button>
 
-        <img *ngIf="imageTaken" [src]= "imageURL" style="height: 100px; width: 100px;">
-
         <button ion-button icon-only id="photo">
         <ion-icon name="ios-camera"></ion-icon>
         </button>
@@ -40,32 +23,9 @@
         <button ion-button icon-only id="photo">
         <ion-icon name="ios-camera"></ion-icon>
         </button>
-
-
-<div class="title-container-description">
-    <h1> <ion-icon name="ios-create"></ion-icon> Add book description</h1>
-    <ion-textarea ></ion-textarea>
 </div>
 
-<div class="title-container">
-
-    <h1> <ion-icon name="ios-create"></ion-icon> select condition</h1>
-    <ion-item>
-      <ion-label>condition</ion-label>
-      <ion-select [(ngModel)]="gender">
-        <ion-option value="f">like new</ion-option>
-        <ion-option value="m">used</ion-option>
-      </ion-select>
-    </ion-item>
-
-</div>
-
-<h1> <ion-icon name="ios-create"></ion-icon> Add price </h1>
-
-    <ion-input id="price" type="number"> </ion-input>
-
-
-<!--<div class="add-title-container">
+<div class="add-title-container">
     <h1 id="title"> <ion-icon name="ios-create"></ion-icon> Add book title </h1>
         <ion-item id="rounded">
             <ion-label fixed>Title</ion-label>
@@ -120,7 +80,7 @@
             <ion-input type="text" value=""></ion-input>
         </ion-item>
     </div>
-</div>-->
+</div>
 
 
 

@@ -1,16 +1,8 @@
 <ion-header>
 
     <ion-navbar>
-    <button ion-button icon-only menuToggle><ion-icon name="menu"></ion-icon></button>
-
-    <ion-title>case - fsu</ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="segueToCart()">
-        <ion-icon name="cart"></ion-icon>
-      </button>
-    </ion-buttons>
-
+    <!--<button ion-button menuToggle>Toggle Menu</button>-->
+    <ion-title>Case</ion-title>
     </ion-navbar>
 
     <ion-searchbar id="search"
@@ -24,7 +16,7 @@
 
 <ion-content padding>
 
-    <div padding id="segment">
+    <div padding>
     <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
     <ion-segment-button value="books">Books</ion-segment-button>
     <ion-segment-button value="guides">Study Guides</ion-segment-button>
@@ -42,10 +34,10 @@
 
 
     <ion-fab right bottom id="btn">
-    <button ion-fab mini (click)="segueToProfile()"><ion-icon name="add"></ion-icon></button>
-    <!--<ion-fab-list side="top">
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
     <button ion-fab (click)="segueToProfile()"><ion-icon name="logo-facebook"></ion-icon></button>
-    </ion-fab-list>-->
+    </ion-fab-list>
     </ion-fab>
 
 </ion-content>

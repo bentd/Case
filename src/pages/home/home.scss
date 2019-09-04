@@ -2,37 +2,26 @@ page-home
 {
     .toolbar-background
     {
-        background: maroon;
+        background: color($colors, light, base);
         border-color: transparent !important;
 
     }
 
-    .toolbar-title-ios
-    {
-        color: white;
-    }
-
     ion-searchbar#search
     {
-        background: maroon;
+        background: color($colors, light, base);
         border-color: transparent;
 
     }
 
     ion-header
     {
-        background: linear-gradient(to right top, #7f0000, #990000);;
-    }
-
-    div#segment
-    {
-        padding: 4px;
-        margin-top: 1vh;
+        background: color($colors, light, base);
     }
 
     ion-content.content.content-ios
     {
-        background: linear-gradient(to left top, #f8f8f8, #fdfdfd);;
+        background: linear-gradient(to left top, #f8f8f8, #fdfdfd);
     }
 
     .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated

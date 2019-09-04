@@ -59,7 +59,7 @@ bookcard
         display:            -webkit-box;
         font-size:          1.8vh;
         line-height:        3vh;
-        margin:             0 0 .5vh !important;
+        margin:             0 0 1vh !important;
         overflow:           hidden;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
@@ -69,20 +69,14 @@ bookcard
     {
         display:            -webkit-box;
         font-size:          2.5vh;
-        font-weight:        250;
+        font-weight:        bold;
         -webkit-line-clamp: 3;
-        text-transform: uppercase;
     }
 
     [line="3"],
     [line="4"]
     {
         color: grey;
-    }
-
-    [line="2"]
-    {
-        font-weight: 200;
     }
 
     [line="5"]

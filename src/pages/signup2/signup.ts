@@ -11,30 +11,17 @@ import { NavParams } from "ionic-angular";
 
 @IonicPage
 ({
-    name: "home",
-    segment: "home"
+    name: "signup2",
+    segment: "signup2"
 })
 @Component
 ({
-    selector: 'page-home',
-    templateUrl: 'home.html',
+    selector: 'page-signup2',
+    templateUrl: 'signup.html',
 })
-export class HomePage
+export class SignupPage2
 {
-    phase: string = "books";
-
-
     constructor(public controller: NavController, public params: NavParams)
     {
-    }
-
-    segueToProfile()
-    {
-        this.controller.push("new");
-    }
-
-    onInput(event: any)
-    {
-
     }
 }

@@ -22,34 +22,21 @@ import { NavParams } from "ionic-angular";
 })
 export class WelcomePage
 {
-    swatch1: any;
-    swatch2: any;
-    swatch3: any;
-    loginWrapper: any;
-
-    isVisible: any = true;
-
-    constructor(public controller: NavController, public params: NavParams)
+    constructor(public navigation: NavController, public params: NavParams)
     {
-
     }
 
     ngAfterViewInit()
     {
-        this.swatch1 = document.getElementById("swatch1");
-        this.swatch2 = document.getElementById("swatch2");
-        this.swatch3 = document.getElementById("swatch3");
-        this.loginWrapper = document.getElementById("wrapper");
     }
 
     segueToLogin()
     {
-        this.loginWrapper.classList.remove("hidden");
+        this.navigation.push("login");
     }
 
     segueToSignup()
     {
-        this.loginWrapper.classList.add("hidden");
-        this.controller.push("signup");
+        this.navigation.push("signup2");
     }
 }

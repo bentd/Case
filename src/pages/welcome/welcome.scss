@@ -1,201 +1,83 @@
-[class~="ios"],
-[class~="md"]
+page-welcome
 {
-    page-welcome
+    *
     {
-        $padding: 0px;
-        $padding2x: calc(2 * #{$padding});
-        $border-radius: 12px;
-        $width: calc(100% - #{$padding2x});
+        color: white;
+    }
 
-        $visible1: calc(100% - 16% - #{$padding2x});
-        $visible2: calc(100% - 08% - #{$padding2x});
-        $visible3: calc(100% - 00% - #{$padding2x});
+    ion-content
+    {
+        background-color: black !important;
+    }
 
-        $vhidden1: calc(100% - 04% - #{$padding2x});
-        $vhidden2: calc(100% - 02% - #{$padding2x});
-        $vhidden3: calc(100% - 00% - #{$padding2x});
+    main
+    {
+        height: 100vh;
+        padding: 0;
+        position: relative;
+        width: 100vw;
+    }
 
-        $whidden1: calc(100% - 00% - #{$padding2x});
-        $whidden2: calc(100% - 02% - #{$padding2x});
-        $whidden3: calc(100% - 04% - #{$padding2x});
+    div.swatch
+    {
+        border-radius: 12px;
+        box-shadow: 0px 1.5px 1.5px black;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 100%;
+    }
 
-        @keyframes show1
-        {
-            000% { height: $vhidden1; width: $whidden1; }
-            075% { height: $vhidden1; width: $whidden1; }
-            100% { height: $visible1; width: $width; }
-        }
+    div#swatch1
+    {
+        background-image: url(../assets/imgs/background.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 84%;
+        z-index: -1;
+    }
 
-        @keyframes show2
-        {
-            000% { height: $vhidden2; width: $whidden2; }
-            075% { height: $vhidden2; width: $whidden2; }
-            100% { height: $visible2; width: $width; }
-        }
+    div#swatch2
+    {
+        background:color($colors, dark, base);
+        height: 92%;
+        z-index: -2;
+    }
 
-        @keyframes show3
-        {
-            000% { height: $vhidden3; width: $whidden3; }
-            075% { height: $vhidden3; width: $whidden3; }
-            100% { height: $visible3; width: $width; }
-        }
+    div#swatch3
+    {
+        background: color($colors, light, base);
+        height: 100%;
+        z-index: -3;
+    }
 
-        *
-        {
-            color: white;
-        }
+    h1#title
+    {
+        position: absolute;
+        font-size: 8vh;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 600;
+    }
 
-        ion-content
-        {
-            background-color: black !important;
-        }
+    button.account-button
+    {
+        background: transparent;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        bottom: 0%;
+        height: 8vh;
+        position: absolute;
+        width: 100%;
+    }
 
-        main
-        {
-            height: 100vh;
-            padding: $padding;
-            position: relative;
-            width: 100vw;
-        }
-
-        div.swatch
-        {
-            border-radius: $border-radius;
-            box-shadow: 0px 1.5px 1.5px black;
-            color: white;
-            left: 50%;
-            position: absolute;
-            transform: translateX(-50%);
-            width: $width;
-        }
-
-        div#swatch1
-        {
-            background-image: url(../assets/imgs/background.jpeg);
-            background-size: cover;
-            z-index: -1;
-        }
-
-        div#swatch2
-        {
-            background: $light;
-            z-index: -2;
-        }
-
-        div#swatch3
-        {
-            background: $dark;
-            z-index: -3;
-        }
-
-        .hidden1 { animation: hide1 0.2s forwards }
-        .hidden2 { animation: hide2 0.2s forwards }
-        .hidden3 { animation: hide3 0.2s forwards }
-
-
-        .visible1 { animation: show1 2s forwards }
-        .visible2 { animation: show2 2s forwards }
-        .visible3 { animation: show3 2s forwards }
-
-        h1#title
-        {
-            position: absolute;
-            font-size: 12vh;
-            left: 50%;
-            top: 15%;
-            transform: translateX(-50%);
-            font-family: montserrat;
-            font-weight: 600;
-        }
-
-        div#touch-target
-        {
-            position: absolute;
-            bottom: 0%;
-            height: 40px;
-            width: 100%;
-        }
-
-        button.account-button
-        {
-            background: transparent;
-            border-bottom-left-radius: $border-radius;
-            border-bottom-right-radius: $border-radius;
-            bottom: 0%;
-            height: 8vh;
-            position: absolute;
-            width: 100%;
-        }
-
-        button.account-button span
-        {
-            font-size: 32px;
-            font-family:sans-serif;
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: 300;
-        }
-
-        button#login
-        {
-            //text-transform: lowercase;
-            //font-size: 10px;
-        }
-
-        button#signup
-        {
-            //text-transform: lowercase;
-        }
-
-        #wrapper
-        {
-            margin-top: 35vh;
-        }
-
-        ion-item#user
-        {
-            background: transparent;
-            width: 80vw;
-            margin: auto;
-            padding:  0;
-            font-size: 17px;
-
-
-        }
-
-        btn-forgot
-        {
-            display: flex;
-            flex-direction: row;
-            width: 100vw;
-        }
-
-        #forgot
-        {
-            background-color: transparent;
-            text-align: left;
-            padding-left: 10vw;
-            padding-top: 1.6vh;
-            font-size: 12px
-        }
-
-
-        .hidden
-        {
-            display: none;
-            height: 0;
-        }
-
-        #submit
-        {
-            background-color: transparent;
-            margin-top: 2.6vh;
-            font-size: 18px;
-            text-transform: lowercase;
-            margin-left: 38vw;
-        }
+    button.account-button span
+    {
+        font-size: 24px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }

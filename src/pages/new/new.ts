@@ -27,8 +27,6 @@ export class NewPage
 {
 
     photos : Array<string>;
-    imageURL: string = "";
-    imageTaken: boolean = false;
 
     constructor(public controller: NavController,
                 public params: NavParams,
@@ -86,28 +84,18 @@ export class NewPage
     takePicture()
     {
         let options = { quality: 100,
-                        correctOrientation: true,
-                        destinationType: this.camera.DestinationType.DATA_URL};
+                        correctOrientation: true };
 
       this.camera.getPicture(options).then((data) =>
       {
-          this.imageTaken = true;           
-          this.imageURL = "data:image/jpeg;base64," + data;
+          this.photos = new Array<string>();
 
-
-          /*this.cropService.crop(data, {quality: 75}).then((data) =>
-            {
-                this.imageURL = "data:image/jpeg;base64," + data;
-            })*/
-
-          //this.photos = new Array<string>();
-
-          /*this.cropService.crop(data, {quality: 75}).then((imageURI) =>
+          this.cropService.crop(data, {quality: 75}).then((newImage) =>
           {
               this.photos.push(newImage);
-          },*/
+          },
 
-          //error => console.error("Error cropping image", error));
+          error => console.error("Error cropping image", error));
 
       },
 

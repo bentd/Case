@@ -2,24 +2,17 @@ page-new
 {
     .toolbar-background
     {
-        background: maroon;
-    }
-
-    .toolbar-title-ios
-    {
-        color: white;
+        background: linear-gradient(to bottom, #660000, #730000);
     }
 
     ion-content h1
     {
         text-align: left;
         margin-left: 5vw;
-        font-size: 3.5vw;
+        font-size: 3.2vw;
         color: #909090;
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-weight: 400;
-        margin-top: 5vh;
-        margin-bottom: 3vh;
     }
 
     .input
@@ -31,11 +24,11 @@ page-new
 
     .button[icon-only]
     {
-        //margin-top: 2vh;
+        margin-top: 2vh;
         margin-left: 5vw;
         background-color: maroon;
         //padding: 5px 15px;
-        //margin-bottom: 2vh;
+        margin-bottom: 5vh;
     }
 
     .button-ios
@@ -45,7 +38,7 @@ page-new
 
     .content-ios
     {
-        background-color: white;
+        background-color: #fdfffd;
     }
 
     .button[icon-only]#photo
@@ -170,7 +163,7 @@ page-new
        color: white;
        border: 1px solid maroon;
        height: 6vh;
-       text-transform: capitalize;
+       text-transform: uppercase;
        font-weight: 300;
        border-radius: 13px;
    }
@@ -179,47 +172,6 @@ page-new
    {
        width: 50%;
    }
-
-   .text-input-ios
-   {
-       margin: 0 4vw 2vh 5vw;
-       padding-top: 1vh;
-       padding-left: 1vh;
-       border-radius: 5px;
-       background-color: #fdfdfd;
-       width: 90vw;
-       -webkit-box-shadow: 0 0 15px #e5e5e5;
-       box-shadow: 0 0 15px #e5e5e5;
-       height: 10vh;
-   }
-
-   .text-input-ios#description
-   {
-
-       height: 16vh;
-   }
-
-   textarea
-   {
-       resize: none;
-       width: 90vw;
-       margin-left: 4vw;
-       border-radius: 5px;
-       border-color: white;
-       -webkit-box-shadow: 0 0 15px lightgrey;
-       box-shadow: 0 0 15px lightgrey;
-       height: 15vh;
-   }
-
-   .item-ios
-   {
-       border-radius: 5px;
-       width: 90vw;
-       margin-left: 5vw;
-       box-shadow: 0 0 15px lightgrey;
-   }
-
-
 
 
 

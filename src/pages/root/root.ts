@@ -25,6 +25,11 @@ export class RootPage
 
     constructor(public controller: NavController, public params: NavParams)
     {
-        this.controller.setRoot("welcome");
+        this.controller.push("welcome");
     }
+
+    ionViewDidLoad()
+    {
+    }
+
 }

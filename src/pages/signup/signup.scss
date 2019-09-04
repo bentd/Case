@@ -1,16 +1,15 @@
 page-signup
 {
-    ion-header.header,
-    ion-header.header-ios,
-    ion-header.header-md
-    {
-        background-image: none !important;
-    }
 
-    ion-navbar div.toolbar-background
+    ion-header,
+    ion-navbar,
+    .toolbar-background-ios,
+    .toolbar-background-md,
+    .header-md::after
     {
-        background-color: transparent !important;
+        background-color: transparent;
         border-color: transparent !important;
+        z-index: 99;
     }
 
     button.back-button
@@ -18,78 +17,44 @@ page-signup
         color: linen !important;
     }
 
-    ion-slides
-    {
-        z-index: 1;
-        height: 100vh;
-    }
-
-    button#next,
-    button#submit
-    {
-        margin-left: 75%;
-    }
-
-    button#submit
-    {
-        z-index: 10;
-    }
-
-    button.swiper-pagination-bullet-active
-    {
-        background-color: linen;
-    }
-
     ion-content#content
     {
-        background: linear-gradient(to left top, maroon, #802b00, #993300);
-        border-radius: 4px;
+        // background: linear-gradient(to left top, maroon, #802b00, #993300);
+        background-color: color($colors, light, base);
+        border-radius: 12px;
+        height: 100%;
+        z-index: 98;
     }
 
-    .name
+    form
+    {
+        height: 100%;
+    }
+
+    ion-slides
+    {
+        //margin-top: -15vh;
+        z-index: 1;
+        height: 92%;
+    }
+
+    div.slide-content
+    {
+        margin-top: -100px;
+    }
+
+    h1.prompt
     {
         font-size: 5.5vw;
         padding: 4vh 7vw 3vh;
-        font-family: montserrat;
         color: white;
         text-align: left;
-
-
     }
 
-    #submit,
-    #next
+    ion-item.field
     {
-        font-size: 10vw;
-        color: linen;
-        background-color: transparent !important;
-        //float: right;
-        top: 12vh;
-        //position: absolute;
-        //z-index: 10;
-        left: 94vw;
-    }
-
-    button#next, button#submit
-    {
-        margin-left: 79%;
-
-    }
-
-    ion-slides
-    {
-        //width: 95vw;
-        margin-top: -15vh;
-        //position: relative;
-        //z-index: 1;
-    }
-
-    ion-content#content ion-slides ion-slide ion-item#fullname,
-    ion-item#email,
-    ion-item#collegeAttend
-    {
-
         padding: 0;
+        pointer-events: auto !important;
         width:85%;
         background-color: transparent;
         color: linen;
@@ -97,8 +62,58 @@ page-signup
         font-size: 4vw;
     }
 
-    p.error
+    ion-list.schools
+    {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0px;
+    }
 
+    button.school
+    {
+        background-color: black;
+        width: 100%;
+        margin: 5px auto;
+        padding: 0px;
+        text-align: right;
+    }
+
+    span.button-inner
+    {
+        text-align: justify;
+    }
+
+    button.school:focus
+    {
+        background-color: inherit;
+    }
+
+    button#submit1
+    {
+        background: color($colors, primary, base);
+        color: white;
+        font-size: 4vh;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        bottom: 0%;
+        height: 8%;
+        position: absolute;
+        width: 100%;
+    }
+
+    button#submit,
+    button#next
+    {
+        font-size: 10vw;
+        color: linen;
+        background-color: transparent !important;
+        top: 12vh;
+        left: 94vw;
+        margin-left: 75%;
+        margin-top: 1.5vh;
+    }
+
+    p.error
     {
        font-size: 15px;
        color: SandyBrown;
@@ -108,29 +123,8 @@ page-signup
        text-align: left;
     }
 
-
-
-
-
-    ion-input.input.input-ios.ng-dirty.ng-touched.invalid.ng-invalid
+    button.swiper-pagination-bullet-active
     {
-        border: 0;
+        background-color: linen;
     }
-
-    *
-    {
-        box-sizing: content-box;
-    }
-
-    .select-ios .select-icon
-    {
-        width: 5vw;
-    }
-
-    .item-ios
-    {
-        background-color: transparent;
-        padding-left: 7vw;
-    }
-
 }
