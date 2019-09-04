@@ -2,14 +2,19 @@ page-home
 {
     .toolbar-background
     {
-        background: linear-gradient(to left top, #990000, #7f0000);;
+        background: maroon;
         border-color: transparent !important;
 
     }
 
+    .toolbar-title-ios
+    {
+        color: white;
+    }
+
     ion-searchbar#search
     {
-        background: linear-gradient(to left top, #990000, #7f0000);;
+        background: maroon;
         border-color: transparent;
 
     }
@@ -19,22 +24,42 @@ page-home
         background: linear-gradient(to right top, #7f0000, #990000);;
     }
 
+    div#segment
+    {
+        padding: 4px;
+        margin-top: 1vh;
+    }
+
     ion-content.content.content-ios
     {
         background: linear-gradient(to left top, #f8f8f8, #fdfdfd);;
     }
 
-    #info
+    .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated
     {
-        width: 90vw;
-        height: 30vh;
-        border-color: black;
-        margin: auto auto 3vh;
+        border-color: darkred;
+    }
+
+    .segment-md .segment-button
+    {
+        color: maroon;
+        text-transform: lowercase;
+    }
+
+    .segment-button
+    {
+        margin-top: -2.5vh;
+        margin-bottom: 2.5vh;
     }
 
     button.fab.fab-ios
     {
         background-color: #7f0000;
+    }
+
+    ion-icon
+    {
+        color: white;
     }
 
 

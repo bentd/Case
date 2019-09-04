@@ -22,7 +22,64 @@ $dark: #802b00;
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 $font-family-base: "Montseratt", sans-serif !default;
 
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+$font-family-base: 'Amatic SC', cursive;
+
 .app-root
 {
     background: black !important;
+}
+
+button.side-menu-button-settings
+{
+    background-color: transparent;
+    color: grey;
+    width: 100%;
+}
+
+button.side-menu-button-logout
+{
+    background-color: transparent;
+    color: black;
+    margin-top: 20vh;
+    margin-left: 50vw;
+
+}
+
+#profile-section
+{
+    background-color: maroon;
+    height: 18vh;
+}
+
+.item-ios ion-avatar ion-img, .item-ios ion-avatar img
+{
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+}
+
+.profile-name
+{
+    color: white;
+}
+
+.menu-icon
+{
+    margin-right: 5vw;
+}
+
+.menu-icon-person
+{
+    margin-right: 6vw;
+}
+
+.all-buttons
+{
+    background-color: white;
+    color: black;
+    font-size: 4vw !important;
+    text-transform: uppercase;
+    font-weight: 300;
 }

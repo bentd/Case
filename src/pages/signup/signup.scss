@@ -1,6 +1,8 @@
 page-signup
 {
-    ion-header.header
+    ion-header.header,
+    ion-header.header-ios,
+    ion-header.header-md
     {
         background-image: none !important;
     }
@@ -46,8 +48,8 @@ page-signup
 
     .name
     {
-        font-size: 6vw;
-        padding: 4vh 7vw 4vh;
+        font-size: 5.5vw;
+        padding: 4vh 7vw 3vh;
         font-family: montserrat;
         color: white;
         text-align: left;
@@ -62,14 +64,17 @@ page-signup
         color: linen;
         background-color: transparent !important;
         //float: right;
-        top: 10vh;
+        top: 12vh;
         //position: absolute;
         //z-index: 10;
+        left: 94vw;
     }
 
+    button#next, button#submit
+    {
+        margin-left: 79%;
 
-
-
+    }
 
     ion-slides
     {
@@ -91,4 +96,41 @@ page-signup
         margin: 2vh auto 3vh !important;
         font-size: 4vw;
     }
+
+    p.error
+
+    {
+       font-size: 15px;
+       color: SandyBrown;
+       border-bottom: none;
+       background-color: transparent;
+       margin: 2vh 7vw 0;
+       text-align: left;
+    }
+
+
+
+
+
+    ion-input.input.input-ios.ng-dirty.ng-touched.invalid.ng-invalid
+    {
+        border: 0;
+    }
+
+    *
+    {
+        box-sizing: content-box;
+    }
+
+    .select-ios .select-icon
+    {
+        width: 5vw;
+    }
+
+    .item-ios
+    {
+        background-color: transparent;
+        padding-left: 7vw;
+    }
+
 }

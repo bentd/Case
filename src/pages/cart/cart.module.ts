@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { IonicPageModule } from "ionic-angular";
 import { CartPage } from "./cart";
+import { BookCardModule } from "../../elements/book/book.module";
+
 
 @NgModule
 ({
@@ -11,6 +13,7 @@ import { CartPage } from "./cart";
 
     imports:
     [
+        BookCardModule,
         IonicPageModule.forChild(CartPage),
     ],
 })

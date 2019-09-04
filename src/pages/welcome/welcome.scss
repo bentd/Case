@@ -1,162 +1,201 @@
-page-welcome
+[class~="ios"],
+[class~="md"]
 {
-    $padding: 0px;
-    $padding2x: calc(2 * #{$padding});
-    $border-radius: 12px;
-    $width: calc(100% - #{$padding2x});
-
-    $visible1: calc(100% - 16% - #{$padding2x});
-    $visible2: calc(100% - 08% - #{$padding2x});
-    $visible3: calc(100% - 00% - #{$padding2x});
-
-    $vhidden1: calc(100% - 04% - #{$padding2x});
-    $vhidden2: calc(100% - 02% - #{$padding2x});
-    $vhidden3: calc(100% - 00% - #{$padding2x});
-
-    $whidden1: calc(100% - 00% - #{$padding2x});
-    $whidden2: calc(100% - 02% - #{$padding2x});
-    $whidden3: calc(100% - 04% - #{$padding2x});
-
-    @keyframes show1
+    page-welcome
     {
-        000% { height: $vhidden1; width: $whidden1; }
-        075% { height: $vhidden1; width: $whidden1; }
-        100% { height: $visible1; width: $width; }
-    }
+        $padding: 0px;
+        $padding2x: calc(2 * #{$padding});
+        $border-radius: 12px;
+        $width: calc(100% - #{$padding2x});
 
-    @keyframes show2
-    {
-        000% { height: $vhidden2; width: $whidden2; }
-        075% { height: $vhidden2; width: $whidden2; }
-        100% { height: $visible2; width: $width; }
-    }
+        $visible1: calc(100% - 16% - #{$padding2x});
+        $visible2: calc(100% - 08% - #{$padding2x});
+        $visible3: calc(100% - 00% - #{$padding2x});
 
-    @keyframes show3
-    {
-        000% { height: $vhidden3; width: $whidden3; }
-        075% { height: $vhidden3; width: $whidden3; }
-        100% { height: $visible3; width: $width; }
-    }
+        $vhidden1: calc(100% - 04% - #{$padding2x});
+        $vhidden2: calc(100% - 02% - #{$padding2x});
+        $vhidden3: calc(100% - 00% - #{$padding2x});
 
-    *
-    {
-        color: white;
-    }
+        $whidden1: calc(100% - 00% - #{$padding2x});
+        $whidden2: calc(100% - 02% - #{$padding2x});
+        $whidden3: calc(100% - 04% - #{$padding2x});
 
-    ion-content
-    {
-        background-color: black !important;
-    }
+        @keyframes show1
+        {
+            000% { height: $vhidden1; width: $whidden1; }
+            075% { height: $vhidden1; width: $whidden1; }
+            100% { height: $visible1; width: $width; }
+        }
 
-    main
-    {
-        height: 100vh;
-        padding: $padding;
-        position: relative;
-        width: 100vw;
-    }
+        @keyframes show2
+        {
+            000% { height: $vhidden2; width: $whidden2; }
+            075% { height: $vhidden2; width: $whidden2; }
+            100% { height: $visible2; width: $width; }
+        }
 
-    div.swatch
-    {
-        border-radius: $border-radius;
-        box-shadow: 0px 1.5px 1.5px black;
-        color: white;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-        width: $width;
-    }
+        @keyframes show3
+        {
+            000% { height: $vhidden3; width: $whidden3; }
+            075% { height: $vhidden3; width: $whidden3; }
+            100% { height: $visible3; width: $width; }
+        }
 
-    div#swatch1
-    {
-        background-image: url(../assets/imgs/background.jpeg);
-        background-size: cover;
-        z-index: -1;
-    }
+        *
+        {
+            color: white;
+        }
 
-    div#swatch2
-    {
-        background: $light;
-        z-index: -2;
-    }
+        ion-content
+        {
+            background-color: black !important;
+        }
 
-    div#swatch3
-    {
-        background: $dark;
-        z-index: -3;
-    }
+        main
+        {
+            height: 100vh;
+            padding: $padding;
+            position: relative;
+            width: 100vw;
+        }
 
-    .hidden1 { animation: hide1 0.2s forwards }
-    .hidden2 { animation: hide2 0.2s forwards }
-    .hidden3 { animation: hide3 0.2s forwards }
+        div.swatch
+        {
+            border-radius: $border-radius;
+            box-shadow: 0px 1.5px 1.5px black;
+            color: white;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: $width;
+        }
 
+        div#swatch1
+        {
+            background-image: url(../assets/imgs/background.jpeg);
+            background-size: cover;
+            z-index: -1;
+        }
 
-    .visible1 { animation: show1 1.5s forwards }
-    .visible2 { animation: show2 1.5s forwards }
-    .visible3 { animation: show3 1.5s forwards }
+        div#swatch2
+        {
+            background: $light;
+            z-index: -2;
+        }
 
-    h1#title
-    {
-        position: absolute;
-        font-size: 8vh;
-        left: 50%;
-        top: 20%;
-        transform: translateX(-50%);
-        font-family: montserrat;
-        font-weight: 600;
-    }
+        div#swatch3
+        {
+            background: $dark;
+            z-index: -3;
+        }
 
-    div#touch-target
-    {
-        position: absolute;
-        bottom: 0%;
-        height: 40px;
-        width: 100%;
-    }
-
-    button.account-button
-    {
-        background: transparent;
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
-        bottom: 0%;
-        height: 8vh;
-        position: absolute;
-        width: 100%;
-    }
-
-    button.account-button span
-    {
-        font-size: 25px;
-        font-family: montserrat;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    button#login{ }
-
-    button#signup{ }
-
-    #wrapper
-    {
-        margin-top: 35vh;
-    }
-
-    ion-item#user
-    {
-        background: transparent;
-        width: 80vw;
-        margin: auto;
-        padding:  0;
+        .hidden1 { animation: hide1 0.2s forwards }
+        .hidden2 { animation: hide2 0.2s forwards }
+        .hidden3 { animation: hide3 0.2s forwards }
 
 
-    }
+        .visible1 { animation: show1 2s forwards }
+        .visible2 { animation: show2 2s forwards }
+        .visible3 { animation: show3 2s forwards }
 
-    .hidden
-    {
-        display: none;
-        height: 0;
+        h1#title
+        {
+            position: absolute;
+            font-size: 12vh;
+            left: 50%;
+            top: 15%;
+            transform: translateX(-50%);
+            font-family: montserrat;
+            font-weight: 600;
+        }
+
+        div#touch-target
+        {
+            position: absolute;
+            bottom: 0%;
+            height: 40px;
+            width: 100%;
+        }
+
+        button.account-button
+        {
+            background: transparent;
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            bottom: 0%;
+            height: 8vh;
+            position: absolute;
+            width: 100%;
+        }
+
+        button.account-button span
+        {
+            font-size: 32px;
+            font-family:sans-serif;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 300;
+        }
+
+        button#login
+        {
+            //text-transform: lowercase;
+            //font-size: 10px;
+        }
+
+        button#signup
+        {
+            //text-transform: lowercase;
+        }
+
+        #wrapper
+        {
+            margin-top: 35vh;
+        }
+
+        ion-item#user
+        {
+            background: transparent;
+            width: 80vw;
+            margin: auto;
+            padding:  0;
+            font-size: 17px;
+
+
+        }
+
+        btn-forgot
+        {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+        }
+
+        #forgot
+        {
+            background-color: transparent;
+            text-align: left;
+            padding-left: 10vw;
+            padding-top: 1.6vh;
+            font-size: 12px
+        }
+
+
+        .hidden
+        {
+            display: none;
+            height: 0;
+        }
+
+        #submit
+        {
+            background-color: transparent;
+            margin-top: 2.6vh;
+            font-size: 18px;
+            text-transform: lowercase;
+            margin-left: 38vw;
+        }
     }
 }

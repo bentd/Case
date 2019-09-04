@@ -42,8 +42,11 @@ page-profile
         position: relative;
     }
 
-    img#profile-pic
+    div#profile-pic
     {
+        background: url(../assets/imgs/kim.png);
+        background-position: center;
+        background-size: 200%;
         height: $profile-pic-size;
         width: $profile-pic-size;
         border-radius: $profile-pic-size;

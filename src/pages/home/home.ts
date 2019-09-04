@@ -21,12 +21,25 @@ import { NavParams } from "ionic-angular";
 })
 export class HomePage
 {
+    phase: string = "books";
+
+
     constructor(public controller: NavController, public params: NavParams)
     {
     }
 
     segueToProfile()
     {
-        this.controller.push("profile");
+        this.controller.push("new");
+    }
+
+    segueToCart()
+    {
+        this.controller.push("cart");
+    }
+
+    onInput(event: any)
+    {
+
     }
 }

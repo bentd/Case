@@ -5,31 +5,23 @@ import { Component } from '@angular/core';
 import { IonicPage } from "ionic-angular";
 import { NavController } from "ionic-angular";
 import { NavParams } from "ionic-angular";
-import { Config } from 'ionic-angular'
 
 // App
 // import { BoilerPage } from "../boiler/boiler";
 
 @IonicPage
 ({
-    name: "profile",
-    segment: "profile"
+    name: "card",
+    segment: "card"
 })
 @Component
 ({
-    selector: 'page-profile',
-    templateUrl: 'profile.html',
+    selector: 'item-card',
+    templateUrl: 'card.html',
 })
-export class ProfilePage
+export class CardPage
 {
-    phase: string = "selling";
-
     constructor(public controller: NavController, public params: NavParams)
     {
-    }
-
-    segueToSettings()
-    {
-        this.controller.push("settings");
     }
 }

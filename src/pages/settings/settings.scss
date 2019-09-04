@@ -21,4 +21,21 @@ page-settings
         font-weight: 400;
 
     }
+
+    ion-item#profile
+    {
+        padding-left: 11px;
+    }
+
+    .item-ios ion-avatar img
+    {
+        width: 35px;
+        height: 35px;
+        margin: 8px 4px 1px 0 !important;
+    }
+
+    .item-ios ion-avatar[item-start]
+    {
+        margin: 4px 6px 1px 0;
+    }
 }

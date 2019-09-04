@@ -5,55 +5,116 @@
 </ion-header>
 
 <ion-content id="content">
-<ion-slides pager="true">
+<ion-slides pager="true" #signupSlider>
 
     <ion-slide>
-    <h1 class="name">What's your full name?</h1>
-    <ion-item id="fullname">
-    <ion-input placeholder="full name" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+        <ion-list no lines>
+
+            <form [formGroup]="slideOneForm">
+                <h1 class="name" > Hi! What's your full name?</h1>
+
+                <ion-item id="fullname">
+                    <ion-input (input)="inputCheck(event, 1)" required formControlName="fullName" type="text" [class.invalid]="!slideOneForm.controls.fullName.valid && (slideOneForm.controls.fullName.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+
+                <p class="error" *ngIf="!slideOneForm.controls.fullName.valid && (slideOneForm.controls.fullName.dirty || submitAttempt)">Please enter a valid name.</p>
+            </form>
+
+        </ion-list>
+
+            <button id="next" [disabled]="!isenabled" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
     </ion-slide>
 
     <ion-slide>
-    <h1 class="name">What's your email?</h1>
-    <ion-item id="fullname">
-    <ion-input placeholder="email" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+        <ion-list no lines>
+
+            <form [formGroup]="slideTwoForm">
+                <h1 class="name" > What's your email?</h1>
+
+                <ion-item id="fullname">
+                    <ion-input (input)="inputCheck(event, 2)" required formControlName="email" type="email" [class.invalid]="!slideTwoForm.controls.email.valid && (slideTwoForm.controls.email.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+
+                <p class="error" *ngIf="!slideTwoForm.controls.email.valid && (slideTwoForm.controls.email.dirty || submitAttempt)"> Plase enter a valid email</p>
+
+            </form>
+
+        </ion-list>
+
+        <button id="next" [disabled]="!isenabled" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
     </ion-slide>
 
     <ion-slide>
+
     <h1 class="name">Where did you go to school?</h1>
+
     <ion-item id="email">
-    <ion-input placeholder="college" clearInput></ion-input>
+        <ion-select [(ngModel)]="class" interface="popover">
+            <ion-option value="f">freshman</ion-option>
+            <ion-option value="s">sophmore</ion-option>
+            <ion-option value="j">junior</ion-option>
+            <ion-option value="se">senior</ion-option>
+          </ion-select>
     </ion-item>
+
+        <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+    </ion-slide>
+
+    <ion-slide>
+    <h1 class="name">Where year are you in school?</h1>
+
+    <ion-item id="email">
+        <ion-label>year</ion-label>
+        <ion-select [(ngModel)]="class" interface="popover">
+            <ion-option value="f">freshman</ion-option>
+            <ion-option value="s">sophmore</ion-option>
+            <ion-option value="j">junior</ion-option>
+            <ion-option value="se">senior</ion-option>
+          </ion-select>
+    </ion-item>
+
     <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
     </ion-slide>
 
     <ion-slide>
-    <h1 class="name">What year are you in school?</h1>
-    <ion-item id="email">
-    <ion-input placeholder="year" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+        <ion-list no lines>
+
+            <form [formGroup]="slideThreeForm">
+                <h1 class="name">Create a password</h1>
+
+                <ion-item id="fullname">
+                    <ion-input (input)="inputCheck(event, 5)" required formControlName="password" type="text" [class.invalid]="!slideThreeForm.controls.password.valid && (slideThreeForm.controls.password.dirty || submitAttempt)"></ion-input>
+                </ion-item>
+
+                <p class="error" *ngIf="!slideThreeForm.controls.password.valid && (slideThreeForm.controls.password.dirty || submitAttempt)"> Password must have 8 characters, a number, and an uppercase letter.</p>
+            </form>
+        </ion-list>
+
+            <button id="next" [disabled]="!isenabled" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
     </ion-slide>
 
     <ion-slide>
-    <h1 class="name">Create a password</h1>
-    <ion-item id="email">
-    <ion-input placeholder="password" clearInput></ion-input>
-    </ion-item>
-    <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
 
-    <ion-slide>
-    <h1 class="name">Confirm your password</h1>
-    <ion-item id="email">
-    <ion-input placeholder="confirm password" clearInput></ion-input>
-    </ion-item>
-    <button id="submit" (click)="segueToHome()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
-    </ion-slide>
+        <ion-list no lines>
+            <form [formGroup]="slideFourForm">
+                <h1 class="name">Confirm your password</h1>
 
+                    <ion-item id="fullname">
+                        <ion-input (input)="inputCheck(event, 6)" required formControlName="confirm" type="password" [class.invalid]="!slideFourForm.controls.confirm.valid && (slideFourForm.controls.confirm.dirty || submitAttempt)"></ion-input>
+                    </ion-item>
+
+                <p class="error" *ngIf="!slideFourForm.controls.confirm.valid && (slideFourForm.controls.confirm.dirty || submitAttempt)"> Passwords do not match.</p>
+            </form>
+        </ion-list>
+
+        <button id="next" [disabled]="!isenabled" (click)="segueToHome()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+    </ion-slide>
 </ion-slides>
 </ion-content>

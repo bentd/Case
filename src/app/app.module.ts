@@ -7,6 +7,9 @@ import { NgModule } from "@angular/core";
 import { IonicApp } from "ionic-angular";
 import { IonicErrorHandler } from "ionic-angular";
 import { IonicModule } from "ionic-angular";
+import { ImagePicker } from "@ionic-native/image-picker";
+import { Crop } from "@ionic-native/crop";
+import { Camera } from "@ionic-native/camera";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
 
@@ -26,7 +29,7 @@ import { RootPage } from "../pages/root/root";
     imports:
     [
         BrowserModule,
-        IonicModule.forRoot(App)
+        IonicModule.forRoot(App,{ platforms : { ios: { scrollAssist: false, autoFocusAssist: false }}})
     ],
 
     bootstrap: [IonicApp],
@@ -39,6 +42,9 @@ import { RootPage } from "../pages/root/root";
 
     providers:
     [
+        ImagePicker,
+		Crop,
+		Camera,
         StatusBar,
         SplashScreen,
         {provide: ErrorHandler, useClass: IonicErrorHandler}
