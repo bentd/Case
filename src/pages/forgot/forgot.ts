@@ -1,37 +1,27 @@
 // Angular
-import { Component } from "@angular/core";
-//import { ViewChild } from "@angular/core";
+import { Component } from '@angular/core';
 
 // Ionic
+import { IonicPage } from "ionic-angular";
 import { NavController } from "ionic-angular";
+import { NavParams } from "ionic-angular";
 
-// Case
-import { WelcomePage } from "../welcome/welcome";
-import { LoginPage } from "../login/login";
-import { SignupPage } from "../signup/signup";
-import { HomePage } from "../home/home";
+// App
+// import { BoilerPage } from "../boiler/boiler";
 
+@IonicPage
+({
+    name: "forgot",
+    segment: "forgot"
+})
 @Component
 ({
-    selector: "page-forgot",
-    templateUrl: "forgot.html"
+    selector: 'page-forgot',
+    templateUrl: 'forgot.html',
 })
 export class ForgotPage
 {
-    constructor(public controller: NavController) { }
-
-    segueToHome()
+    constructor(public controller: NavController, public params: NavParams)
     {
-        this.controller.setRoot(HomePage);
-    }
-
-    segueToLogIn()
-    {
-        this.controller.setRoot(LoginPage);
-    }
-
-    segueToSignUp()
-    {
-        this.controller.setRoot(SignupPage);
     }
 }

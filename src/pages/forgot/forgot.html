@@ -1,26 +1,73 @@
 <ion-header>
+<ion-navbar>
 
-    <ion-navbar></ion-navbar>
-
+</ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content id="content">
+<ion-slides pager="true">
 
-    <div class="container wooden-background">
+    <ion-slide>
 
-        <div class="forgot">
+        <h1 class="email">Please enter your email.</h1>
 
-            <h1 class="forgot-heading">Please enter your email</h1>
+        <ion-item id="fullname">
+            <ion-input placeholder="email" type="email" clearInput></ion-input>
+        </ion-item>
 
-            <form method="post">
+        <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
 
-            <input name="email" type="text"  placeholder="Email" required="required" class="input-txt"/>
-            <button (click)="segueToHome()" style="height:40px;width:40px"></button>
+    </ion-slide>
 
-            </form>
+    <ion-slide>
 
+        <h1 class="code">Enter the code sent to your email</h1>
+
+        <div class="numbers">
+            <ion-item id="number1" max=1>
+            <ion-input type="number" clearInput id="number1"></ion-input>
+            </ion-item>
+
+            <ion-item id="number2">
+            <ion-input type="number" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item id="number3">
+            <ion-input type="number" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item id="number4">
+            <ion-input type="number" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item id="number5">
+            <ion-input type="number" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item id="number6">
+            <ion-input type="number" clearInput></ion-input>
+            </ion-item>
         </div>
 
-    </div>
 
+        <button id="submit" ><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+
+    </ion-slide>
+
+    <ion-slide>
+
+        <h1 class="password">Please change your password.</h1>
+
+        <ion-item id="password">
+            <ion-input placeholder="password" type="email" id="password" clearInput></ion-input>
+        </ion-item>
+
+        <button id="next" (click)="nextSlide()"><ion-icon name="ios-arrow-round-forward-outline"></ion-icon> </button>
+
+    </ion-slide>
+
+
+
+</ion-slides>
 </ion-content>

@@ -1,34 +1,47 @@
 <ion-header>
-
-    <ion-navbar></ion-navbar>
-
+    <ion-navbar> <ion-title>Case</ion-title>
+    </ion-navbar>
 </ion-header>
-
 <ion-content>
+    <h1> Profile</h1>
 
-    <div class="container wooden-background">
+    <ion-list>
+        <ion-item id="profile">
+           <ion-avatar item-start>
+             <img src="../assets/imgs/background.jpeg">
+           </ion-avatar>
+           Profile Pic
+       </ion-item>
+      <ion-item>
+        <ion-icon name="ios-person" item-start></ion-icon>
+          Name
+     </ion-item>
+      <ion-item>
+         <ion-icon name="ios-school" item-start></ion-icon>
+         School
+       </ion-item>
+   </ion-list>
 
-      <div class="profilePic"> </div>
-
-      <ion-list>
-
-          <button class="settings-buttons" ion-item *ngFor="let setting of settings" (click)="setting.action()">
-              {{ setting.title }}
+       <h1> Account</h1>
+   <ion-list>
+       <ion-item>
+           <button id="email-btn"  (click)="segueToEmail()">
+          <ion-icon name="ios-mail" item-start ></ion-icon>
+          Change Email
+          </ion-item>
           </button>
+       <ion-item>
+          <ion-icon name="ios-lock" item-start></ion-icon>
+          Change Password
+        </ion-item>
+    </ion-list>
 
+<h1> Support</h1>
+    <ion-list>
+        <ion-item>
+           <ion-icon name="ios-cog-outline" item-start></ion-icon>
+           Terms and Conditions
+         </ion-item>
       </ion-list>
-<!--
-      <button class="takePhoto case-button">Take Photo</button>
-      <br>
-      <button class="logoutButton case-button"> Logout</button>
-      <br>
-      <button class="changeEmail case-button">Change Email</button>
-      <br>
-      <button class="changePassword case-button"> Change Password</button>
-      <br>
-      <button (click)="showConfirm()" class="deleteAccount case-button"> Delete Account</button>
--->
-
-    </div>
 
 </ion-content>

@@ -1,86 +1,141 @@
 page-email
 {
-
-    .container
+    ion-header.header
     {
-        padding: 20px;
+        background-image: none !important;
     }
 
-    .forgot
+    ion-navbar div.toolbar-background
     {
-      padding-top: 40px;
+        background-color: transparent !important;
+        border-color: transparent !important;
     }
 
-    .forgot-heading
+    button.back-button
     {
-      font-size: 8vw;
-      color: maroon;
-      margin-bottom: 5vh;
+        color: linen !important;
     }
 
-    .input-txt
+
+    ion-content#content
     {
-      width: 100%;
-      padding: 20px 10px;
-      background: transparent;
-      border: none;
-      font-size: 1.7em;
-      color: white;
-      border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      -moz-transition: background-color 0.5s ease-in-out;
-      -o-transition: background-color 0.5s ease-in-out;
-      -webkit-transition: background-color 0.5s ease-in-out;
-      transition: background-color 0.5s ease-in-out;
-    }
-    .input-txt:-moz-placeholder
-    {
-      color: darkgray;
-    }
-    .input-txt:-ms-input-placeholder
-    {
-      color: darkgray;
-    }
-    .input-txt::-webkit-input-placeholder
-    {
-      color: darkgray;
-    }
-    .input-txt:focus
-    {
-      background-color: darkgray;
+        background: linear-gradient(to left top, maroon, #802b00, #993300);
+        border-radius: 4px;
     }
 
-    .button
+    ion-slides
     {
-      margin: 2vh;
-      padding: 2vh 6vw;
-      border: none;
-      background: maroon;
-      color: blanchedalmond;
+        z-index: 1;
+        height: 100vh;
     }
 
-    .btn--right
+    button#next,
+    button#submit
     {
-      float: right;
+        margin-left: 78%;
     }
 
-    .icon
+    button#submit
     {
-      display: inline-block;
+        z-index: 10;
     }
 
-    .icon--min
+    button.swiper-pagination-bullet-active
     {
-      font-size: .9em;
+        background-color: linen;
     }
 
-    .lnk
+    #submit,
+    #next
     {
-      font-size: .8em;
-      line-height: 3em;
-      color: white;
-      text-decoration: none;
+        font-size: 10vw;
+        color: linen;
+        background-color: transparent !important;
+        //float: right;
+        top: 12vh;
+        //position: absolute;
+        //z-index: 10;
+        left: 94vw;
     }
+
+
+
+    ion-slides
+    {
+        //width: 95vw;
+        margin-top: -15vh;
+        //position: relative;
+        //z-index: 1;
+    }
+
+    ion-content#content ion-slides ion-slide ion-item#fullname,
+    ion-item#email,
+    ion-item#collegeAttend
+    {
+
+        padding: 0;
+        width:85%;
+        background-color: transparent;
+        color: linen;
+        margin: 2vh auto 3vh !important;
+        font-size: 4vw;
+    }
+
+    h1
+    {
+        font-size: 5.1vw;
+        padding: 4vh 6vw 3vh;
+        font-family: montserrat;
+        color: white;
+        text-align: left;
+    }
+
+    h1.email
+    {
+        margin-left: 1.2vw;
+    }
+
+    .numbers
+    {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+
+    ion-item.number1
+    {
+        margin-right: 2vw;
+        background-color: transparent;
+    }
+
+    .item-ios
+    {
+        background-color: transparent;
+    }
+
+    .item-block
+    {
+        width: 15%;
+    }
+
+    ion-icon
+    {
+        margin-top: 5vh;
+    }
+
+    div.numbers
+    {
+        margin-left: 2.5vw;
+    }
+
+    page-forgot ion-content#content ion-slides ion-slide ion-item#fullname, page-forgot ion-item#email, page-forgot ion-item#collegeAttend
+    {
+        margin-left: 3vw;
+    }
+
+    item item-block item-ios item-input
+    {
+        width: 50vw;
+    }
+
 }

@@ -1,75 +1,60 @@
 // Angular
-import { Component } from "@angular/core";
-import { ElementRef } from "@angular/core";
-import { ViewChild } from "@angular/core";
+import { Component } from '@angular/core';
 
 // Ionic
+import { IonicPage } from "ionic-angular";
 import { NavController } from "ionic-angular";
+import { NavParams } from "ionic-angular";
 
-// Case
-import { LoginPage } from "../login/login";
-import { SignupPage } from "../signup/signup";
+// App
+// import { SignupPage } from "../signup/signup";
+// import { BoilerPage } from "../boiler/boiler";
 
+@IonicPage
+({
+    name: "welcome",
+    segment: "welcome"
+})
 @Component
 ({
-    selector: "page-welcome",
-    templateUrl: "welcome.html"
+    selector: 'page-welcome',
+    templateUrl: 'welcome.html',
 })
 export class WelcomePage
 {
-    zIndices: Array<number> = [-1, -2, -3];
+    swatch1: any;
+    swatch2: any;
+    swatch3: any;
+    loginWrapper: any;
 
-    get zIntro(): number
-    {
-        return this.zIndices[0];
-    }
-    get zLogIn(): number
-    {
-        return this.zIndices[1];
-    }
-    get zSignUp(): number
-    {
-        return this.zIndices[2];
-    }
+    isVisible: any = true;
 
-    constructor(public controller: NavController)
+    constructor(public controller: NavController, public params: NavParams)
     {
+
     }
 
     ngAfterViewInit()
     {
-        var tutorialSwatch = document.getElementById("tutorial");
-        console.log(tutorialSwatch);
-        tutorialSwatch.addEventListener("click", this.tutorialUp);
+        this.swatch1 = document.getElementById("swatch1");
+        this.swatch2 = document.getElementById("swatch2");
+        this.swatch3 = document.getElementById("swatch3");
+        this.loginWrapper = document.getElementById("wrapper");
     }
 
-    tutorialUp(event: Event)
+    segueToLogin()
     {
-        console.log(event);
+        this.loginWrapper.classList.remove("hidden");
     }
 
-    openIntroduction()
+    segueToSignup()
     {
-        this.zIndices = [-1, -2, -3];
+        this.loginWrapper.classList.add("hidden");
+        this.controller.push("signup");
     }
 
-    openLogIn()
+    segueToForgot()
     {
-        this.zIndices = [-2, -1, -3];
-    }
-
-    openSignUp()
-    {
-        this.zIndices = [-3, -2, -1];
-    }
-
-    segueToLogIn()
-    {
-        this.controller.push(LoginPage);
-    }
-
-    segueToSignUp()
-    {
-        this.controller.push(SignupPage);
+        this.controller.push("forgot");
     }
 }

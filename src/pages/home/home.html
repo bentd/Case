@@ -1,67 +1,111 @@
+<ion-menu [content]="content">
+</ion-menu>
+
 <ion-header>
+  <ion-navbar>
 
-    <ion-navbar>
+      <!--<button ion-button menuToggle>Toggle Menu</button>-->
 
-      <ion-icon (click)="segueToSchool()" class='changeSchool' name="md-school"> Change School</ion-icon>
-      <ion-icon (click)="segueToSettings()" class='settings' name="md-settings"></ion-icon>
 
-    </ion-navbar>
+    <ion-title>
+      Case
+  </ion-title>
 
-    <ion-toolbar>
-        <ion-searchbar (ionInput)="filterPosts($event)" class="searchbar-school" placeholder="Search for book, course number, author.."></ion-searchbar>
-    </ion-toolbar>
+  </ion-navbar>
+
+  <ion-searchbar id="search"
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+  </ion-searchbar>
 
 </ion-header>
 
-<ion-content>
-
-    <div class="container wooden-background">
-
-      <button class="postButton case-button"  (click)=segueToPost()>Post</button>
-
-        <ion-card class="post" *ngFor="let post of filteredPosts">
-
-            <div class="post-image-container">
-
-                <!--<div class="post-image" [style.background-image]="'url(' + post.image + ')'"></div>-->
-
-                <img class="post-image" [src]="post.image">
-
-            </div>
-
-            <div class="post-information-container">
-
-                <h1 class="post-title">{{ post.title }}</h1>
-                <br>
-
-                <p class="post-condition">{{ post.condition }}</p>
-                <br>
-
-                <p class="post-description">{{ post.description }}</p>
-                <br>
-
-                <!--<ion-row class="post-footer-container">-->
-
-                <ion-col col-4>
-                <button class="footer-button" ion-button icon-left clear small>
-                <ion-icon class="post-icon" name="pricetag"></ion-icon>
-                <div class="post-price">{{ post.price }}</div>
-                </button>
-                </ion-col>
-
-                <ion-col col-8>
-                <button (click)="showRadio()" class="footer-button" ion-button icon-right clear small>
-                <ion-icon class="post-icon" name="contact"></ion-icon>
-                <div class="post-contact">Contact</div>
-                </button>
-                </ion-col>
-
-                <!--</ion-row>-->
-            </div>
-
-
-        </ion-card>
-
+<!--segment-->
+<ion-content padding>
+    <div padding>
+        <ion-segment mode="md" color="transparent" [(ngModel)]="phase">
+          <ion-segment-button value="books">
+             Books
+          </ion-segment-button>
+          <ion-segment-button value="guides">
+              study guides
+          </ion-segment-button>
+      </ion-segment>
     </div>
+
+    <!--switch-->
+    <div [ngSwitch]="phase">
+        <ion-list *ngSwitchCase="'books'">
+            <ion-card class="item">
+                  <!--<ion-card-content>-->
+                      <div class="item-container">
+                        <div class="photo-container">
+                            <img src="../assets/imgs/books/biology.jpg">
+                        </div>
+                        <div class="info-container">
+                            <h1 class="book-title">Introduction to Biology: Apparent Life</h1>
+                            <h2 class="book-author">by Dr. Stephen Ramsier</h2>
+
+                            <div class="grey">
+                                <h3 class="condition-edition">Like New ∙ 7th Edition</h3>
+                                <h4 class="professor-course"> Prof. Battler ∙ BIO1101</h4>
+                            </div>
+                            <h5 class="price">$45.65</h5>
+                            <!--<h5 id="course"> BIO1101 </h5>-->
+                        </div>
+                    </div>
+                  <!--</ion-card-content>-->
+            </ion-card>
+            <ion-card class="item">
+                  <ion-card-content>
+                    <!-- Add card content here! -->
+                  </ion-card-content>
+            </ion-card>
+
+        </ion-list>
+        <ion-list *ngSwitchCase="'guides'">
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here! -->
+                  </ion-card-content>
+            </ion-card>
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here! -->
+                  </ion-card-content>
+            </ion-card>
+        </ion-list>
+    </div>
+
+
+
+
+            <!--<ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here!
+                  </ion-card-content>
+            </ion-card>
+
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here!
+                  </ion-card-content>
+            </ion-card>
+
+            <ion-card id="info">
+                  <ion-card-content>
+                    <!-- Add card content here!
+                  </ion-card-content>
+            </ion-card>
+
+
+        <ion-fab right bottom id="btn">
+            <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+            <ion-fab-list side="top">
+              <button ion-fab (click)="segueToProfile()"><ion-icon name="logo-facebook"></ion-icon></button>
+            </ion-fab-list>
+        </ion-fab>-->
 
 </ion-content>

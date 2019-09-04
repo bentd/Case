@@ -1,0 +1,187 @@
+book-card
+{
+    $card-height:   25vh;
+    $card-paddingv: 2vh;
+    $card-paddingh: 4vw;
+    $card-marginv:  1.25vh;
+    $card-marginh:  auto;
+    $card-width:    90vw;
+
+    $container-height: calc( #{ $card-height } - 2 * #{ $card-paddingv });
+
+    ion-card.card-ios,
+    ion-card.card-md
+    {
+        border-color: black;
+        height:       $card-height;
+        padding:      $card-paddingv $card-paddingh;
+        margin:       $card-marginv $card-marginh;
+        width:        $card-width;
+    }
+
+    div.container
+    {
+        display:        flex;
+        flex-direction: row;
+        height:         $container-height;
+        width:          100%;
+    }
+
+    div.photo-container
+    {
+        height:       $container-height;
+        margin-right: 4%;
+        position:     relative;
+        width:        40%;
+    }
+
+    div.photo-container img
+    {
+        border-radius: 1.5px;
+        left:          50%;
+        position:      absolute;
+        max-height:    100%;
+        max-width:     100%;
+        top:           0%;
+        transform:     translateX(-50%);
+    }
+
+    div.info-container
+    {
+        height: $container-height;
+        width:  56%;
+        right:  0;
+    }
+
+    [line1]
+    {
+        overflow:           hidden;
+        display:            -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    [line1],
+    [line2],
+    [line3],
+    [line4]
+    {
+        margin-bottom: 12px;
+    }
+
+    span.title
+    {
+
+    }
+
+    span.edition
+    {
+
+    }
+
+    span.author
+    {
+
+    }
+
+    span.course
+    {
+
+    }
+
+    span.professor
+    {
+
+    }
+
+    span.price
+    {
+
+    }
+
+    span.condition
+    {
+
+    }
+
+    /*
+    h1#book-title
+    {
+        font-weight: 300;
+        text-transform: uppercase;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+        font-size: 18px;
+    }
+
+    h1.title
+    {
+        height: 6vh;
+        text-transform: capitalize;
+        font-size: 2vh;
+        line-height: 3vh;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        font-weight: 350;
+    }
+
+    h2.author
+    {
+        height: 2vh;
+        font-weight: 200;
+        padding: 0;
+        font-size: 2vh;
+        line-height: 2vh;
+
+    }
+
+    /*h3.condition-edition
+    {
+        height: 4vh;
+        font-weight: 300;
+        font-size: 1.6vh;
+        line-height: 4vh;
+        text-transform: uppercase;
+        color: #9C9C9C;
+    }
+
+
+    h4.professor-course
+    {
+        height: 3vh;
+        font-weight: 300;
+        font-size: 1.6vh;
+        line-height: 3vh;
+        color: #9C9C9C;
+        margin-top: 0vh;
+        text-transform: uppercase;
+    }
+
+    div.grey h3
+    {
+        margin-top: 2vh;
+    }
+
+    div.grey h3, div.grey h4
+    {
+        //height: 6vh;
+        font-size: 1.3vh;
+        color: #9C9C9C;
+        text-transform: uppercase;
+
+    }
+
+    h5.price
+    {
+        font-weight: bold;
+        height: 3vh;
+        font-size: 2vh;
+        line-height: 3vh;
+        font-weight: 100;
+    }
+    */
+
+}

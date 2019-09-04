@@ -1,26 +1,27 @@
 // Angular
-import { Component } from "@angular/core";
-//import { ViewChild } from "@angular/core";
+import { Component } from '@angular/core';
 
 // Ionic
+import { IonicPage } from "ionic-angular";
 import { NavController } from "ionic-angular";
+import { NavParams } from "ionic-angular";
 
-// Case
-// mport { BoilerPage } from "../boiler/boiler";
+// App
+// import { BoilerPage } from "../boiler/boiler";
 
+@IonicPage
+({
+    name: "boiler",
+    segment: "boiler"
+})
 @Component
 ({
-    selector: "page-boiler",
-    templateUrl: "boiler.html"
+    selector: 'page-boiler',
+    templateUrl: 'boiler.html',
 })
 export class BoilerPage
 {
-    constructor(public controller: NavController) { }
-
-/*
-    segueToWhereever()
+    constructor(public controller: NavController, public params: NavParams)
     {
-        this.controller.setRoot(Wherever);
     }
-*/
 }

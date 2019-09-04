@@ -1,189 +1,101 @@
 page-signup
 {
-/*{
-    .signup
+    ion-header.header
     {
-      margin-top: 50px;
+        background-image: none !important;
     }
 
-    .signup-header
+    ion-navbar div.toolbar-background
     {
-      color: maroon;
-      font-size: 36px;
-      margin-bottom: 0.5em;
-      text-align: center;
+        background-color: transparent !important;
+        border-color: transparent !important;
     }
 
-    .signup form
+    button.back-button
     {
-        text-align: center;
+        color: linen !important;
     }
 
-    .signup input
+    ion-slides
     {
-
-      padding: 20px 10px;
-      background: transparent;
-      border: none;
-      font-size: 1em;
-      color: white;
-      border-bottom: 1px dotted white;
-      width: 90%;
-      box-sizing: border-box;
-      transition: background-color 0.5s ease-in-out;
-    }
-
-    .signup input:last-child
-    {
-        background-color: maroon;
-        font-size: 1.3em;
-    }
-
-    .signup input::-moz-placeholder,
-    .signup input::-ms-input-placeholder,
-    .signup input::-webkit-input-placeholder
-    {
-      color: darkgray;
-    }
-
-    .signup input::hover
-    {
-      background-color: maroon;
-    }
-
-    form div
-    {
-        margin-top: 60px;
-    }
-
-    .signup #submit
-    {
-        box-sizing: border-box;
-        display: block;
-        box-shadow: 1px 1px 1px black;
-    }
-
-    .signup-footer
-    {
-      margin: 10px 0;
-      overlow: hidden;
-      float: left;
-      width: 100%;
-    }
-
-    .btn
-    {
-      padding: 15px 30px;
-      border: none;
-      background: white;
-      color: #5D92BA;
-    }
-
-    .btn--right
-    {
-      float: right;
-    }
-
-    .icon
-    {
-      display: inline-block;
-    }
-
-    .lnk
-    {
-      font-size: .8em;
-      line-height: 3em;
-      color: white;
-      text-decoration: none;
-    }
-}*/
-
-
-    section.swatch
-    {
-        box-shadow: 0.2px 0.2px 1px black;
-        border-bottom-left-radius:12%;
-        border-bottom-right-radius:12%;
-        position: absolute;
-    }
-
-    .back_arrow
-    {
-        float: left;
-        position: absolute;
-        color: white;
-        margin-left: 3.5vw;
-        margin-top: 2vh;
-        font-size: 8vw;
-
-    }
-
-    main
-    {
-        background-color: white;
-        position: absolute;
-        height: 100vh;
-        width: 100vw;
-
-    }
-
-    .firstname, .lastname, .slides
-    {
-        border-radius: 5px;
-        width: 90%;
-        //position: absolute;
-        margin-left: 5vw;
-
-    }
-
-    section#tutorial
-    {
-        background-color: white;
-        background-size: cover;
-        width: 100%;
-        height: 81%;
         z-index: 1;
+        height: 100vh;
     }
 
-
-
-    section#login
+    button#next,
+    button#submit
     {
-        background: #993300;
-        width: 100%;
-        height: 90%;
-        z-index: -1;
+        margin-left: 75%;
+    }
+
+    button#submit
+    {
+        z-index: 10;
+    }
+
+    button.swiper-pagination-bullet-active
+    {
+        background-color: linen;
+    }
+
+    ion-content#content
+    {
+        background: linear-gradient(to left top, maroon, #802b00, #993300);
+        border-radius: 4px;
+    }
+
+    h1
+    {
+        font-size: 5.5vw;
+        padding: 4vh 7vw 3vh;
+        font-family: montserrat;
         color: white;
+        text-align: left;
+
 
     }
 
-    .login_button
+    #submit,
+    #next
     {
-        position: absolute;
-        margin-top: 83vh;
-        color: white;
-        margin-left: 40vw;
-        background-color: #993300;
-        font-size: 8vw;
+        font-size: 10vw;
+        color: linen;
+        background-color: transparent !important;
+        //float: right;
+        top: 12vh;
+        //position: absolute;
+        //z-index: 10;
+        left: 94vw;
+    }
+
+    button#next, button#submit
+    {
+        margin-left: 79%;
+        margin-top: 1.5vh;
     }
 
 
 
-    section#signup
+
+
+    ion-slides
     {
-        background: #802b00;
-        width: 100%;
-        height: 99%;
-        z-index: -2;
+        //width: 95vw;
+        margin-top: -15vh;
+        //position: relative;
+        //z-index: 1;
     }
 
-    .signup_button
+    ion-content#content ion-slides ion-slide ion-item#fullname,
+    ion-item#email,
+    ion-item#collegeAttend
     {
-        position: absolute;
-        margin-top: 92vh;
-        color: white;
-        margin-left: 36vw;
-        background-color: #802b00;
-        font-size: 8vw;
+
+        padding: 0;
+        width:85%;
+        background-color: transparent;
+        color: linen;
+        margin: 2vh auto 3vh !important;
+        font-size: 4vw;
     }
 }

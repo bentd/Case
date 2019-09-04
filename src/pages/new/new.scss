@@ -1,0 +1,181 @@
+page-new
+{
+    .toolbar-background
+    {
+        background: linear-gradient(to bottom, #660000, #730000);
+    }
+
+    ion-content h1
+    {
+        text-align: left;
+        margin-left: 5vw;
+        font-size: 3.2vw;
+        color: #909090;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    .input
+    {
+        background-color: transparent;
+    }
+
+
+
+    .button[icon-only]
+    {
+        margin-top: 2vh;
+        margin-left: 5vw;
+        background-color: maroon;
+        //padding: 5px 15px;
+        margin-bottom: 5vh;
+    }
+
+    .button-ios
+    {
+        font-size: 3rem;
+    }
+
+    .content-ios
+    {
+        background-color: #fdfffd;
+    }
+
+    .button[icon-only]#photo
+    {
+        background-color: transparent;
+        border: 1px solid darkgrey;
+        color: #323232;
+    }
+
+    #rounded
+    {
+       width: 92vw;
+       height: 6vh;
+       border-radius: 10px;
+       margin-bottom: 10px;
+       margin-left: 4vw;
+       border-bottom:none;
+       margin-top: 3vh;
+       font-size: 15px;
+       color: darkgrey;
+       background-color: transparent;
+   }
+
+   #rounded2
+   {
+       width: 80%;
+       margin-top: 3vh;
+       margin-left: 10%;
+       border-radius: 10px;
+       color: darkgrey;
+       font-size: 15px;
+       background-color: transparent;
+   }
+
+   #rounded3
+   {
+       width: 80%;
+       margin-top: 3vh;
+       margin-left: 10%;
+       border-radius: 10px;
+       color: darkgrey;
+       font-size: 15px;
+       background-color: transparent;
+   }
+
+   .add-photo-container, .add-title-container, .add-author-container
+   {
+       border-bottom: 1px solid darkgrey;
+   }
+
+   .add-title-container, .add-author-container
+   {
+       padding-top: 2vh;
+       padding-bottom: 3vh;
+   }
+
+   .split
+   {
+       display: flex;
+       flex-direction: row;
+       width: 100vw;
+       margin: 0;
+       //padding: 0;
+       height: 20vh;
+   }
+
+   div#add-price-container, div#add-condition-container
+   {
+       width: 50vw;
+       border-right: 1px solid darkgrey;
+       border-bottom: 1px solid darkgrey;
+       //left: 0;
+       //margin: auto;
+       //margin-right: 14vw;
+       float: left;
+   }
+
+   div#add-price-container h1
+   {
+       //align: center;
+       margin-left: 10vw;
+
+   }
+
+   #add-condition-container h1
+   {
+       margin-left: 7vw;
+   }
+
+   #add-course-container, #add-edition-container
+   {
+       border-bottom: 1px solid darkgrey;
+       width: 50vw;
+
+   }
+
+   #add-course-container h1
+   {
+       margin-left: 12vw;
+       //align: right;
+   }
+
+   #add-edition-container h1
+   {
+       margin-left: 13vw;
+   }
+
+   .item-ios#price
+   {
+       width: 90%;
+       margin-left: 2.5vw;
+       //padding: 1vh;
+   }
+
+   #submit
+   {
+       margin-top: 3vh;
+       margin-left: 5vw;
+       margin-bottom: 2vh;
+       width: 90vw;
+       background-color: maroon;
+       color: white;
+       border: 1px solid maroon;
+       height: 6vh;
+       text-transform: uppercase;
+       font-weight: 300;
+       border-radius: 13px;
+   }
+
+   div.photo-container
+   {
+       width: 50%;
+   }
+
+  
+
+
+
+
+}

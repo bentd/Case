@@ -1,5 +1,7 @@
 {
-  "name": "Case3",
-  "integrations": {},
+  "name": "Case",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

@@ -1,20 +1,42 @@
 <ion-content>
+<main ion-fixed>
 
-    <main ion-fixed>
+    <div class="swatch visible1" [class.hidden1]="!isVisible" [class.visible1]="isVisible" id="swatch1">
+    <h1 id="title">Case</h1>
+    <!--<h2 id="description">Sell High<br>Buy Low</h2>-->
+    <div class="hidden" id="wrapper">
 
-        <div (pan)="tutorialUp($event)" class="swatch" id="tutorial" [style.z-index]="zIntro">
-            <h1><b> Case</b></h1>
-            <h2>Sell high, buy low</h2>
-        </div>
+    <ion-item id="user">
+    <ion-label> <ion-icon name="md-person"></ion-icon></ion-label>
+    <ion-input type="text" placeholder="username"></ion-input>
+    </ion-item>
 
-        <div [style.z-index]="zLogIn" class="swatch" id="login">
-            <button (click)="segueToLogIn()" class="account-button" id="login"><span>LOG IN</span></button>
-        </div>
+    <ion-item id="user">
+    <ion-label> <ion-icon name="md-lock"></ion-icon></ion-label>
+    <ion-input type="text" placeholder="password"></ion-input>
+    </ion-item>
 
-        <div [style.z-index]="zSignUp" class="swatch" id="signup">
-            <button (click)="segueToSignUp()" class="account-button" id="signup"><span>SIGN UP</span></button>
-        </div>
+    <div class="btn-forgot">
 
-    </main>
+        <button id="forgot" ion-button (click)="segueToForgot()"> Forgot password? 
+        </button>
 
+        <button id="submit" ion-button icon-only>
+            <ion-icon name="md-arrow-forward"></ion-icon>
+        </button>
+
+    </div>
+
+    </div>
+    </div>
+
+    <div class="swatch visible2" [class.hidden2]="!isVisible" [class.visible2]="isVisible" id="swatch2">
+    <button *ngIf="isVisible" (click)="segueToLogin()" class="account-button" id="login"><span>login</span></button>
+    </div>
+
+    <div class="swatch visible3" [class.hidden3]="!isVisible" [class.visible3]="isVisible" id="swatch3">
+    <button *ngIf="isVisible" (click)="segueToSignup()" class="account-button" id="signup"><span>sign up</span></button>
+    </div>
+
+</main>
 </ion-content>
